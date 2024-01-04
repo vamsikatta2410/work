@@ -1,52 +1,27 @@
-import React, { useState } from 'react';
-import { Redirect, Route, Switch, useHistory } from 'react-router-dom';
+import React from 'react';
+import NewHome from './New Home/NewHome';
+import Result from './result/Result';
+import News from './news/News';
+import Videos from './BingVideo/BingVideo';
+import Images from './SearchBf77/Search';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import ComingSoon from './ComingSoon/ComingSoon';
 
-import { Home } from './components/HomeScreen';
-import SearchPage from './components/Search/SearchPage';
-
-import { GoogleSearch } from './api/GoogleSearch';
-
-const App = (props) => {
-  let history = useHistory();
-  //search term
-  const [searchTerm, setSearchTerm] = useState('');
-  // serach data
-  const [searchData, setSearchData] = useState({});
-  //set search term
-  const setSearch = async (term) => {
-    setSearchTerm(term);
-    await setData(term);
-    history.push('/search');
-  };
-  //set search data
-  const setData = async (term) => {
-    const searches = await GoogleSearch(term);
-    setSearchData(searches);
-  };
-
+function App() {
   return (
-    <Switch>
-      <Route
-        exact
-        path={'/'}
-        component={() => <Home setSearch={setSearch} />}
-      />
-      {searchTerm !== '' ? (
-        <Route
-          exact
-          path={'/search'}
-          component={() => (
-            <SearchPage
-              searchTerm={searchTerm}
-              searchData={searchData}
-              setSearch={setSearch}
-            />
-          )}
-        />
-      ) : null}
-      <Redirect to="/" />
-    </Switch>
+    <>
+      <Router>
+        <Routes>
+          <Route path="/" element={<NewHome />} />
+          <Route path="/result/:name" element={<Result />} />
+          <Route path="/news/:name" element={<News />} />
+          <Route path="/videos/:name" element={<Videos />} />
+          <Route path="/images/:name" element={<Images />} />
+          <Route path="/ComingSoon/" element={<ComingSoon />} />
+        </Routes>
+      </Router>
+    </>
   );
-};
+}
 
 export default App;
