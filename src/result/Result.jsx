@@ -11,7 +11,7 @@ import Pagination from './Pagination'
 function WikiComponent(props) {
   return (
     <div className="wiki_container" style={{ height: '22rem', width: '22rem' }}>
-      <img className="wiki_image_content" src="" alt={props.title} />{' '}
+      <img className="wiki_image_content" src={props.image} alt={props.title} />{' '}
       {/*   {props.image} */}
       <div
         className="wiki_heading"
@@ -220,9 +220,8 @@ export default function Result() {
               <WikiComponent
                 title={wiki.title}
                 description={wiki.description}
-                extract={
-                  wiki.extract
-                } /*page={wiki.content_urls.desktop.page} */
+                extract={wiki.extract}
+                image = {wiki?.originalimage?.source} 
               />
             </div>
           </main>
