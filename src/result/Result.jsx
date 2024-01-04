@@ -119,17 +119,7 @@ function ResultComponent(props) {
             </span>
           </p>
           <div className="b_factrow b_twofr">
-            {/* <div className="b_vlist2col">
-                            <ul>
-                                <li>
-                                    <div><a href="search1c9f.html?q=Shanthie+Mariet+D'souza" h="ID=SERP,5289.1"><strong>Author:</strong>
-                                        Shanthie Mariet
-                                        D'souza</a>
-                                    </div>
-                                </li>
-                            </ul>
-                            <ul />
-                        </div> */}
+            {}
           </div>
         </div>
       </div>
@@ -170,27 +160,6 @@ export default function Result() {
 
     getSearchData(); 
   }, []);
-  
-  
-  // useEffect(() => {
-  //   fetch(
-  //     ``
-  //   )
-  //     .then((response) => response.json())
-  //     .then((data) => setData(data.items))
-  //     .catch((error) => console.error(error))
-  //   console.log(Data);
-  // }, [])
-
-  // useEffect(() => {
-  //   fetch(
-  //     `https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((totalresults) => setDatatotal(totalresults.searchInformation))
-  //     .catch((error) => console.error(error))
-  //   console.log(Totalresults);
-  // }, [])
 
   return (
     <>
