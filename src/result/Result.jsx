@@ -156,19 +156,25 @@ export default function Result() {
 
     getWikiData(); 
   }, []);
-  
-  
 
-  // useEffect(() => {
-  //   fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)
-  //     .then((response) => response.json())
-  //     .then((wiki) => SetwikiData(wiki))
-  //     .catch((error) => console.error(error))
-  //   console.log(wiki)
-  // }, [])
+  useEffect(() => {
+    async function getSearchData() {
+      try {
+        const response = await axios.get(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`);
+        setDatatotal(response.data.items)
+        console.log(response.data.items);
+      } catch (error) {
+        console.error('Error fetching data from Wikipedia:', error);
+      }
+    }
+
+    getSearchData(); 
+  }, []);
+  
+  
   // useEffect(() => {
   //   fetch(
-  //     `https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`
+  //     ``
   //   )
   //     .then((response) => response.json())
   //     .then((data) => setData(data.items))
@@ -190,8 +196,9 @@ export default function Result() {
     <>
       <div>
         <Header page={'result'} />
-        {/* AI result box started*/}
-        <div id="b_content" style={{ height: '100vh' }}>
+        
+        {/*Wikipedia header*/}
+        <div id="b_content">
           <main aria-label="Search Results">
             <div className="aiResult example">
               <h1 style={{fontWeight:'700',color:'black',fontSize:'35px'}}>
@@ -201,13 +208,15 @@ export default function Result() {
                 {wiki.extract}
               </p>
             </div>
+
+
             {/* AI result box end*/}
             <div
               className="results_new"
               style={{ display: 'flex', height: '100%' }}
             >
               <ol id="b_results" className>
-                {Data?.map((results) => (
+                {Totalresults?.map((results) => (
                   <ResultComponent
                     title={results.title}
                     link={results.link}
