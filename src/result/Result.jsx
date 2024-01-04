@@ -145,31 +145,46 @@ export default function Result() {
   const { name } = useParams()
 
   useEffect(() => {
-    fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)
-      .then((response) => response.json())
-      .then((wiki) => SetwikiData(wiki))
-      .catch((error) => console.error(error))
-    console.log(wiki)
-  }, [])
-  useEffect(() => {
-    fetch(
-      `https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`
-    )
-      .then((response) => response.json())
-      .then((data) => setData(data.items))
-      .catch((error) => console.error(error))
-    // console.log(Data);
-  }, [])
+    async function getWikiData() {
+      try {
+        const response = await axios.get(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`);
+        SetwikiData(response.data);
+      } catch (error) {
+        console.error('Error fetching data from Wikipedia:', error);
+      }
+    }
 
-  useEffect(() => {
-    fetch(
-      `https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`
-    )
-      .then((response) => response.json())
-      .then((totalresults) => setDatatotal(totalresults.searchInformation))
-      .catch((error) => console.error(error))
-    // console.log(Totalresults);
-  }, [])
+    getWikiData(); 
+  }, []);
+  
+  
+
+  // useEffect(() => {
+  //   fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`)
+  //     .then((response) => response.json())
+  //     .then((wiki) => SetwikiData(wiki))
+  //     .catch((error) => console.error(error))
+  //   console.log(wiki)
+  // }, [])
+  // useEffect(() => {
+  //   fetch(
+  //     `https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((data) => setData(data.items))
+  //     .catch((error) => console.error(error))
+  //   console.log(Data);
+  // }, [])
+
+  // useEffect(() => {
+  //   fetch(
+  //     `https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0`
+  //   )
+  //     .then((response) => response.json())
+  //     .then((totalresults) => setDatatotal(totalresults.searchInformation))
+  //     .catch((error) => console.error(error))
+  //   console.log(Totalresults);
+  // }, [])
 
   return (
     <>
@@ -179,75 +194,11 @@ export default function Result() {
         <div id="b_content" style={{ height: '100vh' }}>
           <main aria-label="Search Results">
             <div className="aiResult example">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Consectetur veniam voluptate porro distinctio. Numquam quos
-                soluta voluptatibus. Hic cupiditate, ut ullam distinctio
-                reiciendis repellendus sed quibusdam libero nostrum, provident
-                sunt. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Aspernatur, reiciendis. Officia ex sed neque consequatur
-                accusantium veritatis deleniti esse, fugit error ducimus culpa
-                incidunt dolorem dolorum saepe earum qui rerum?
+              <h1 style={{fontWeight:'700',color:'black',fontSize:'35px'}}>
+                {wiki.title}
+              </h1>
+              <p style={{color:'black',marginTop:'10px',fontSize:'18px'}}>
+                {wiki.extract}
               </p>
             </div>
             {/* AI result box end*/}
@@ -263,7 +214,8 @@ export default function Result() {
                     displayLink={results.displayLink}
                     snippet={results.snippet}
                   />
-                ))}
+                ))
+                }
 
                 <RelatedSearch title={wiki.title} />
                 <Pagination title={wiki.title} />
