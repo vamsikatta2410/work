@@ -173,14 +173,16 @@ export default function Result() {
         {/*Wikipedia header*/}
         <div id="b_content">
           <main aria-label="Search Results">
-            <div className="aiResult example">
+            {
+              wiki.extract?.length? (<div className="aiResult example">
               <h1 style={{fontWeight:'700',color:'black',fontSize:'35px'}}>
                 {wiki.title}
               </h1>
               <p style={{color:'black',marginTop:'10px',fontSize:'18px'}}>
                 {wiki.extract}
               </p>
-            </div>
+            </div>):''
+            }
 
 
             {/* AI result box end*/}
