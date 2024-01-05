@@ -224,13 +224,15 @@ export default function Result() {
               </ol>
 
               {/* image={wiki.originalimage.source} */}
-              <WikiComponent
-                title={wiki.title}
-                description={wiki.description}
-                extract={wiki.extract}
-                image = {wiki?.originalimage?.source} 
-                link = {wiki?.content_urls?.desktop?.page}
-              />
+              {
+                wiki?.extract?.length? (<WikiComponent
+                  title={wiki.title}
+                  description={wiki.description}
+                  extract={wiki.extract}
+                  image = {wiki?.originalimage?.source} 
+                  link = {wiki?.content_urls?.desktop?.page}
+                />):''
+              }
             </div>
           </main>
         </div>
