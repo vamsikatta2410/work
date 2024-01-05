@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import Result from './Result'
 
 const RelatedSearch = ({ title, name }) => {
   const [data, setData] = useState([])
@@ -53,9 +54,9 @@ const RelatedSearch = ({ title, name }) => {
             {
               relatedData.map((item, index) => {
                 return (
-                  <li data-priority>
+                  <li data-priority key={index}>
                     <a
-                      href="search5244.html?q=pm+modi+live+today&FORM=QSRE2"
+                      href={`/result/${name + ' ' + item.subtitle}`}
                       h="ID=SERP,6823.1"
                     >
                       <div
