@@ -9,8 +9,10 @@ import RelatedSearch from './RelatedSearch'
 import Pagination from './Pagination'
 
 function WikiComponent(props) {
+  const slicedExtract = props?.extract?.slice(0,200);
+  console.log(props);
   return (
-    <div className="wiki_container" style={{ height: '22rem', width: '22rem' }}>
+    <div className="wiki_container" style={{width:'23rem',padding:'15px'}}>
       <img className="wiki_image_content" src={props.image} alt={props.title} />{' '}
       {/*   {props.image} */}
       <div
@@ -37,10 +39,12 @@ function WikiComponent(props) {
         style={{ textAlign: 'left', marginLeft: '10px' }}
       >
         <span>
-          {props.extract}{' '}
-          <a href={props.page} style={{ textDecoration: 'none' }}>
-            read more
-          </a>
+          {slicedExtract}{' '}
+          <a href={props?.link} style={{ textDecoration: 'none' }}>
+          {props?.extract?.length > 200 ? "...   " : "    "}
+          read more
+</a>
+
         </span>
       </div>
     </div>
@@ -139,6 +143,7 @@ export default function Result() {
       try {
         const response = await axios.get(`https://en.wikipedia.org/api/rest_v1/page/summary/${name}`);
         SetwikiData(response.data);
+        console.log(response.data)
       } catch (error) {
         console.error('Error fetching data from Wikipedia:', error);
       }
@@ -222,6 +227,7 @@ export default function Result() {
                 description={wiki.description}
                 extract={wiki.extract}
                 image = {wiki?.originalimage?.source} 
+                link = {wiki?.content_urls?.desktop?.page}
               />
             </div>
           </main>
