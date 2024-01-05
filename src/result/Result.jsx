@@ -38,7 +38,7 @@ function WikiComponent(props) {
         className="wiki_details"
         style={{ textAlign: 'left', marginLeft: '10px' }}
       >
-        <span>
+        <span style={{lineHeight:'23px'}}>
           {slicedExtract}{' '}
           <a href={props?.link} style={{ textDecoration: 'none' }}>
           {props?.extract?.length > 200 ? "...   " : "    "}
