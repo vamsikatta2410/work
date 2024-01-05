@@ -195,7 +195,7 @@ export default function Result() {
                 ))
                 }
 
-                <RelatedSearch title={wiki.title} />
+                <RelatedSearch title={wiki.title} name = {name}/>
                 <Pagination title={wiki.title} />
 
                 <li id="mfa_root" className="b_fabHide fabcolapse">
