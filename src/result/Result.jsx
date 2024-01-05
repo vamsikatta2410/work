@@ -7,6 +7,7 @@ import Header from '../Commons/Header'
 import image from '../assets/4.png'
 import RelatedSearch from './RelatedSearch'
 import Pagination from './Pagination'
+import NoDataFound from './NoDataFound'
 
 function WikiComponent(props) {
   const slicedExtract = props?.extract?.slice(0,200);
@@ -191,14 +192,15 @@ export default function Result() {
               style={{ display: 'flex', height: '100%' }}
             >
               <ol id="b_results" className>
-                {Totalresults?.map((results) => (
-                  <ResultComponent
-                    title={results.title}
-                    link={results.link}
-                    displayLink={results.displayLink}
-                    snippet={results.snippet}
-                  />
-                ))
+                {
+                  Totalresults? Totalresults?.map((results) => (
+                    <ResultComponent
+                      title={results.title}
+                      link={results.link}
+                      displayLink={results.displayLink}
+                      snippet={results.snippet}
+                    />
+                  )):<NoDataFound/>
                 }
 
                 <RelatedSearch title={wiki.title} name = {name}/>
@@ -226,9 +228,9 @@ export default function Result() {
               {/* image={wiki.originalimage.source} */}
               {
                 wiki?.extract?.length? (<WikiComponent
-                  title={wiki.title}
-                  description={wiki.description}
-                  extract={wiki.extract}
+                  title={wiki?.title}
+                  description={wiki?.description}
+                  extract={wiki?.extract}
                   image = {wiki?.originalimage?.source} 
                   link = {wiki?.content_urls?.desktop?.page}
                 />):''
