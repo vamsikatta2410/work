@@ -1,10 +1,7 @@
 import React from "react";
 import "./Style.css";
 import Container from "./Container";
-import Abc from "./SideImage";
-import SideImage from "./SideImage";
 import { useNavigate, useParams } from "react-router-dom";
-import mainLogo from "../BingVideo/google.png"
 import { useState } from "react";
 import Header from "../Commons/Header";
 
