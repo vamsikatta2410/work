@@ -12,9 +12,8 @@ function WikiComponent(props) {
   const slicedExtract = props?.extract?.slice(0,200);
   console.log(props);
   return (
-    <div className="wiki_container" style={{width:'23rem',padding:'15px'}}>
+    <div className="wiki_container" style={{width:'23rem',padding:'15px',height:'65vh'}}>
       <img className="wiki_image_content" src={props.image} alt={props.title} />{' '}
-      {/*   {props.image} */}
       <div
         className="wiki_heading"
         style={{ textAlign: 'left', marginBottom: '15px', marginLeft: '10px' }}
@@ -221,6 +220,7 @@ export default function Result() {
                   </div>
                 </li>
               </ol>
+
               {/* image={wiki.originalimage.source} */}
               <WikiComponent
                 title={wiki.title}
