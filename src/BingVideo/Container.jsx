@@ -1,5 +1,5 @@
 import React, { useState,useEffect } from "react";
-// import ImageData from "./ImageData";
+import axios from "axios";
 import ImageCard from "./ImageCard";
 import { useParams } from "react-router-dom";
 
@@ -7,18 +7,37 @@ function Container() {
   const { name } = useParams();
   const [imgData, setimgData] = useState([]);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8`);
-        const data = await response.json();
-        setimgData(data.items);
-      } catch (error) {
-        console.error(error);
+  useEffect(() => 
+  {
+    const fetchImages = async () =>
+    {
+      try
+      {
+        const response = await axios.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8');
+        console.log(response);
       }
-    };
+      catch(error)
+      {
+        console.log(error);
+      }
+    }
+
     fetchImages();
-  }, []);
+  },[]);
+
+
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     try {
+  //       const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8`);
+  //       const data = await response.json();
+  //       setimgData(data.items);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   fetchImages();
+  // }, []);
 
   // const videoLink = `https://www.youtube.com/watch?v=${imgData.videoId}`;
 
@@ -58,7 +77,7 @@ function Container() {
             data-iid="images.5996"
             data-layout="row"
           >
-            {imgData.map((val) => {
+            {imgData?.map((val) => {
               return (
                 <ImageCard
                   channelTitle={val.channelTitle}
