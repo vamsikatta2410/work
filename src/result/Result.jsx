@@ -175,7 +175,7 @@ export default function Result() {
         <div id="b_content">
           <main aria-label="Search Results">
             {
-              wiki.extract?.length? (<div className="aiResult example">
+              wiki.extract?.length? (<div className="aiResult example" style={{height:'40px'}}>
               <h1 style={{fontWeight:'700',color:'black',fontSize:'35px'}}>
                 {wiki.title}
               </h1>

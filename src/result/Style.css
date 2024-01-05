@@ -9346,8 +9346,8 @@ a.wcardc:hover h2 {
 }
 
 #b_content .aiResult {
-    width: 90%;
-    min-height: 20rem;
+    min-height: 250px;
+    width: 60%;
     background-color: #fff;
     border-radius: 10px;
     border: 0 solid lightgray;
