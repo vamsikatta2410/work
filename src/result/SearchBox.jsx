@@ -15,15 +15,10 @@ import './../assets/css/style.css'
 const SearchBox = () => {
     return (
         <header>
-            {/* //    <!-- preloader end  --> */}
-
-            {/* //    <!-- back-to-top-start  --> */}
             <button className="scroll-top scroll-to-target" data-target="html">
                 <i className="far fa-angle-double-up"></i>
             </button>
-            {/* //    <!-- back-to-top-end  --> */}
-
-            {/* //    <!-- search popup start --> */}
+            
             <div className="search__popup">
                 <div className="container">
                     <div className="row">
@@ -63,12 +58,9 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            {/* <!-- search popup end --> */}
-
-            {/* <!-- tp-header-area-start --> */}
+           
             <header className="header-bottom__transparent z-index-6 tp-header-height">
 
-                {/* <!-- header top area --> */}
                 <div className="header-top__area header-top__space z-index-3 d-none d-md-block tp-header-top-animation">
                     <div className="container">
                         <div className="row align-items-start">
@@ -92,7 +84,6 @@ const SearchBox = () => {
                     </div>
                 </div>
 
-                {/* <!-- header bottom --> */}
                 <div id="header-sticky" className="header-bottom__area header-mob-space header-bottom__area-2 header-bottom__transparent z-index-5">
                     <div className="container">
                         <div className="row align-items-center">
@@ -191,12 +182,8 @@ const SearchBox = () => {
                     </div>
                 </div>
 
-
-                {/* <!-- tp-header-area-end --> */}
-
             </header>
 
-            {/* <!-- tp-offcanvus-area-start --> */}
             <div className="tpoffcanvas-area">
                 <div className="tpoffcanvas">
                     <div className="tpoffcanvas__close-btn">
@@ -235,14 +222,12 @@ const SearchBox = () => {
                 </div>
             </div>
             <div className="body-overlay"></div>
-            {/* <!-- tp-offcanvus-area-end --> */}
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
 
                     <main className="fix">
 
-                        {/* <!-- tp-slider-area-start --> */}
                         <div className="tp-hero__area tp-hero__pl-pr">
                             <div className="tp-hero__bg p-relative">
                                 <div className="tp-hero-bg tp-hero-bg-single">
