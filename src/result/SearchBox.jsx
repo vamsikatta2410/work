@@ -1,4 +1,15 @@
-import React from 'react';
+import React,{useState,useEffect} from 'react';
+import {
+    FaFacebookF,
+    FaGlobe,
+    FaInstagram,
+    FaQuoteRight,
+    FaTwitter,
+    FaLinkedin,
+    FaGithub,
+    FaArrowRight,
+} from 'react-icons/fa'
+
 import './../assets/css/bootstrap.min.css'
 import './../assets/css/animate.css'
 import './../assets/css/custom-animation.css'
@@ -12,7 +23,36 @@ import './../assets/css/magnific-popup.css'
 import './../assets/css/spacing.css'
 import './../assets/css/style.css'
 
+import {Link,useParams,useNavigate} from 'react-router-dom'
+import ContactForm from '../New Home/ContactForm';
+
 const SearchBox = () => {
+
+    const [searchQuery, setSearchQuery] = useState('')
+    const navigate = useNavigate()
+
+    const handleSearch = (e) => {
+        e.preventDefault()
+        navigate(`/result/${searchQuery}`)
+    }
+
+    const handleSubmit = (e) => {
+        const scriptURL = ''
+        const form = document.forms['formName']
+    
+        form.addEventListener('submit', (e) => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then((response) =>
+              alert('Thank you! your form is submitted successfully.')
+            )
+            .then(() => {
+              window.location.reload()
+            })
+            .catch((error) => console.error('Error!', error.message))
+        })
+    }
+
     return (
         <header>
             <button className="scroll-top scroll-to-target" data-target="html">
@@ -255,9 +295,9 @@ const SearchBox = () => {
                                                     </div>
                                                 </div>
                                                 <div className="tp-hero__input p-relative wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                                                    <form action="#">
+                                                    <form onSubmit={handleSearch} method='post'>
                                                         <div className="p-relative">
-                                                            <input type="text" placeholder="Business email adress" />
+                                                            <input type="text" placeholder="Search" name='search' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)}/>
                                                             <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                                                                 xmlns="http://www.w3.org/2000/svg">
                                                                 <path
@@ -270,8 +310,8 @@ const SearchBox = () => {
                                                                     stroke-linejoin="round" />
                                                             </svg>
                                                         </div>
-                                                        <button className="tp-btn tp-btn-hover alt-color-black">
-                                                            <span>Get A Demo</span>
+                                                        <button type='submit' className="tp-btn tp-btn-hover alt-color-black">
+                                                            <span>Search</span>
                                                             <b></b>
                                                         </button>
                                                     </form>
