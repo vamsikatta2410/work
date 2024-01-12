@@ -1,12 +1,12 @@
 import React from 'react';
 import NewHome from './New Home/NewHome';
 import Result from './result/Result';
-import News from './news/News';
-import Videos from './BingVideo/BingVideo';
-import Images from './SearchBf77/Search';
+import News from './news/News'
+import Videos from './BingVideo/BingVideo'
+import Images from './SearchBf77/Search'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import ComingSoon from './ComingSoon/ComingSoon';
-import NewHomePage from './result/NewHomePage';
+import ComingSoon from './ComingSoon/ComingSoon'
+import NewHomePage from './result/NewHomePage'
 import { Helmet } from 'react-helmet'
 
 
@@ -16,18 +16,13 @@ function App() {
       <Helmet>
         <script src="/js/vendor/jquery.js"></script>
         <script src="/js/vendor/waypoints.js"></script>
-        <script src="/js/bootstrap.bundle.min.js"></script>
         <script src="/js/wow.js"></script>
-        <script src="/js/slick.min.js"></script>
         <script src="/js/magnific-popup.js"></script>
-        <script src="/js/counterup.js"></script>
         <script src="/js/nice-select.js"></script>
         <script src="/js/swiper-bundle.js"></script>
         <script src="/js/meanmenu.js"></script>
-        <script src="/js/tilt.jquery.js"></script>
         <script src="/js/isotope-pkgd.js"></script>
         <script src="/js/imagesloaded-pkgd.js"></script>
-        <script src="/js/ajax-form.js"></script>
         <script src="/js/gsap.min.js"></script>
         <script src="/js/ScrollTrigger.min.js"></script>
         <script src="/js/ScrollSmoother.min.js"></script>
