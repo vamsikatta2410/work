@@ -32,16 +32,10 @@ function App() {
         <script src="/js/ScrollTrigger.min.js"></script>
         <script src="/js/ScrollSmoother.min.js"></script>
         <script src="/js/split-text.min.js"></script>
-
-        {/* <!-- Add these lines before your main.js script tag --> */}
         <script src="https://unpkg.com/gsap@3.9.1/dist/gsap.min.js"></script>
         <script src="https://unpkg.com/gsap@3.9.1/dist/ScrollTrigger.min.js"></script>
         <script src="https://unpkg.com/gsap@3.9.1/dist/ScrollToPlugin.min.js"></script>
-
-        {/* <!-- Your main.js script --> */}
         <script src="/js/main.js"></script>
-
-
       </Helmet>
 
       <Router>

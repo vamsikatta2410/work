@@ -105,56 +105,6 @@ const SearchBox = () => {
                                     </div>
                                 </div>
                                 <div className="col-xxl-6 col-xl-5 col-lg-5 d-none d-lg-block">
-                                    <div className="header-bottom__main-menu">
-                                        <nav id="mobile-menu">
-                                            <ul>
-                                                <li>
-                                                    <Link to='/home'>Home</Link>
-                                                    <ul className="submenu">
-                                                        {
-                                                            homeItems.map((item,index)=>{
-                                                                return (
-                                                                    <li key={index}><Link to={item.link}>{item.title}</Link></li>
-                                                                )
-                                                            })
-                                                        }
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Pages</a>
-                                                    <ul className="submenu">
-                                                        {
-                                                            pageItems.map((item,index) =>{
-                                                                return (
-                                                                    <li key={index}><Link to={item.link}>{item.title}</Link></li>
-                                                                )
-                                                            })
-                                                        }
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="blog-details.html">Blog</a>
-                                                    <ul className="submenu">
-                                                        {
-                                                            blogData.map((item,index) => {
-                                                                return (
-                                                                    <li key={index}><Link to={item.link}>{item.title}</Link></li>
-                                                                )
-                                                            })
-                                                        }
-                                                    </ul>
-                                                </li>
-                                                <li>
-                                                    <a href="project-details.html">Projects</a>
-                                                    <ul className="submenu">
-                                                        <li><a href="project.html">Project</a></li>
-                                                        <li><a href="project-details.html">Project Details</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
                                 </div>
                                 <div className="col-xxl-4 col-xl-5 col-lg-5 col-md-8 col-6">
                                     <div className="header-bottom__right d-flex align-items-center justify-content-end">
