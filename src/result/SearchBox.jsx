@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import {
-    FaFacebookF,
-    FaGlobe,
-    FaInstagram,
-    FaQuoteRight,
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaArrowRight,
-} from 'react-icons/fa'
+    FaMagnifyingGlass
+} from 'react-icons/fa6'
 
 import './../assets/css/bootstrap.min.css'
 import './../assets/css/animate.css'
@@ -55,20 +48,7 @@ const SearchBox = () => {
     }
 
     return (
-        <>
             <body>
-
-                {/* <div id="preloader">
-   <div className="preloader">
-      <span></span>
-      <span></span>
-   </div>
-</div> */}
-
-                <button className="scroll-top scroll-to-target" data-target="html">
-                    <i className="far fa-angle-double-up"></i>
-                </button>
-
                 <div className="search__popup">
                     <div className="container">
                         <div className="row">
@@ -77,7 +57,7 @@ const SearchBox = () => {
                                     <div className="search__top d-flex justify-content-between align-items-center">
                                         <div className="search__logo">
                                             <a href="home-main.html">
-                                                <img src="assets/img/logo/logo-white.png" alt="" />
+                                                
                                             </a>
                                         </div>
                                         <div className="search__close">
@@ -88,20 +68,6 @@ const SearchBox = () => {
                                                 </svg>
                                             </button>
                                         </div>
-                                    </div>
-                                    <div className="search__form">
-                                        <form action="#">
-                                            <div className="search__input">
-                                                <input className="search-input-field" type="text" placeholder="Type here to search..." />
-                                                <span className="search-focus-border"></span>
-                                                <button type="submit">
-                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </button>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -116,18 +82,12 @@ const SearchBox = () => {
                             <div className="row align-items-start">
                                 <div className="col-6">
                                     <div className="header-top__link">
-                                        <span>Offer <i>is going on till Friday, $2.99/mo.</i></span>
-                                        <a href="#">
-                                            <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M1.40918 9L5.591 5L1.40918 1" stroke="white" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </a>
+                                        <span><i></i></span>
                                     </div>
                                 </div>
                                 <div className="col-6">
                                     <div className="header-top__support text-end">
-                                        <span>Get Support: <a href="tel:806(000)88899">+806 (000) 888 99</a></span>
+                                        <span><a href="#"></a></span>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +99,7 @@ const SearchBox = () => {
                             <div className="row align-items-center">
                                 <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                                     <div className="header-bottom__logo">
-                                        <a href="index.html"><img src="assets/img/logo/logo-black.png" alt="" /></a>
+                                        <Link to='/home'/>
                                     </div>
                                 </div>
                                 <div className="col-xxl-6 col-xl-5 col-lg-5 d-none d-lg-block">
@@ -147,7 +107,7 @@ const SearchBox = () => {
                                         <nav id="mobile-menu">
                                             <ul>
                                                 <li>
-                                                    <a href="index.html">Home</a>
+                                                    <Link to='/home'>Home</Link>
                                                     <ul className="submenu">
                                                         <li><a href="index.html">Data analytics</a></li>
                                                         <li><a href="index-2.html">Payment Gateway</a></li>
@@ -294,7 +254,7 @@ const SearchBox = () => {
                                                 <div className="tp-hero__content-box text-center z-index-3">
                                                     <div className="tp-hero__title-box p-relative">
                                                         <h2 className="tp-hero__hero-title tp-title-anim">
-                                                            The Leading Customer<br />Data Platform
+                                                            <img src={mainLogo} alt='bsearch'/>
                                                         </h2>
                                                         <div className="tp-hero__title-shape d-none d-sm-block">
                                                             <svg width="491" height="24" viewBox="0 0 491 26" fill="none"
@@ -308,21 +268,11 @@ const SearchBox = () => {
                                                     <div className="tp-hero__input p-relative wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
                                                         <form onSubmit={handleSearch} method='post'>
                                                             <div className="p-relative">
+                                                                <FaMagnifyingGlass/>
                                                                 <input type="text" placeholder="Search" name='search' value={searchQuery} onChange={(e)=> setSearchQuery(e.target.value)}/>
-                                                                <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path
-                                                                        d="M13 14.6H5C2.6 14.6 1 13.4 1 10.6V5C1 2.2 2.6 1 5 1H13C15.4 1 17 2.2 17 5V10.6C17 13.4 15.4 14.6 13 14.6Z"
-                                                                        stroke="#5F6168" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                    <path opacity="0.4"
-                                                                        d="M13 5.39993L10.496 7.39993C9.672 8.05593 8.32 8.05593 7.496 7.39993L5 5.39993"
-                                                                        stroke="#5F6168" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                                                                        stroke-linejoin="round" />
-                                                                </svg>
                                                             </div>
                                                             <button className="tp-btn tp-btn-hover alt-color-black" type='submit'>
-                                                                <span>Get A Demo</span>
+                                                                <span>Search</span>
                                                                 <b></b>
                                                             </button>
                                                         </form>
@@ -1953,30 +1903,7 @@ const SearchBox = () => {
                     </div>
                 </div>
 
-
-                {/* <!-- JS here -->
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/waypoints.js"></script>
-<script src="assets/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/wow.js"></script>
-<script src="assets/js/slick.min.js"></script>
-<script src="assets/js/magnific-popup.js"></script>
-<script src="assets/js/counterup.js"></script>
-<script src="assets/js/nice-select.js"></script>
-<script src="assets/js/swiper-bundle.js"></script>
-<script src="assets/js/meanmenu.js"></script>
-<script src="assets/js/tilt.jquery.js"></script>
-<script src="assets/js/isotope-pkgd.js"></script>
-<script src="assets/js/imagesloaded-pkgd.js"></script>
-<script src="assets/js/ajax-form.js"></script>
-<script src="assets/js/gsap.min.js"></script>
-<script src="assets/js/ScrollTrigger.min.js"></script>
-<script src="assets/js/ScrollSmoother.min.js"></script>
-<script src="assets/js/split-text.min.js"></script>
-<script src="assets/js/main.js"></script> */}
-
             </body>
-        </>
 
     )
 }
