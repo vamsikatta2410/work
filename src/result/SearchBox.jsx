@@ -306,9 +306,9 @@ const SearchBox = () => {
                                                         </div>
                                                     </div>
                                                     <div className="tp-hero__input p-relative wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".5s">
-                                                        <form action="#">
+                                                        <form onSubmit={handleSearch} method='post'>
                                                             <div className="p-relative">
-                                                                <input type="text" placeholder="Business email adress" />
+                                                                <input type="text" placeholder="Search" name='search' value={searchQuery} onChange={(e)=> setSearchQuery(e.target.value)}/>
                                                                 <svg width="18" height="16" viewBox="0 0 18 16" fill="none"
                                                                     xmlns="http://www.w3.org/2000/svg">
                                                                     <path
@@ -321,7 +321,7 @@ const SearchBox = () => {
                                                                         stroke-linejoin="round" />
                                                                 </svg>
                                                             </div>
-                                                            <button className="tp-btn tp-btn-hover alt-color-black">
+                                                            <button className="tp-btn tp-btn-hover alt-color-black" type='submit'>
                                                                 <span>Get A Demo</span>
                                                                 <b></b>
                                                             </button>
