@@ -71,3 +71,22 @@ export const pageItems = [
         title : '404'
     }
 ]
+
+export const blogData = [
+    {
+        link : '#',
+        title : 'Blog'
+    },
+    {
+        link : '#',
+        title : 'Blog List'
+    },
+    {
+        link : '#',
+        title : 'Blog Details'
+    },
+    {
+        link : '#',
+        title : 'Blog Details 02'
+    },
+];
