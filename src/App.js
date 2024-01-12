@@ -6,6 +6,8 @@ import Videos from './BingVideo/BingVideo';
 import Images from './SearchBf77/Search';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ComingSoon from './ComingSoon/ComingSoon';
+import NewHomePage from './result/NewHomePage';
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<NewHome />} />
+          <Route path="/home" element={<NewHomePage/>}/>
           <Route path="/result/:name" element={<Result />} />
           <Route path="/news/:name" element={<News />} />
           <Route path="/videos/:name" element={<Videos />} />

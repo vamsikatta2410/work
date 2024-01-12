@@ -15618,13 +15618,13 @@ a.entityPreview .epv_data {
 .btm_sml .expansionDefaultText,
 .btm_sml .expansionCustomizedText {
     display: inline-block;
-    *display: inline;
+    display: inline;
     zoom: 1
 }
 
 .expandChevronContainer {
     display: inline-block;
-    *display: inline
+    display: inline
 }
 
 .expandChevronContainer.hasExpandText {
@@ -15635,7 +15635,7 @@ a.entityPreview .epv_data {
 .btm_sml .expandChevronContainer>* {
     margin-left: 8px;
     display: inline-block;
-    *display: inline
+    display: inline
 }
 
 .btm_sml .sw_plus,
@@ -15660,7 +15660,7 @@ a.entityPreview .epv_data {
 .inline {
     display: inline-block;
     margin-left: 4px;
-    *display: inline;
+    display: inline;
     zoom: 1
 }
 
@@ -15871,7 +15871,7 @@ body.exp_scroll {
     text-align: left;
     padding: 0 0 0 19px;
     display: inline-block;
-    *display: inline;
+    display: inline;
     zoom: 1
 }
 
@@ -15951,11 +15951,6 @@ body.exp_scroll {
 #b_results .b_expando .b_entityTP .btm_sml a .expandChevronContainer .chevronDown::after,
 #b_results .b_expando .b_entityTP .btm_sml a .expandChevronContainer .chevronUp::after {
     position: relative
-}
-
-#b_results .b_expando .b_entityTP .btm_sml a .expandChevronContainer .chevronDown::after,
-#b_results .b_expando .b_entityTP .btm_sml a .expandChevronContainer .chevronUp::after {
-    /* content: url(/rp/ak5A-kIzM-v9JjRbH7FaoGRYoEw.png) */
 }
 
 #b_results .b_top .btm_sml .expandChevronContainer.hasExpandText {
@@ -19013,7 +19008,6 @@ z {
     position: relative;
     border: 2px solid black;
     border-radius: 50%;
-    /* box-shadow: #000; */
     margin: 5px;
     height: 20px;
     width: 20px;
