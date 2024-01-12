@@ -22,6 +22,7 @@ import './../assets/css/font-awesome-pro.css'
 import './../assets/css/magnific-popup.css'
 import './../assets/css/spacing.css'
 import './../assets/css/style.css'
+import mainLogo from '../assets/google.png'
 
 import {Link,useParams,useNavigate} from 'react-router-dom'
 import ContactForm from '../New Home/ContactForm';
@@ -54,7 +55,7 @@ const SearchBox = () => {
     }
 
     return (
-        <header>
+        <>
             <button className="scroll-top scroll-to-target" data-target="html">
                 <i className="far fa-angle-double-up"></i>
             </button>
@@ -105,19 +106,19 @@ const SearchBox = () => {
                     <div className="container">
                         <div className="row align-items-start">
                             <div className="col-6">
-                                <div className="header-top__link">
-                                    <span>Offer <i>is going on till Friday, $2.99/mo.</i></span>
+                                {/* <div className="header-top__link">
+                                    <span></span>
                                     <a href="#">
                                         <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M1.40918 9L5.591 5L1.40918 1" stroke="white" stroke-width="1.5"
                                                 stroke-linecap="round" stroke-linejoin="round" />
                                         </svg>
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="col-6">
                                 <div className="header-top__support text-end">
-                                    <span>Get Support: <a href="tel:806(000)88899">+806 (000) 888 99</a></span>
+                                    <span></span>
                                 </div>
                             </div>
                         </div>
@@ -283,7 +284,7 @@ const SearchBox = () => {
                                             <div className="tp-hero__content-box text-center z-index-3">
                                                 <div className="tp-hero__title-box p-relative">
                                                     <h2 className="tp-hero__hero-title tp-title-anim">
-                                                        The Leading Customer<br />Data Platform
+                                                        <img src={mainLogo}/>
                                                     </h2>
                                                     <div className="tp-hero__title-shape d-none d-sm-block">
                                                         <svg width="491" height="24" viewBox="0 0 491 26" fill="none"
@@ -378,7 +379,7 @@ const SearchBox = () => {
                     </main>
                 </div>
             </div>
-        </header>
+        </>
 
     )
 }
