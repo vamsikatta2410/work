@@ -17,6 +17,8 @@ import './../assets/css/spacing.css'
 import './../assets/css/style.css'
 import mainLogo from '../assets/google.png'
 
+import { homeItems } from './PageData';
+
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import ContactForm from '../New Home/ContactForm';
 
@@ -109,11 +111,13 @@ const SearchBox = () => {
                                                 <li>
                                                     <Link to='/home'>Home</Link>
                                                     <ul className="submenu">
-                                                        <li><a href="index.html">Data analytics</a></li>
-                                                        <li><a href="index-2.html">Payment Gateway</a></li>
-                                                        <li><a href="index-3.html">CRM Software</a></li>
-                                                        <li><a href="index-4.html">Security Software</a></li>
-                                                        <li><a href="index-5.html">Saas</a></li>
+                                                        {
+                                                            homeItems.map((item,index)=>{
+                                                                return (
+                                                                    <li><Link to={item.link}>{item.title}</Link></li>
+                                                                )
+                                                            })
+                                                        }
                                                     </ul>
                                                 </li>
                                                 <li>
