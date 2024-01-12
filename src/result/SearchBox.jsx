@@ -17,7 +17,7 @@ import './../assets/css/spacing.css'
 import './../assets/css/style.css'
 import mainLogo from '../assets/google.png'
 
-import { homeItems } from './PageData';
+import { homeItems,pageItems } from './PageData';
 
 import { Link, useParams, useNavigate } from 'react-router-dom'
 import ContactForm from '../New Home/ContactForm';
@@ -114,7 +114,7 @@ const SearchBox = () => {
                                                         {
                                                             homeItems.map((item,index)=>{
                                                                 return (
-                                                                    <li><Link to={item.link}>{item.title}</Link></li>
+                                                                    <li key={index}><Link to={item.link}>{item.title}</Link></li>
                                                                 )
                                                             })
                                                         }
@@ -123,18 +123,13 @@ const SearchBox = () => {
                                                 <li>
                                                     <a href="#">Pages</a>
                                                     <ul className="submenu">
-                                                        <li><a href="about.html">About</a></li>
-                                                        <li><a href="service.html">Service</a></li>
-                                                        <li><a href="service-details.html">Service Details</a></li>
-                                                        <li><a href="team.html">Team</a></li>
-                                                        <li><a href="team-details.html">Team Details</a></li>
-                                                        <li><a href="career.html">Career</a></li>
-                                                        <li><a href="career-details.html">Career Details</a></li>
-                                                        <li><a href="integrations.html">Integrations</a></li>
-                                                        <li><a href="price.html">Price</a></li>
-                                                        <li><a href="register.html">Register</a></li>
-                                                        <li><a href="sign-in.html">Signin</a></li>
-                                                        <li><a href="404.html">404</a></li>
+                                                        {
+                                                            pageItems.map((item,index) =>{
+                                                                return (
+                                                                    <li key={index}><Link to={item.link}>{item.title}</Link></li>
+                                                                )
+                                                            })
+                                                        }
                                                     </ul>
                                                 </li>
                                                 <li>
