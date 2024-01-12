@@ -15,12 +15,6 @@ import './../assets/css/style.css'
 const SearchBox = () => {
     return (
         <header>
-            <div id="preloader">
-                <div className="preloader">
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
             {/* //    <!-- preloader end  --> */}
 
             {/* //    <!-- back-to-top-start  --> */}
