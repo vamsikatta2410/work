@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ComingSoon from './ComingSoon/ComingSoon'
 import NewHomePage from './result/NewHomePage'
 import { Helmet } from 'react-helmet'
+import Contact from './result/Contact';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/videos/:name" element={<Videos />} />
           <Route path="/images/:name" element={<Images />} />
           <Route path="/ComingSoon/" element={<ComingSoon />} />
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </Router>
     </>

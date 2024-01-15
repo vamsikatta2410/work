@@ -3,6 +3,10 @@ import {
     FaMagnifyingGlass
 } from 'react-icons/fa6'
 
+import Contact from './Contact';
+
+import { FaGlobe } from 'react-icons/fa'
+
 import './../assets/css/bootstrap.min.css'
 import './../assets/css/animate.css'
 import './../assets/css/custom-animation.css'
@@ -15,7 +19,12 @@ import './../assets/css/font-awesome-pro.css'
 import './../assets/css/magnific-popup.css'
 import './../assets/css/spacing.css'
 import './../assets/css/style.css'
+import './../New Home/Style.css'
+
 import mainLogo from '../assets/google.png'
+import hero41 from '../assets/img/hero/hero-4-1.png'
+import hero43 from '../assets/img/hero/hero-4-3.png'
+
 
 import { homeItems, pageItems, blogData } from './PageData';
 
@@ -52,7 +61,7 @@ const SearchBox = () => {
     return (
 
         <body>
-            
+
             <button className="scroll-top scroll-to-target" data-target="html">
                 <i className="far fa-angle-double-up"></i>
             </button>
@@ -61,12 +70,15 @@ const SearchBox = () => {
                 <div id="header-sticky" className="header-bottom__area header-blur header-bottom__transparent header-bottom__plr-4 z-index-3">
                     <div className="container-fluid p-0">
                         <div className="row g-0 align-items-center">
+
+                            {/* Display logo  */}
                             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                                 <div className="header-bottom__logo">
-                                    <a className="white-logo" href="index.html"><img src="assets/img/logo/logo-white.png" alt=""/></a>
-                                    <a className="black-logo" href="index.html"><img src="assets/img/logo/logo-black.png" alt=""/></a>
+                                    <a className="white-logo" href="index.html"><img src={mainLogo} alt="" /></a>
                                 </div>
                             </div>
+
+                            {/* Navbar items   */}
                             <div className="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block">
                                 <div className="header-bottom__main-menu header-bottom__main-menu-4">
                                     <nav id="mobile-menu">
@@ -120,11 +132,13 @@ const SearchBox = () => {
                                     </nav>
                                 </div>
                             </div>
+
+                            {/* Login and get in touch  */}
                             <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-6">
                                 <div className="header-bottom__right d-flex align-items-center justify-content-end">
                                     <div className="header-bottom__action header-bottom__action-4">
                                         <a className="d-none d-lg-inline-block header-bottom__action-2 border-none" href="register.html">
-                                            <span>Log In</span>
+                                            <span><Link to='/contact'>Log In</Link></span>
                                         </a>
                                     </div>
                                     <div className="header-bottom__btn d-flex align-items-center">
@@ -148,106 +162,156 @@ const SearchBox = () => {
                     </div>
                     <div className="tpoffcanvas__logo text-center">
                         <a href="index.html">
-                            <img src="../assets/img/logo/logo-white.png" alt=""/>
+                            <img src={mainLogo} alt="" />
                         </a>
-                    </div>
-                    <div className="mobile-menu"></div>
-                    <div className="tpoffcanvas__instagram text-center">
-                        <div className="tpoffcanvas__instagram-title">
-                            <h4>instagram</h4>
-                        </div>
-                        <a href="#"><img src="../assets/img/project/project-inner-4.jpg" alt=""/></a>
-                        <a href="#"><img src="../assets/img/project/project-inner-5.jpg" alt=""/></a>
-                        <a href="#"><img src="../assets/img/project/project-inner-6.jpg" alt=""/></a>
-                        <a href="#"><img src="../assets/img/project/project-inner-7.jpg" alt=""/></a>
-                    </div>
-                    <div className="tpoffcanvas__info text-center">
-                        <h4 className="offcanva-title">we are here</h4>
-                        <a href="https://www.google.com/maps/@23.506657,90.3443647,7z" target="_blank">
-                            27 Division St, New York, <br/>
-                                NY 10002, USA
-                        </a>
-                    </div>
-                    <div className="tpoffcanvas__social">
-                        <div className="social-icon text-center">
-                            <a href="#"><i className="fab fa-twitter"></i></a>
-                            <a href="#"><i className="fab fa-instagram"></i></a>
-                            <a href="#"><i className="fab fa-facebook-square"></i></a>
-                            <a href="#"><i className="fab fa-dribbble"></i></a>
-                        </div>
                     </div>
                 </div>
             </div>
-            <div className="body-overlay"></div>
 
+
+            <div className="body-overlay"></div>
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
 
-
                     <main className="fix">
                         <div className="tp-hero-area tp-hero-overlay blue-bg pt-200 pb-115 p-relative">
-                            <div className="tp-hero-4-shape-img  wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".5s">
-                                <img src="assets/img/hero/hero-shape-4-1.png" alt=""/>
-                            </div>
                             <div className="tp-hero-glob-img">
-                                <img src="assets/img/hero/hero-4-3.png" alt=""/>
+                                <img src={hero43} alt="" />
                             </div>
+
                             <div className="container">
                                 <div className="row">
                                     <div className="col-xl-7 col-lg-7">
                                         <div className="tp-hero-4-section-box pt-10 z-index-3">
-                                            <h5 className="tp-section-subtitle-4 tp-char-animation"> Wellcome to Softec</h5>
-                                            <h3 className="tp-hero-title-4 pb-35 tp-char-animation ">A1-Driven Cyber Security Solutions</h3>
-                                            <a className="tp-btn-yellow-border wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s" href="contact.html"><span>Get in Touch<i className="far fa-angle-right"></i></span></a>
+                                            {/* <form onSubmit={handleSearch}
+                                                method="post"
+                                            >
+                                                <div className="form-group">
+                                                    <FaGlobe size={20} />
+                                                    <input
+                                                        type="text"
+                                                        name="search"
+                                                        placeholder="Search"
+                                                        value={searchQuery}
+                                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <button
+                                                        type="submit"
+                                                    >
+                                                        <span>
+                                                            Search <i className="bi bi-arrow-right ms-1" />
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </form> */}
+
+                                            {/* <form onSubmit={handleSearch} method="post" style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', margin: '0 auto' }}>
+                                                <div style={{ flex: '1', border: '1px solid #dfe1e5', borderRadius: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingLeft: '16px' }}>
+                                                    <FaGlobe size={20} style={{ color: '#70757a', marginRight: '8px' }} />
+                                                    <input
+                                                        type="text"
+                                                        name="search"
+                                                        placeholder="Search Google"
+                                                        value={searchQuery}
+                                                        style={{
+                                                            flex: '1',
+                                                            border: 'none',
+                                                            padding: '8px',
+                                                            outline: 'none',
+                                                            fontSize: '16px',
+                                                        }}
+                                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                                    />
+                                                </div>
+                                                <div style={{ marginLeft: '8px' }}>
+                                                    <button type="submit" style={{ backgroundColor: '#4285f4', color: '#ffffff', border: '1px solid #4285f4', borderRadius: '24px', padding: '8px 16px', cursor: 'pointer' }}>
+                                                        <span>
+                                                            Search <i className="bi bi-arrow-right ms-1" />
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </form> */}
+
+                                            <form onSubmit={handleSearch} method="post" style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', margin: '0 auto' }}>
+                                                <div style={{ flex: '1', border: '1px solid #dfe1e5', borderRadius: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingLeft: '16px' }}>
+                                                    <FaGlobe size={20} style={{ color: '#70757a', marginRight: '12px' }} />
+                                                    <input
+                                                        type="text"
+                                                        name="search"
+                                                        placeholder="Search Google"
+                                                        value={searchQuery}
+                                                        style={{
+                                                            flex: '1',
+                                                            border: 'none',
+                                                            padding: '12px',  // Increase the padding for more space
+                                                            outline: 'none',
+                                                            fontSize: '16px',
+                                                            boxShadow: 'none',  // Remove the default input box shadow
+                                                        }}
+                                                        onChange={(e) => setSearchQuery(e.target.value)}
+                                                    />
+                                                </div>
+                                                <div style={{ marginLeft: '8px' }}>
+                                                    <button type="submit" style={{ backgroundColor: '#4285f4', color: '#ffffff', border: '1px solid #4285f4', borderRadius: '24px', padding: '12px 16px', cursor: 'pointer' }}>
+                                                        <span>
+                                                            Search <i className="bi bi-arrow-right ms-1" />
+                                                        </span>
+                                                    </button>
+                                                </div>
+                                            </form>
+
+
                                         </div>
                                     </div>
                                     <div className="col-xl-5 col-lg-5">
                                         <div className="tp-hero-4-img-wrapper p-relative">
                                             <div className="tp-hero-4-main-img text-center z-index-3">
-                                                <img src="../assets/img/hero/hero-4-1.png" alt=""/>
+                                                <img src="../assets/img/hero/hero-4-1.png" alt="" />
                                             </div>
                                             <div className="tp-hero-4-sub-img z-index-3">
-                                                <img src="../assets/img/hero/hero-4-2.png" alt=""/>
+                                                <img src="../assets/img/hero/hero-4-2.png" alt="" />
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div className="tp-barnd-area tp-barnd-plr blue-bg z-index-3 fix">
                             <div className="tp-barnd-main-wrapper p-relative">
                                 <div className="tp-barnd-shape-1">
-                                    <img src="../assets/img/brand/image_01.png" alt=""/>
+                                    <img src="../assets/img/brand/image_01.png" alt="" />
                                 </div>
                                 <div className="container">
                                     <div className="row align-items-center">
                                         <div className="col-xl-4 col-lg-4">
                                             <div className="tp-barnd-left-item d-flex align-items-center">
                                                 <div className="tp-barnd-icon">
-                                                    <img src="../assets/img/hero/hero-slider-icon-1.jpg" alt=""/>
+                                                    <img src="../assets/img/hero/hero-slider-icon-1.jpg" alt="" />
                                                 </div>
-                                                <h5 className="tp-barnd-title-sm">2k Companies <br/> Trusted in the world</h5>
+                                                <h5 className="tp-barnd-title-sm">2k Companies <br /> Trusted in the world</h5>
                                             </div>
                                         </div>
                                         <div className="col-xl-8 col-lg-8">
                                             <div className="tp-barnd-slider-wrapper">
                                                 <div className="tp-barnd-slider-active p-relative">
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-2.jpg" alt=""/>
+                                                        <img src="../assets/img/hero/hero-slider-icon-2.jpg" alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-3.jpg" alt=""/>
+                                                        <img src="../assets/img/hero/hero-slider-icon-3.jpg" alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-4.jpg" alt=""/>
+                                                        <img src="../assets/img/hero/hero-slider-icon-4.jpg" alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-5.jpg" alt=""/>
+                                                        <img src="../assets/img/hero/hero-slider-icon-5.jpg" alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-3.jpg" alt=""/>
+                                                        <img src="../assets/img/hero/hero-slider-icon-3.jpg" alt="" />
                                                     </div>
                                                 </div>
                                             </div>
@@ -256,10 +320,10 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div className="tp-service-area blue-bg p-relative pt-115 pb-105">
                             <div className="tp-service-shape-right z-index">
-                                <img src="../assets/img/service/service-shape-right.png" alt=""/>
+                                <img src="../assets/img/service/service-shape-right.png" alt="" />
                             </div>
                             <div className="container">
                                 <div className="row align-items-end mb-60">
@@ -271,7 +335,7 @@ const SearchBox = () => {
                                     </div>
                                     <div className="col-xl-6 col-lg-6  wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".5s">
                                         <div className="tp-service-sction-content pb-15 d-flex justify-content-md-start justify-content-end">
-                                            <p>Softec provides all customer management <br/> service within one software.
+                                            <p>Softec provides all customer management <br /> service within one software.
                                             </p>
                                         </div>
                                     </div>
@@ -281,7 +345,7 @@ const SearchBox = () => {
                                         <div className="col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right service-border-trang-1">
                                             <div className="tp-service-4-item z-index">
                                                 <div className="tp-service-4-icon">
-                                                    <img src="../assets/img/service/sv-icon-4-1.png" alt=""/>
+                                                    <img src="../assets/img/service/sv-icon-4-1.png" alt="" />
                                                 </div>
                                                 <div className="tp-service-4-content">
                                                     <span>Cloud Backup</span>
@@ -293,7 +357,7 @@ const SearchBox = () => {
                                         <div className="col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right service-border-trang-2">
                                             <div className="tp-service-4-item z-index">
                                                 <div className="tp-service-4-icon">
-                                                    <img src="../assets/img/service/sv-icon-4-2.png" alt=""/>
+                                                    <img src="../assets/img/service/sv-icon-4-2.png" alt="" />
                                                 </div>
                                                 <div className="tp-service-4-content">
                                                     <span>Cloud Backup</span>
@@ -305,11 +369,11 @@ const SearchBox = () => {
                                         <div className="col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right service-border-trang-3">
                                             <div className="tp-service-4-item z-index">
                                                 <div className="tp-service-4-icon">
-                                                    <img src="../assets/img/service/sv-icon-4-3.png" alt=""/>
+                                                    <img src="../assets/img/service/sv-icon-4-3.png" alt="" />
                                                 </div>
                                                 <div className="tp-service-4-content">
                                                     <span>Cloud Backup</span>
-                                                    <h4 className="tp-service-4-title"><a href="service-details.html">Managed <br/> Web Application</a></h4>
+                                                    <h4 className="tp-service-4-title"><a href="service-details.html">Managed <br /> Web Application</a></h4>
                                                     <a className="tp-btn-service" href="service-details.html">Learn More</a>
                                                 </div>
                                             </div>
@@ -317,7 +381,7 @@ const SearchBox = () => {
                                         <div className="col-xl-3 col-lg-4 col-md-6 mb-50 tp-service-4-border-right service-border-trang-">
                                             <div className="tp-service-4-item z-index">
                                                 <div className="tp-service-4-icon">
-                                                    <img src="assets/img/service/sv-icon-4-4.png" alt=""/>
+                                                    <img src="assets/img/service/sv-icon-4-4.png" alt="" />
                                                 </div>
                                                 <div className="tp-service-4-content">
                                                     <span>Cloud Backup</span>
@@ -330,19 +394,19 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="tp-about-area pb-135 blue-bg p-relative">
                             <div className="tp-about-top-img-2">
-                                <img src="assets/img/about/about-4-3.png" alt=""/>
+                                <img src="assets/img/about/about-4-3.png" alt="" />
                             </div>
                             <div className="container">
                                 <div className="row align-items-center">
                                     <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
                                         <div className="tp-about-left-img text-md-center p-relative text-start z-index">
-                                            <img src="assets/img/about/about-4-1.png" alt=""/>
-                                                <div className="tp-about-top-img">
-                                                    <img src="assets/img/about/about-4-2.png" alt=""/>
-                                                </div>
+                                            <img src="assets/img/about/about-4-1.png" alt="" />
+                                            <div className="tp-about-top-img">
+                                                <img src="assets/img/about/about-4-2.png" alt="" />
+                                            </div>
                                         </div>
                                     </div>
                                     <div className="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".5s">
@@ -357,8 +421,8 @@ const SearchBox = () => {
                                             </div>
                                             <div className="tp-security-feature">
                                                 <ul>
-                                                    <li><i className="far fa-check"></i>High-Performance <br/> Solutions</li>
-                                                    <li><i className="far fa-check"></i>Best Cyber Security <br/> Solutions.</li>
+                                                    <li><i className="far fa-check"></i>High-Performance <br /> Solutions</li>
+                                                    <li><i className="far fa-check"></i>Best Cyber Security <br /> Solutions.</li>
                                                 </ul>
                                             </div>
                                             <div className="tp-security-btn">
@@ -369,35 +433,35 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="tp-fun-fact-area pb-75 blue-bg">
                             <div className="container">
                                 <div className="row">
                                     <div className="col-xl-4 col-lg-4 col-md-4 mb-60 tp-counter-br">
                                         <div className="tp-fun-fact-item tp-fun-fact-space-1 d-flex align-items-center">
                                             <h4><span data-purecounter-duration="1" data-purecounter-end="23" className="purecounter">0</span>+</h4>
-                                            <p>Years <br/> Of Experience</p>
+                                            <p>Years <br /> Of Experience</p>
                                         </div>
                                     </div>
                                     <div className="col-xl-4 col-lg-4 col-md-4 mb-60 tp-counter-br">
                                         <div className="tp-fun-fact-item tp-fun-fact-space-2 d-flex align-items-center">
                                             <h4><span data-purecounter-duration="1" data-purecounter-end="300" className="purecounter">0</span>%</h4>
-                                            <p>Year on <br/> year Growth</p>
+                                            <p>Year on <br /> year Growth</p>
                                         </div>
                                     </div>
                                     <div className="col-xl-4 col-lg-4 col-md-4 mb-60 tp-counter-br">
                                         <div className="tp-fun-fact-item tp-fun-fact-space-3 d-flex align-items-center">
                                             <h4><span data-purecounter-duration="1" data-purecounter-end="12" className="purecounter">0</span>+</h4>
-                                            <p>Countries <br/> Of Operation</p>
+                                            <p>Countries <br /> Of Operation</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div className="tp-platform-area border-tb blue-bg pt-115 pb-105 p-relative z-index">
                             <div className="tp-platform-bg-shape">
-                                <img src="assets/img/Platform/p-bg.html" alt=""/>
+                                <img src="assets/img/Platform/p-bg.html" alt="" />
                             </div>
                             <div className="container">
                                 <div className="row align-items-end mb-40">
@@ -418,7 +482,7 @@ const SearchBox = () => {
                                 <div className="row align-items-center">
                                     <div className="col-xl-2 col-lg-2 d-none d-xl-block">
                                         <div className="tp-platform-img-box">
-                                            <img src="assets/img/payment/platform-1.png" alt=""/>
+                                            <img src="assets/img/payment/platform-1.png" alt="" />
                                         </div>
                                     </div>
                                     <div className="col-xl-10 col-lg-12">
@@ -494,7 +558,7 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div className="tp-price-area pt-120 pb-145 blue-bg">
                             <div className="container">
                                 <div className="row g-0">
@@ -511,10 +575,10 @@ const SearchBox = () => {
                                             <div className="col-4">
                                                 <div className="tp-price-header">
                                                     <div className="tp-price-header-img">
-                                                        <img src="assets/img/price/price-4.1.png" alt=""/>
+                                                        <img src="assets/img/price/price-4.1.png" alt="" />
                                                     </div>
                                                     <div className="tp-price-header-content">
-                                                        <p>You pay <span>$59.00/mo</span> today Renews <br/>
+                                                        <p>You pay <span>$59.00/mo</span> today Renews <br />
                                                             April 2024 For <span>$69.00/mo</span></p>
                                                     </div>
                                                 </div>
@@ -524,7 +588,7 @@ const SearchBox = () => {
                                                     <div className="tp-price-top-item text-center">
                                                         <div className="tp-price-top-tag-wrapper">
                                                             <span>STARTER</span>
-                                                            <p>Collect more submissions, <br/> access most of the features</p>
+                                                            <p>Collect more submissions, <br /> access most of the features</p>
                                                         </div>
                                                         <div className="tp-price-top-title-wrapper">
                                                             <h4><em>$</em>18 <span>/mo</span></h4>
@@ -535,7 +599,7 @@ const SearchBox = () => {
                                                     <div className="tp-price-top-item text-center active">
                                                         <div className="tp-price-top-tag-wrapper">
                                                             <span>Advance</span>
-                                                            <p>Collect more submissions, <br/> access most of the features</p>
+                                                            <p>Collect more submissions, <br /> access most of the features</p>
                                                         </div>
                                                         <div className="tp-price-top-title-wrapper">
                                                             <h4><em>$</em>19 <span>/mo</span></h4>
@@ -546,7 +610,7 @@ const SearchBox = () => {
                                                     <div className="tp-price-top-item text-center">
                                                         <div className="tp-price-top-tag-wrapper">
                                                             <span>Team Plan</span>
-                                                            <p>Collect more submissions, <br/> access most of the features</p>
+                                                            <p>Collect more submissions, <br /> access most of the features</p>
                                                         </div>
                                                         <div className="tp-price-top-title-wrapper">
                                                             <h4><em>$</em>14 <span>/mo</span></h4>
@@ -707,7 +771,7 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="tp-team-area blue-bg pb-95">
                             <div className="container">
                                 <div className="tp-team-section-wrapper mb-70">
@@ -720,7 +784,7 @@ const SearchBox = () => {
                                         </div>
                                         <div className="col-xl-6 col-lg-6  wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".5s">
                                             <div className="tp-team-top-content d-flex justify-content-md-start justify-content-end">
-                                                <p>Our clients are the companies and startups who <br/> make the world go round,!</p>
+                                                <p>Our clients are the companies and startups who <br /> make the world go round,!</p>
                                             </div>
                                         </div>
                                     </div>
@@ -729,7 +793,7 @@ const SearchBox = () => {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 tp-team-border-right tp-border-after-1">
                                         <div className="tp-team-item text-center z-index">
                                             <div className="tp-team-img tp-tilt-effect">
-                                                <img src="assets/img/team/team-4-1.png" alt=""/>
+                                                <img src="assets/img/team/team-4-1.png" alt="" />
                                             </div>
                                             <div className="tp-team-content">
                                                 <h4 className="tp-team-title-sm"><a href="team-details.html">Alexa Montes</a></h4>
@@ -758,7 +822,7 @@ const SearchBox = () => {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 tp-team-border-right tp-border-after-2">
                                         <div className="tp-team-item text-center z-index">
                                             <div className="tp-team-img">
-                                                <img src="assets/img/team/team-4-2.png" alt=""/>
+                                                <img src="assets/img/team/team-4-2.png" alt="" />
                                             </div>
                                             <div className="tp-team-content">
                                                 <h4 className="tp-team-title-sm"><a href="team-details.html">Ravi Ganatra</a></h4>
@@ -787,7 +851,7 @@ const SearchBox = () => {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 tp-team-border-right tp-border-after-3">
                                         <div className="tp-team-item text-center z-index">
                                             <div className="tp-team-img">
-                                                <img src="assets/img/team/team-4-3.png" alt=""/>
+                                                <img src="assets/img/team/team-4-3.png" alt="" />
                                             </div>
                                             <div className="tp-team-content">
                                                 <h4 className="tp-team-title-sm"><a href="team-details.html">Imdat Cimsit</a></h4>
@@ -816,7 +880,7 @@ const SearchBox = () => {
                                     <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 mb-50 tp-team-border-right tp-border-after-4">
                                         <div className="tp-team-item text-center z-index">
                                             <div className="tp-team-img">
-                                                <img src="assets/img/team/team-4-4.png" alt=""/>
+                                                <img src="assets/img/team/team-4-4.png" alt="" />
                                             </div>
                                             <div className="tp-team-content">
                                                 <h4 className="tp-team-title-sm"><a href="team-details.html">Imdat Cimsit</a></h4>
@@ -845,7 +909,7 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                      
+
                         <div className="tp-security-area blue-bg pb-180 fix z-index">
                             <div className="container-fluid g-0">
                                 <div className="row justify-content-center">
@@ -864,10 +928,10 @@ const SearchBox = () => {
                                                 className="tp-security-wrapper d-flex align-items-center justify-content-between">
                                                 <div className="tp-security-item d-flex align-items-center">
                                                     <div className="tp-security-img">
-                                                        <img src="assets/img/security/security-1.png" alt=""/>
+                                                        <img src="assets/img/security/security-1.png" alt="" />
                                                     </div>
                                                     <div className="tp-security-content">
-                                                        <h4 className="tp-security-title-sm">Business <br/> Security</h4>
+                                                        <h4 className="tp-security-title-sm">Business <br /> Security</h4>
                                                     </div>
                                                 </div>
                                                 <div className="tp-security-link">
@@ -885,10 +949,10 @@ const SearchBox = () => {
                                             <div className="tp-security-wrapper d-flex align-items-center justify-content-between">
                                                 <div className="tp-security-item d-flex align-items-center">
                                                     <div className="tp-security-img">
-                                                        <img src="assets/img/security/security-2.png" alt=""/>
+                                                        <img src="assets/img/security/security-2.png" alt="" />
                                                     </div>
                                                     <div className="tp-security-content">
-                                                        <h4 className="tp-security-title-sm">Logistics <br/> Security</h4>
+                                                        <h4 className="tp-security-title-sm">Logistics <br /> Security</h4>
                                                     </div>
                                                 </div>
                                                 <div className="tp-security-link">
@@ -906,10 +970,10 @@ const SearchBox = () => {
                                             <div className="tp-security-wrapper d-flex align-items-center justify-content-between">
                                                 <div className="tp-security-item d-flex align-items-center">
                                                     <div className="tp-security-img">
-                                                        <img src="assets/img/security/security-3.png" alt=""/>
+                                                        <img src="assets/img/security/security-3.png" alt="" />
                                                     </div>
                                                     <div className="tp-security-content">
-                                                        <h4 className="tp-security-title-sm">Education <br/> Security</h4>
+                                                        <h4 className="tp-security-title-sm">Education <br /> Security</h4>
                                                     </div>
                                                 </div>
                                                 <div className="tp-security-link">
@@ -927,10 +991,10 @@ const SearchBox = () => {
                                             <div className="tp-security-wrapper d-flex align-items-center justify-content-between">
                                                 <div className="tp-security-item d-flex align-items-center">
                                                     <div className="tp-security-img">
-                                                        <img src="assets/img/security/security-4.png" alt=""/>
+                                                        <img src="assets/img/security/security-4.png" alt="" />
                                                     </div>
                                                     <div className="tp-security-content">
-                                                        <h4 className="tp-security-title-sm">Food <br/> & Beverage</h4>
+                                                        <h4 className="tp-security-title-sm">Food <br /> & Beverage</h4>
                                                     </div>
                                                 </div>
                                                 <div className="tp-security-link">
@@ -948,10 +1012,10 @@ const SearchBox = () => {
                                             <div className="tp-security-wrapper d-flex align-items-center justify-content-between">
                                                 <div className="tp-security-item d-flex align-items-center">
                                                     <div className="tp-security-img">
-                                                        <img src="assets/img/security/security-5.png" alt=""/>
+                                                        <img src="assets/img/security/security-5.png" alt="" />
                                                     </div>
                                                     <div className="tp-security-content">
-                                                        <h4 className="tp-security-title-sm">Media & <br/> Entertainment</h4>
+                                                        <h4 className="tp-security-title-sm">Media & <br /> Entertainment</h4>
                                                     </div>
                                                 </div>
                                                 <div className="tp-security-link">
@@ -969,10 +1033,10 @@ const SearchBox = () => {
                                             <div className="tp-security-wrapper d-flex align-items-center justify-content-between">
                                                 <div className="tp-security-item d-flex align-items-center">
                                                     <div className="tp-security-img">
-                                                        <img src="assets/img/security/security-3.png" alt=""/>
+                                                        <img src="assets/img/security/security-3.png" alt="" />
                                                     </div>
                                                     <div className="tp-security-content">
-                                                        <h4 className="tp-security-title-sm">Business <br/> Security</h4>
+                                                        <h4 className="tp-security-title-sm">Business <br /> Security</h4>
                                                     </div>
                                                 </div>
                                                 <div className="tp-security-link">
@@ -990,7 +1054,7 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                       
+
                         <div className="tp-blog-area blue-bg pb-90">
                             <div className="container">
                                 <div className="row align-items-end tp-blog-four-section-space">
@@ -1011,7 +1075,7 @@ const SearchBox = () => {
                                         data-wow-delay=".7s">
                                         <div className="tp-blog-four-item p-relative fix">
                                             <div className="tp-blog-four-img fix">
-                                                <a href="blog-details.html"><img src="assets/img/blog/blog-4-1.jpg" alt=""/></a>
+                                                <a href="blog-details.html"><img src="assets/img/blog/blog-4-1.jpg" alt="" /></a>
                                             </div>
                                             <div className="tp-blog-four-content-wrapper">
                                                 <div className="tp-blog-four-meta">
@@ -1033,7 +1097,7 @@ const SearchBox = () => {
                                         data-wow-delay=".9s">
                                         <div className="tp-blog-four-item fix">
                                             <div className="tp-blog-four-img fix">
-                                                <a href="blog-details.html"><img src="assets/img/blog/blog-4-2.jpg" alt=""/></a>
+                                                <a href="blog-details.html"><img src="assets/img/blog/blog-4-2.jpg" alt="" /></a>
                                             </div>
                                             <div className="tp-blog-four-content-wrapper">
                                                 <div className="tp-blog-four-meta">
@@ -1054,10 +1118,10 @@ const SearchBox = () => {
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div className="tp-contact-area tp-contact-overlay pt-120 pb-120 blue-bg z-index p-relative fix">
                             <div className="tp-contact-glob-img">
-                                <img src="assets/img/hero/hero-4-3.png" alt=""/>
+                                <img src="assets/img/hero/hero-4-3.png" alt="" />
                             </div>
                             <div className="container">
                                 <div className="row">
@@ -1115,7 +1179,7 @@ const SearchBox = () => {
                                                             stroke="#F8FF35" stroke-width="1.5" stroke-linecap="round" />
                                                     </svg>
                                                     <a href="https://www.google.com/maps/place/Argentina,+Santiago+del+Estero+Province,+Argentina/@-28.9465488,-65.3732971,7.53z/data=!4m5!3m4!1s0x9436ede70248f47b:0x3bdbc4e928700c2a!8m2!3d-29.5355289!4d-62.2664853"
-                                                        target="_blank">1811 Silverside Rd, Wilmington, <br/> DE 19810, USA</a>
+                                                        target="_blank">1811 Silverside Rd, Wilmington, <br /> DE 19810, USA</a>
                                                 </li>
                                             </ul>
                                         </div>
@@ -1123,18 +1187,18 @@ const SearchBox = () => {
                                     <div className="col-xl-7 col-12 ">
                                         <div className="tp-contact-input-wrapperrr p-relative">
                                             <div className="tp-contact-shape">
-                                                <img src="assets/img/contact/shape-4-1.png" alt=""/>
+                                                <img src="assets/img/contact/shape-4-1.png" alt="" />
                                             </div>
                                             <div className="tp-contact-input-wrapper p-relative">
                                                 <div className="row">
                                                     <div className="col-xl-6">
                                                         <div className="tp-contact-input mb-20">
-                                                            <input type="text" placeholder="Full name"/>
+                                                            <input type="text" placeholder="Full name" />
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-6">
                                                         <div className="tp-contact-input mb-20">
-                                                            <input type="email" placeholder="Email address"/>
+                                                            <input type="email" placeholder="Email address" />
                                                         </div>
                                                     </div>
                                                     <div className="col-xl-12">
@@ -1174,7 +1238,7 @@ const SearchBox = () => {
                         <div className="tp-footer__pl-pr blue-bg z-index">
                             <div className="tp-footer__area tp-footer__border-bottom-4 fix">
                                 <div className="tp-footer-bottom-shape">
-                                    <img src="assets/img/footer/footer-bottom-shape-4-1.png" alt=""/>
+                                    <img src="assets/img/footer/footer-bottom-shape-4-1.png" alt="" />
                                 </div>
                                 <div className="container">
                                     <div className="row">
@@ -1182,7 +1246,7 @@ const SearchBox = () => {
                                             <div className="tp-footer__widget footer-widget-4 footer-col-4-1">
                                                 <div className="tp-footer__logo mb-25">
                                                     <a href="index.html">
-                                                        <img src="assets/img/logo/logo-white.png" alt=""/>
+                                                        <img src="assets/img/logo/logo-white.png" alt="" />
                                                     </a>
                                                 </div>
                                                 <h3 className="footer-subtitle-3">SUBSCRIBE TO OUR NEWSLETTER</h3>
@@ -1190,13 +1254,13 @@ const SearchBox = () => {
                                                     <form action="#">
                                                         <div className="tp-footer-subscribe-input-box">
                                                             <div className="tp-footer-subscribe-input">
-                                                                <input type="email" placeholder="Enter your e-mail"/>
-                                                                    <span>
-                                                                        <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                            <path d="M17 7.4C17 10.417 17 11.9255 16.0627 12.8627C15.1255 13.8 13.617 13.8 10.6 13.8H7.4C4.38301 13.8 2.87452 13.8 1.93726 12.8627C1 11.9255 1 10.417 1 7.4C1 4.38301 1 2.87452 1.93726 1.93726C2.87452 1 4.38301 1 7.4 1H10.6C13.617 1 15.1255 1 16.0627 1.93726C16.5853 2.4598 16.8165 3.15991 16.9188 4.2" stroke="currentColor" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                                                                            <path d="M13.7992 4.19922L12.0721 5.63848C10.6028 6.86291 9.86814 7.47512 8.99922 7.47512C8.47978 7.47512 8.00832 7.25634 7.39922 6.81877M4.19922 4.19922L4.91922 4.79922L5.63922 5.39922" stroke="currentColor" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
-                                                                        </svg>
-                                                                    </span>
+                                                                <input type="email" placeholder="Enter your e-mail" />
+                                                                <span>
+                                                                    <svg width="18" height="15" viewBox="0 0 18 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                        <path d="M17 7.4C17 10.417 17 11.9255 16.0627 12.8627C15.1255 13.8 13.617 13.8 10.6 13.8H7.4C4.38301 13.8 2.87452 13.8 1.93726 12.8627C1 11.9255 1 10.417 1 7.4C1 4.38301 1 2.87452 1.93726 1.93726C2.87452 1 4.38301 1 7.4 1H10.6C13.617 1 15.1255 1 16.0627 1.93726C16.5853 2.4598 16.8165 3.15991 16.9188 4.2" stroke="currentColor" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                                                                        <path d="M13.7992 4.19922L12.0721 5.63848C10.6028 6.86291 9.86814 7.47512 8.99922 7.47512C8.47978 7.47512 8.00832 7.25634 7.39922 6.81877M4.19922 4.19922L4.91922 4.79922L5.63922 5.39922" stroke="currentColor" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" />
+                                                                    </svg>
+                                                                </span>
                                                             </div>
                                                             <button type="submit">
                                                                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1300,7 +1364,7 @@ const SearchBox = () => {
                                                                     stroke="#F8FF35" stroke-width="1.5" stroke-linecap="round" />
                                                             </svg>
                                                             <a href="https://www.google.com/maps/place/Argentina,+Santiago+del+Estero+Province,+Argentina/@-28.9465488,-65.3732971,7.53z/data=!4m5!3m4!1s0x9436ede70248f47b:0x3bdbc4e928700c2a!8m2!3d-29.5355289!4d-62.2664853"
-                                                                target="_blank">1811 Silverside Rd, <br/> Wilmington, DE 19810, USA</a>
+                                                                target="_blank">1811 Silverside Rd, <br /> Wilmington, DE 19810, USA</a>
                                                         </li>
                                                     </ul>
                                                 </div>
