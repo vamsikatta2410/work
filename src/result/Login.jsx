@@ -15,7 +15,7 @@ import './../New Home/Style.css'
 
 import mainLogo from '../assets/google.png'
 
-const Contact = () => {
+const Login = () => {
   return (
     <body>
 
@@ -294,4 +294,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Login

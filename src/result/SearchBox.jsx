@@ -3,8 +3,6 @@ import {
     FaMagnifyingGlass
 } from 'react-icons/fa6'
 
-import Contact from './Contact';
-
 import { FaGlobe } from 'react-icons/fa'
 
 import './../assets/css/bootstrap.min.css'
@@ -74,7 +72,7 @@ const SearchBox = () => {
                             {/* Display logo  */}
                             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                                 <div className="header-bottom__logo">
-                                    <a className="white-logo" href="index.html"><img src={mainLogo} alt="" /></a>
+                                    <Link to='/home'><img src={mainLogo} alt="" /></Link>
                                 </div>
                             </div>
 
@@ -138,7 +136,7 @@ const SearchBox = () => {
                                 <div className="header-bottom__right d-flex align-items-center justify-content-end">
                                     <div className="header-bottom__action header-bottom__action-4">
                                         <a className="d-none d-lg-inline-block header-bottom__action-2 border-none" href="register.html">
-                                            <span><Link to='/contact'>Log In</Link></span>
+                                            <span><Link to='/login'>Log In</Link></span>
                                         </a>
                                     </div>
                                     <div className="header-bottom__btn d-flex align-items-center">
