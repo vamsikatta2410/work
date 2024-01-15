@@ -14,6 +14,10 @@ import './../assets/css/style.css'
 import './../New Home/Style.css'
 
 import mainLogo from '../assets/google.png'
+import loginShape1 from '../assets/img/login/login-shape-1.png'
+import loginBg from '../assets/img/login/login-bg-shape.png'
+
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -33,31 +37,6 @@ const Login = () => {
                <img src={mainLogo} alt=""/>
             </a>
          </div>
-         <div className="mobile-menu"></div>
-         <div className="tpoffcanvas__instagram text-center">
-            <div className="tpoffcanvas__instagram-title">
-               <h4>instagram</h4>
-            </div>
-            <a href="#"><img src="assets/img/project/project-inner-4.jpg" alt=""/></a>
-            <a href="#"><img src="assets/img/project/project-inner-5.jpg" alt=""/></a>
-            <a href="#"><img src="assets/img/project/project-inner-6.jpg" alt=""/></a>
-            <a href="#"><img src="assets/img/project/project-inner-7.jpg" alt=""/></a>
-         </div>
-         <div className="tpoffcanvas__info text-center">
-            <h4 className="offcanva-title">we are here</h4>
-            <a href="https://www.google.com/maps/@23.506657,90.3443647,7z" target="_blank">
-               27 Division St, New York, <br/>
-               NY 10002, USA
-            </a>
-         </div>
-         <div className="tpoffcanvas__social">
-            <div className="social-icon text-center">
-               <a href="#"><i className="fab fa-twitter"></i></a>
-               <a href="#"><i className="fab fa-instagram"></i></a>
-               <a href="#"><i className="fab fa-facebook-square"></i></a>
-               <a href="#"><i className="fab fa-dribbble"></i></a>
-            </div>
-         </div>
       </div>
    </div>
    <div className="body-overlay"></div>
@@ -68,7 +47,7 @@ const Login = () => {
             <div className="row align-items-center">
                <div className="col-6">
                   <div className="header-signin-logo">
-                     <a href="index.html"><img src="assets/img/logo/logo-inner.html" alt=""/></a>
+                     <Link to='/home'><img src={mainLogo} alt="" style={{height:'130px',width:'300px'}}/></Link>
                   </div>
                </div>
                <div className="col-6">
@@ -85,78 +64,13 @@ const Login = () => {
             </div>
          </div>
       </div>
+
       <div className="header-bottom__area header-bottom__transparent header-bottom__bdr z-index-5 d-none">
          <div className="container">
             <div className="row g-0 align-items-center">
                <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                   <div className="header-bottom__logo">
-                     <a href="index.html"><img src="assets/img/logo/logo-inner.html" alt=""/></a>
-                  </div>
-               </div>
-               <div className="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block">
-                  <div className="header-bottom__main-menu header-bottom__main-menu-4 header-bottom__main-menu-inner">
-                     <nav id="mobile-menu-2">
-                        <ul>
-                           <li>
-                              <a href="index.html">Home</a>
-                              <ul className="submenu">
-                                 <li><a href="index.html">Data analytics</a></li>
-                                 <li><a href="index-2.html">Payment Gateway</a></li>
-                                 <li><a href="index-3.html">CRM Software</a></li>
-                                 <li><a href="index-4.html">Security Software</a></li>
-                                 <li><a href="index-5.html">Saas</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="#">Page</a>
-                              <ul className="submenu">
-                                 <li><a href="about.html">About</a></li>
-                                 <li><a href="service.html">Service</a></li>
-                                 <li><a href="service-details.html">Service Details</a></li>
-                                 <li><a href="team.html">Team</a></li>
-                                 <li><a href="team-details.html">Team Details</a></li>
-                                 <li><a href="career.html">Career</a></li>
-                                 <li><a href="career-details.html">Career Details</a></li>
-                                 <li><a href="integrations.html">Integrations</a></li>
-                                 <li><a href="price.html">Price</a></li>
-                                 <li><a href="register.html">Register</a></li>
-                                 <li><a href="sign-in.html">Signin</a></li>
-                                 <li><a href="404.html">404</a></li>
-                              </ul>
-                           </li>
-                           <li>
-                              <a href="project-details.html">Portfoilo</a>
-                              <ul className="submenu">
-                                 <li><a href="project.html">Project</a></li>
-                                 <li><a href="project-details.html">Project Details</a></li>
-                              </ul>
-                           </li>
-                           <li><a href="price.html">Pricing</a></li>
-                           <li>
-                              <a href="blog-details.html">Blog</a>
-                              <ul className="submenu">
-                                 <li><a href="blog.html">Blog</a></li>
-                                 <li><a href="blog-list.html">Blog List</a></li>
-                                 <li><a href="blog-details.html">Blog Details</a></li>
-                                 <li><a href="blog-details-2.html">Blog Details 02</a></li>
-                              </ul>
-                           </li>
-                           <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                     </nav>
-                  </div>
-               </div>
-               <div className="col-xxl-3 col-xl-3 col-lg-3 col-md-8 col-6">
-                  <div className="header-bottom__right d-flex align-items-center justify-content-end">
-                     <div className="header-bottom__action header-bottom__action-4">
-                        <a className="d-none d-lg-inline-block header-bottom__action-2 border-none" href="register.html">
-                           <span>Log In</span>
-                        </a>
-                     </div>
-                     <div className="header-bottom__btn d-flex align-items-center">
-                        <a className="tp-btn-yellow d-none d-md-inline-block inner-color" href="#">Get in Touch</a>
-                        <a className="header-bottom__bar tp-menu-bar d-lg-none" href="#"><i className="fal fa-bars"></i></a>
-                     </div>
+                     <Link to='/home'><img src={mainLogo} alt="" style={{height:'120px',width:'180px'}}/></Link>
                   </div>
                </div>
             </div>
@@ -169,31 +83,12 @@ const Login = () => {
 
          <main>
          <div className="signin-banner-area signin-banner-main-wrap d-flex align-items-center">
-            <div className="signin-banner-left-box signin-banner-bg p-relative" data-background="assets/img/login/login-bg-shape.png">
+            <div className="signin-banner-left-box signin-banner-bg p-relative" data-background={loginBg} style={{backgroundColor:'#86A7FC'}}>
                <div className="signin-banner-bottom-shape">
-                  <img src="assets/img/login/login-shape-1.png" alt=""/>
-               </div>
-               <div className="signin-banner-left-wrap">
-                  <div className="signin-banner-title-box mb-100">
-                     <h4 className="signin-banner-title tp-char-animation">Welcome To <br/>
-                        Your Softec System.</h4>
-                  </div>
-                  <div className="signin-banner-img-box position-relative">
-                     <div className="signin-banner-img signin-img-1 d-none d-md-block z-index-3">
-                        <img src="assets/img/login/login-2.png" alt=""/>
-                     </div>
-                     <div className="signin-banner-img signin-img-2 d-none d-md-block">
-                        <img src="assets/img/login/login-1.png" alt=""/>
-                     </div>
-                     <div className="signin-banner-img signin-img-3 d-none d-md-block z-index-5">
-                        <img src="assets/img/login/login-3.png" alt=""/>
-                     </div>
-                     <div className="signin-banner-img signin-img-4 d-none d-sm-block">
-                        <img src="assets/img/login/login-4.png" alt=""/>
-                     </div>
-                  </div>
+                  <img src={loginShape1} alt=""/>
                </div>
             </div>
+
             <div className="signin-banner-from d-flex justify-content-center align-items-center">
                <div className="signin-banner-from-wrap">
                   <div className="signin-banner-title-box">
