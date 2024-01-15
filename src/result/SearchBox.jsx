@@ -182,57 +182,8 @@ const SearchBox = () => {
                                 <div className="row">
                                     <div className="col-xl-7 col-lg-7">
                                         <div className="tp-hero-4-section-box pt-10 z-index-3">
-                                            {/* <form onSubmit={handleSearch}
-                                                method="post"
-                                            >
-                                                <div className="form-group">
-                                                    <FaGlobe size={20} />
-                                                    <input
-                                                        type="text"
-                                                        name="search"
-                                                        placeholder="Search"
-                                                        value={searchQuery}
-                                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                                    />
-                                                </div>
-                                                <div>
-                                                    <button
-                                                        type="submit"
-                                                    >
-                                                        <span>
-                                                            Search <i className="bi bi-arrow-right ms-1" />
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                            </form> */}
-
-                                            {/* <form onSubmit={handleSearch} method="post" style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', margin: '0 auto' }}>
-                                                <div style={{ flex: '1', border: '1px solid #dfe1e5', borderRadius: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingLeft: '16px' }}>
-                                                    <FaGlobe size={20} style={{ color: '#70757a', marginRight: '8px' }} />
-                                                    <input
-                                                        type="text"
-                                                        name="search"
-                                                        placeholder="Search Google"
-                                                        value={searchQuery}
-                                                        style={{
-                                                            flex: '1',
-                                                            border: 'none',
-                                                            padding: '8px',
-                                                            outline: 'none',
-                                                            fontSize: '16px',
-                                                        }}
-                                                        onChange={(e) => setSearchQuery(e.target.value)}
-                                                    />
-                                                </div>
-                                                <div style={{ marginLeft: '8px' }}>
-                                                    <button type="submit" style={{ backgroundColor: '#4285f4', color: '#ffffff', border: '1px solid #4285f4', borderRadius: '24px', padding: '8px 16px', cursor: 'pointer' }}>
-                                                        <span>
-                                                            Search <i className="bi bi-arrow-right ms-1" />
-                                                        </span>
-                                                    </button>
-                                                </div>
-                                            </form> */}
-
+                                            
+                                            {/* Search box form  */}
                                             <form onSubmit={handleSearch} method="post" style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', margin: '0 auto' }}>
                                                 <div style={{ flex: '1', border: '1px solid #dfe1e5', borderRadius: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingLeft: '16px' }}>
                                                     <FaGlobe size={20} style={{ color: '#70757a', marginRight: '12px' }} />
