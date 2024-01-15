@@ -13,10 +13,6 @@ import { Helmet } from 'react-helmet'
 function App() {
   return (
     <>
-      <Helmet>
-        
-      </Helmet>
-
       <Router>
         <Routes>
           <Route path="/" element={<NewHome />} />
