@@ -13,6 +13,8 @@ import './../assets/css/spacing.css'
 import './../assets/css/style.css'
 import './../New Home/Style.css'
 
+import mainLogo from '../assets/google.png'
+
 const Contact = () => {
   return (
     <body>
@@ -28,7 +30,7 @@ const Contact = () => {
          </div>
          <div className="tpoffcanvas__logo text-center">
             <a href="index.html">
-               <img src="assets/img/logo/logo-white.png" alt=""/>
+               <img src={mainLogo} alt=""/>
             </a>
          </div>
          <div className="mobile-menu"></div>
