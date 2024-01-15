@@ -21,6 +21,7 @@ import './../New Home/Style.css'
 
 import mainLogo from '../assets/google.png'
 import hero41 from '../assets/img/hero/hero-4-1.png'
+import hero42 from '../assets/img/hero/hero-4-2.png'
 import hero43 from '../assets/img/hero/hero-4-3.png'
 
 
@@ -218,10 +219,10 @@ const SearchBox = () => {
                                     <div className="col-xl-5 col-lg-5">
                                         <div className="tp-hero-4-img-wrapper p-relative">
                                             <div className="tp-hero-4-main-img text-center z-index-3">
-                                                <img src="../assets/img/hero/hero-4-1.png" alt="" />
+                                                <img src={hero41} alt="" />
                                             </div>
                                             <div className="tp-hero-4-sub-img z-index-3">
-                                                <img src="../assets/img/hero/hero-4-2.png" alt="" />
+                                                <img src={hero42} alt="" />
                                             </div>
                                         </div>
                                     </div>
