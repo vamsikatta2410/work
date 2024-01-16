@@ -24,6 +24,52 @@ import hero41 from '../assets/img/hero/hero-4-1.png'
 import hero42 from '../assets/img/hero/hero-4-2.png'
 import hero43 from '../assets/img/hero/hero-4-3.png'
 
+// Importing payment images 
+import paybg from '../assets/img/payment/background.png'
+import paycoin1 from '../assets/img/payment/coin-1.png'
+import paycoin2 from '../assets/img/payment/coin-2.png'
+import paygetpaid from '../assets/img/payment/get-paid.png'
+import payhand from '../assets/img/payment/hand.png'
+import payimage from '../assets/img/payment/image.png'
+import paymessage from '../assets/img/payment/message.png'
+import paymobile from '../assets/img/payment/mobile.png'
+import paypayment3 from '../assets/img/payment/payment-3.png'
+import payplatform1 from '../assets/img/payment/platform-1.png'
+import payqr from '../assets/img/payment/qrcode.png'
+
+// importing payment logos 
+import paylogomain from '../assets/img/payment-logo/logo-main.png'
+import paylogo1 from '../assets/img/payment-logo/logo-1.png'
+import paylogo2 from '../assets/img/payment-logo/logo-2.png'
+import paylogo3 from '../assets/img/payment-logo/logo-3.png'
+import paylogo4 from '../assets/img/payment-logo/logo-4.png'
+import paylogo5 from '../assets/img/payment-logo/logo-5.png'
+import paylogo6 from '../assets/img/payment-logo/logo-6.png'
+import paylogo7 from '../assets/img/payment-logo/logo-7.png'
+import paylogo8 from '../assets/img/payment-logo/logo-8.png'
+import paylogo9 from '../assets/img/payment-logo/logo-9.png'
+import paylogo10 from '../assets/img/payment-logo/logo-10.png'
+import paylogo11 from '../assets/img/payment-logo/logo-11.png'
+import paylogo12 from '../assets/img/payment-logo/logo-12.png'
+import paylogo13 from '../assets/img/payment-logo/logo-13.png'
+import paylogo14 from '../assets/img/payment-logo/logo-14.png'
+import paylogo15 from '../assets/img/payment-logo/logo-15.png'
+import paylogo16 from '../assets/img/payment-logo/logo-16.png'
+
+// import hero images 
+import herobrowser1 from '../assets/img/hero/browser-icon-1.png'
+import herobrowser2 from '../assets/img/hero/browser-icon-2.png'
+import herobrowser3 from '../assets/img/hero/browser-icon-3.png'
+import herobrowser4 from '../assets/img/hero/browser-icon-4.png'
+import herobrowser5 from '../assets/img/hero/browser-icon-5.png'
+import hero5 from '../assets/img/hero/hero-5.svg'
+import herobg2 from '../assets/img/hero/hero-bg-2.png'
+import herocircle51 from '../assets/img/hero/hero-circle-5-1.png'
+import heroslider1 from '../assets/img/hero/hero-slider-icon-1.jpg'
+import heroslider2 from '../assets/img/hero/hero-slider-icon-2.jpg'
+import heroslider3 from '../assets/img/hero/hero-slider-icon-3.jpg'
+import heroslider4 from '../assets/img/hero/hero-slider-icon-4.jpg'
+import heroslider5 from '../assets/img/hero/hero-slider-icon-5.jpg'
 
 import { homeItems, pageItems, blogData } from './PageData';
 
@@ -180,10 +226,10 @@ const SearchBox = () => {
                             </div>
 
                             <div className="container">
-                                <div className="row">
+                                <div className="row mt-10">
                                     <div className="col-xl-7 col-lg-7">
                                         <div className="tp-hero-4-section-box pt-10 z-index-3">
-                                            
+
                                             {/* Search box form  */}
                                             <form onSubmit={handleSearch} method="post" style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', margin: '0 auto' }}>
                                                 <div style={{ flex: '1', border: '1px solid #dfe1e5', borderRadius: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingLeft: '16px' }}>
@@ -227,6 +273,167 @@ const SearchBox = () => {
                                         </div>
                                     </div>
                                 </div>
+
+                                <div className="row justify-content-center">
+                                    <div className="col-xl-12">
+                                        <div className="row">
+                                            <div className="col-md-6 mb-30">
+                                                <div className="tp-payment__item tp-payment__bg-color-2 p-relative z-index wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".3s">
+                                                    <div className="tp-payment__shape-4">
+                                                        <img src={payqr} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__shape-5">
+                                                        <img src={paymobile} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__shape-6">
+                                                        <img src={payhand} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__shape-7">
+                                                        <img src={paycoin1} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__shape-8">
+                                                        <img src={paycoin2} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__content">
+                                                        <h3 className="tp-payment__title">Scan & Go</h3>
+                                                        <p>Transform your payment link into a QR code
+                                                            that customers can scan with their <br />
+                                                            phone to pay.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div className="col-md-6 mb-30">
+                                                <div className="tp-payment__item tp-payment__bg-color-3 p-relative z-index wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".5s">
+                                                    <div className="tp-payment__shape-9">
+                                                        <img src={paypayment3} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__shape-11">
+                                                        <img src={paymessage} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__content">
+                                                        <h3 className="tp-payment__title">Easily Send Requesrs
+                                                            vai e-mail or SMS</h3>
+                                                        <p>... or copy-paste the link</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="col-xl-12 mb-30">
+                                        <div className="tp-payment__item p-relative z-index wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
+                                            <div className="tp-payment__shape-1">
+                                                <img src={paybg} alt="" />
+                                            </div>
+                                            <div className="row">
+                                                <div className="col-md-6">
+                                                    <div className="tp-payment__content tp-payment__content-space">
+                                                        <h3 className="tp-payment__title">Online Billing & <br /> Invoicing Payments.</h3>
+                                                        <p>Get paid faster with Online Invoicing <br /> and the Virtual Terminal.</p>
+                                                        <a href="service-details.html">Explore Invoicing Tools<i className="far fa-arrow-right"></i></a>
+                                                    </div>
+                                                </div>
+                                                <div className="col-md-6">
+                                                    <div className="tp-payment__shape-2">
+                                                        <img src={payimage} alt="" />
+                                                    </div>
+                                                    <div className="tp-payment__shape-3 d-none d-sm-block">
+                                                        <img src={paygetpaid} alt="" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="tp-payment-method__area tp-payment-method__space">
+                                    <div className="container-fluid g-0">
+                                        <div className="row g-0 justify-content-center">
+                                            <div className="col-xl-7">
+                                                <div className="tp-payment-method__title-box text-center mb-20" style={{color:'white'}}>
+                                                    <h3 className="tp-section-title-lg pb-10" style={{color:'white'}}>All major <br/>
+                                                        payment methods</h3>
+                                                    <p style={{color:'white'}}>We've got all your payments covered</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="row g-0">
+                                            <div className="col-12">
+                                                <div className="tp-payment-method__wrapper text-center p-relative">
+                                                    <div className="tp-payment-method__main-circle p-relative z-index">
+                                                        <div className="tp-payment-method__main-img z-index-3">
+                                                            <img src={paylogomain} alt=""/>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-1">
+                                                            <div className="tp-payment-method__circle circle-1"></div>
+                                                            <span><img src={paylogo1} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-2 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-2"></div>
+                                                            <span><img src={paylogo2} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-3">
+                                                            <div className="tp-payment-method__circle circle-3"></div>
+                                                            <span><img src={paylogo3} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-4 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-4"></div>
+                                                            <span><img src={paylogo4} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-5">
+                                                            <div className="tp-payment-method__circle circle-5"></div>
+                                                            <span><img src={paylogo5} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-6 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-6"></div>
+                                                            <span><img src={paylogo6} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-7">
+                                                            <div className="tp-payment-method__circle circle-7"></div>
+                                                            <span><img src={paylogo7} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-8 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-8"></div>
+                                                            <span><img src={paylogo16} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-9">
+                                                            <div className="tp-payment-method__circle circle-9"></div>
+                                                            <span><img src={paylogo15} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-10 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-10"></div>
+                                                            <span><img src={paylogo14} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-11">
+                                                            <div className="tp-payment-method__circle circle-11"></div>
+                                                            <span><img src={paylogo13} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-12 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-12"></div>
+                                                            <span><img src={paylogo12} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-13">
+                                                            <div className="tp-payment-method__circle circle-13"></div>
+                                                            <span><img src={paylogo11} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-14 d-none d-lg-block">
+                                                            <div className="tp-payment-method__circle circle-14"></div>
+                                                            <span><img src={paylogo10} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-15">
+                                                            <div className="tp-payment-method__circle circle-15"></div>
+                                                            <span><img src={paylogo9} alt=""/></span>
+                                                        </div>
+                                                        <div className="tp-payment-method__line-16">
+                                                            <div className="tp-payment-method__circle circle-16"></div>
+                                                            <span><img src={paylogo8} alt=""/></span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
@@ -240,7 +447,7 @@ const SearchBox = () => {
                                         <div className="col-xl-4 col-lg-4">
                                             <div className="tp-barnd-left-item d-flex align-items-center">
                                                 <div className="tp-barnd-icon">
-                                                    <img src="../assets/img/hero/hero-slider-icon-1.jpg" alt="" />
+                                                    <img src={heroslider1} alt="" />
                                                 </div>
                                                 <h5 className="tp-barnd-title-sm">2k Companies <br /> Trusted in the world</h5>
                                             </div>
@@ -249,19 +456,19 @@ const SearchBox = () => {
                                             <div className="tp-barnd-slider-wrapper">
                                                 <div className="tp-barnd-slider-active p-relative">
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-2.jpg" alt="" />
+                                                        <img src={heroslider2} alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-3.jpg" alt="" />
+                                                        <img src={heroslider3} alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-4.jpg" alt="" />
+                                                        <img src={heroslider4} alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-5.jpg" alt="" />
+                                                        <img src={heroslider5} alt="" />
                                                     </div>
                                                     <div className="tp-brand-item">
-                                                        <img src="../assets/img/hero/hero-slider-icon-3.jpg" alt="" />
+                                                        <img src={heroslider3} alt="" />
                                                     </div>
                                                 </div>
                                             </div>
