@@ -75,6 +75,14 @@ import featureicon1 from '../assets/img/feature/fea-icon-1.png'
 import featureicon2 from '../assets/img/feature/fea-icon-2.png'
 import featureicon3 from '../assets/img/feature/fea-icon-3.png'
 
+// import services 
+import service1 from '../assets/img/service/sv-icon-1.png'
+import service2 from '../assets/img/service/sv-icon-2.png'
+import service3 from '../assets/img/service/sv-icon-3.png'
+import service4 from '../assets/img/service/sv-icon-4.png'
+import service5 from '../assets/img/service/sv-icon-5.png'
+import servicedashboard from '../assets/img/service/sv-dashbord.png'
+
 // importing about /
 import about1 from '../assets/img/about/about-1.jpg'
 import about2 from '../assets/img/about/about-2.jpg'
@@ -487,7 +495,7 @@ const Search2 = () => {
 
                         <div className="tp-feature__area tp-feature__pt-pb pt-165 pb-170 p-relative">
                             <div className="tp-feature__bottom-shape">
-                                <img src="assets/img/feature/fea-bg-shape-1.png" alt="" />
+                                <img src={featurebgshape1} alt="" />
                             </div>
                             <div className="container">
                                 <div className="row justify-content-center">
@@ -628,7 +636,7 @@ const Search2 = () => {
                                     <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".4s">
                                         <div className="tp-service__item mb-30">
                                             <div className="tp-service__icon">
-                                                <img src="assets/img/service/sv-icon-1.png" alt="" />
+                                                <img src={service1} alt="" />
                                             </div>
                                             <div className="tp-service__content">
                                                 <h3 className="tp-service__title-sm tp-orange-color"><a href="service-details.html">AI Data
@@ -652,7 +660,7 @@ const Search2 = () => {
                                     <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
                                         <div className="tp-service__item mb-30">
                                             <div className="tp-service__icon">
-                                                <img src="assets/img/service/sv-icon-2.png" alt="" />
+                                                <img src={service2} alt="" />
                                             </div>
                                             <div className="tp-service__content">
                                                 <h3 className="tp-service__title-sm tp-theme-color"><a href="service-details.html">Machine
@@ -676,7 +684,7 @@ const Search2 = () => {
                                     <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
                                         <div className="tp-service__item mb-30">
                                             <div className="tp-service__icon">
-                                                <img src="assets/img/service/sv-icon-3.png" alt="" />
+                                                <img src={service3} alt="" />
                                             </div>
                                             <div className="tp-service__content">
                                                 <h3 className="tp-service__title-sm tp-purple-color"><a href="service-details.html">Data
@@ -700,7 +708,7 @@ const Search2 = () => {
                                     <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".8s">
                                         <div className="tp-service__item mb-30">
                                             <div className="tp-service__icon">
-                                                <img src="assets/img/service/sv-icon-4.png" alt="" />
+                                                <img src={service4} alt="" />
                                             </div>
                                             <div className="tp-service__content">
                                                 <h3 className="tp-service__title-sm tp-green-color"><a href="service-details.html">Business
@@ -724,7 +732,7 @@ const Search2 = () => {
                                     <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
                                         <div className="tp-service__item mb-30">
                                             <div className="tp-service__icon">
-                                                <img src="assets/img/service/sv-icon-5.png" alt="" />
+                                                <img src={service5} alt="" />
                                             </div>
                                             <div className="tp-service__content">
                                                 <h3 className="tp-service__title-sm tp-yellow-color"><a href="service-details.html">Artificial
@@ -757,7 +765,7 @@ const Search2 = () => {
                                             </div>
                                             <div className="tp-service__dashdboard-sm-img">
                                                 <img className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s"
-                                                    src="assets/img/service/sv-dashbord.png" alt="" />
+                                                    src={servicedashboard} alt="" />
                                             </div>
                                         </div>
                                     </div>
