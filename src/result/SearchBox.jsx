@@ -4,6 +4,7 @@ import {
 } from 'react-icons/fa6'
 
 import { FaGlobe } from 'react-icons/fa'
+import './Search.css'
 
 import './../assets/css/bootstrap.min.css'
 import './../assets/css/animate.css'
@@ -122,12 +123,12 @@ const SearchBox = () => {
             <header className="tp-header-height">
                 <div id="header-sticky" className="header-bottom__area header-blur header-bottom__transparent header-bottom__plr-4 z-index-3">
                     <div className="container-fluid p-0">
-                        <div className="row g-0 align-items-center">
+                        <div className="row g-0 align-items-center" style={{marginTop:'20px'}}>
 
                             {/* Display logo  */}
                             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
                                 <div className="header-bottom__logo">
-                                    <Link to='/home'><img src={mainLogo} alt="" /></Link>
+                                    <Link to='/home'><img className='logo-image' src={mainLogo} alt="" /></Link>
                                 </div>
                             </div>
 
@@ -193,16 +194,16 @@ const SearchBox = () => {
                                             {/* Search box form  */}
                                             <form onSubmit={handleSearch} method="post" style={{ display: 'flex', alignItems: 'center', maxWidth: '600px', margin: '0 auto' }}>
                                                 <div style={{ flex: '1', border: '1px solid #dfe1e5', borderRadius: '24px', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingLeft: '16px' }}>
-                                                    <FaGlobe size={20} style={{ color: '#70757a', marginRight: '12px' }} />
+                                                    <FaGlobe size={20} style={{ color: '#fff', marginRight: '12px' }} />
                                                     <input
                                                         type="text"
                                                         name="search"
-                                                        placeholder="Search Google"
+                                                        placeholder="Search"
                                                         value={searchQuery}
                                                         style={{
                                                             flex: '1',
                                                             border: 'none',
-                                                            padding: '12px',  // Increase the padding for more space
+                                                            padding: '24px 18px',  // Increase the padding for more space
                                                             outline: 'none',
                                                             fontSize: '16px',
                                                             boxShadow: 'none',  // Remove the default input box shadow
