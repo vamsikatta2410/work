@@ -123,7 +123,7 @@ const SearchBox = () => {
             <header className="tp-header-height">
                 <div id="header-sticky" className="header-bottom__area header-blur header-bottom__transparent header-bottom__plr-4 z-index-3">
                     <div className="container-fluid p-0">
-                        <div className="row g-0 align-items-center" style={{marginTop:'20px'}}>
+                        <div className="row g-0 align-items-center" style={{marginTop:'15px',marginBottom:'15px'}}>
 
                             {/* Display logo  */}
                             <div className="col-xxl-2 col-xl-2 col-lg-2 col-md-4 col-6">
