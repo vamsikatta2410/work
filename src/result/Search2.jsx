@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import { FaMagnifyingGlass } from 'react-icons/fa6'
+import { Link, useParams, useNavigate } from 'react-router-dom'
 
 import './Search.css'
 
@@ -74,9 +75,43 @@ import featureicon1 from '../assets/img/feature/fea-icon-1.png'
 import featureicon2 from '../assets/img/feature/fea-icon-2.png'
 import featureicon3 from '../assets/img/feature/fea-icon-3.png'
 
+// importing about /
+import about1 from '../assets/img/about/about-1.jpg'
+import about2 from '../assets/img/about/about-2.jpg'
+import about3 from '../assets/img/about/about-3.jpg'
+import about5 from '../assets/img/about/about-5.png'
+import aboutbgshape from '../assets/img/about/about-bg-shape.png'
+
 import mainLogo from '../assets/google.png'
 
 const Search2 = () => {
+
+    const [searchQuery, setSearchQuery] = useState('')
+    const navigate = useNavigate()
+
+    const handleSearch = (e) => {
+        e.preventDefault()
+        navigate(`/result/${searchQuery}`)
+    }
+
+    const handleSubmit = (e) => {
+        const scriptURL = ''
+        const form = document.forms['formName']
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then((response) =>
+                    alert('Thank you! your form is submitted successfully.')
+                )
+                .then(() => {
+                    window.location.reload()
+                })
+                .catch((error) => console.error('Error!', error.message))
+        })
+    }
+
+
     return (
         <body>
 
@@ -108,9 +143,9 @@ const Search2 = () => {
                                     </div>
                                 </div>
                                 <div className="search__form">
-                                    <form action="#">
+                                    <form onSubmit={handleSearch} method='post'>
                                         <div className="search__input">
-                                            <input className="search-input-field" type="text" placeholder="Type here to search..." />
+                                            <input className="search-input-field" type="text" name='search' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Type here to search..." />
                                             <span className="search-focus-border"></span>
                                             <button type="submit">
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
@@ -222,7 +257,7 @@ const Search2 = () => {
                                                     stroke-linecap="round" stroke-linejoin="round" />
                                             </svg>
                                         </a>
-                                        <a className="d-none d-lg-inline-block last-child" href="register.html">
+                                        <a className="d-none d-lg-inline-block last-child" href="/login">
                                             <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
@@ -325,14 +360,13 @@ const Search2 = () => {
                                                 </div>
                                                 <div className="tp-hero__input p-relative wow tpfadeUp" data-wow-duration=".9s"
                                                     data-wow-delay=".5s">
-                                                    <form action="#">
+                                                    <form onSubmit={handleSearch} method='post'>
                                                         <div className="p-relative">
-                                                            <input type="text" placeholder="Type here to search" />
+                                                            <input type="text" placeholder="Type here to search" name='search' value={searchQuery} onChange={(e)=>setSearchQuery(e.target.value)}/>
                                                             <FaMagnifyingGlass />
                                                         </div>
-                                                        <button className="tp-btn tp-btn-hover alt-color-black">
+                                                        <button type='submit' className="tp-btn tp-btn-hover alt-color-black">
                                                             <span>Search</span>
-                                                            <b></b>
                                                         </button>
                                                     </form>
                                                 </div>
@@ -362,7 +396,7 @@ const Search2 = () => {
                             </div>
                         </div>
 
-                        <div className="tp-payment-method__area tp-payment-method__space" style={{paddingBottom:'0'}}>
+                        <div className="tp-payment-method__area tp-payment-method__space" style={{ paddingBottom: '0' }}>
                             <div className="container-fluid g-0">
                                 <div className="row g-0 justify-content-center">
                                     <div className="col-xl-7">
@@ -535,19 +569,19 @@ const Search2 = () => {
                                     <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".2s">
                                         <div className="tp-about__img-wrapper text-center text-lg-end p-relative">
                                             <div className="tp-about__bg-shape">
-                                                <img src="assets/img/about/about-bg-shape.png" alt="" />
+                                                <img src={aboutbgshape} alt="" />
                                             </div>
                                             <div className="tp-about__main-img z-index">
-                                                <img src="assets/img/about/about-2.jpg" alt="" />
+                                                <img src={about2} alt="" />
                                             </div>
                                             <div className="tp-about__sub-img-1 d-none d-sm-block z-index-3">
-                                                <img src="assets/img/about/about-1.jpg" alt="" />
+                                                <img src={about1} alt="" />
                                             </div>
                                             <div className="tp-about__sub-img-2 d-none d-sm-block">
-                                                <img src="assets/img/about/about-3.jpg" alt="" />
+                                                <img src={about2} alt="" />
                                             </div>
                                             <div className="tp-about__sub-img-3 d-none d-sm-block z-index-3">
-                                                <img src="assets/img/about/about-5.png" alt="" />
+                                                <img src={about5} alt="" />
                                             </div>
                                         </div>
                                     </div>
