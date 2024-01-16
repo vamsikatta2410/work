@@ -20,9 +20,14 @@ import './../assets/css/style.css'
 import './../New Home/Style.css'
 
 import mainLogo from '../assets/google.png'
+
+// Importing hero images 
 import hero41 from '../assets/img/hero/hero-4-1.png'
 import hero42 from '../assets/img/hero/hero-4-2.png'
 import hero43 from '../assets/img/hero/hero-4-3.png'
+
+// importing services images 
+import serviceshaperight from '../assets/img/service/service-shape-right.png'
 
 // Importing payment images 
 import paybg from '../assets/img/payment/background.png'
@@ -111,6 +116,9 @@ const SearchBox = () => {
                 <i className="far fa-angle-double-up"></i>
             </button>
 
+            <div className="mouseCursor cursor-outer"></div>
+            <div className="mouseCursor cursor-inner"><a href="#"><i className="fas fa-play"></i></a></div>
+
             <header className="tp-header-height">
                 <div id="header-sticky" className="header-bottom__area header-blur header-bottom__transparent header-bottom__plr-4 z-index-3">
                     <div className="container-fluid p-0">
@@ -127,53 +135,6 @@ const SearchBox = () => {
                             <div className="col-xxl-7 col-xl-7 col-lg-7 d-none d-lg-block">
                                 <div className="header-bottom__main-menu header-bottom__main-menu-4">
                                     <nav id="mobile-menu">
-                                        <ul>
-                                            <li>
-                                                <a href="index.html">Home</a>
-                                                <ul className="submenu">
-                                                    <li><a href="index.html">Data analytics</a></li>
-                                                    <li><a href="index-2.html">Payment Gateway</a></li>
-                                                    <li><a href="index-3.html">CRM Software</a></li>
-                                                    <li><a href="index-4.html">Security Software</a></li>
-                                                    <li><a href="index-5.html">Saas</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">Page</a>
-                                                <ul className="submenu">
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="service.html">Service</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                    <li><a href="career.html">Career</a></li>
-                                                    <li><a href="career-details.html">Career Details</a></li>
-                                                    <li><a href="integrations.html">Integrations</a></li>
-                                                    <li><a href="register.html">Register</a></li>
-                                                    <li><a href="sign-in.html">Signin</a></li>
-                                                    <li><a href="contact.html">Contact</a></li>
-                                                    <li><a href="404.html">404</a></li>
-                                                </ul>
-                                            </li>
-                                            <li>
-                                                <a href="project-details.html">Portfoilo</a>
-                                                <ul className="submenu">
-                                                    <li><a href="project.html">Project</a></li>
-                                                    <li><a href="project-details.html">Project Details</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="price.html">Pricing</a></li>
-                                            <li>
-                                                <a href="blog-details.html">Blog</a>
-                                                <ul className="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-list.html">Blog List</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                    <li><a href="blog-details-2.html">Blog Details 02</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                        </ul>
                                     </nav>
                                 </div>
                             </div>
@@ -218,7 +179,6 @@ const SearchBox = () => {
 
             <div id="smooth-wrapper">
                 <div id="smooth-content">
-
                     <main className="fix">
                         <div className="tp-hero-area tp-hero-overlay blue-bg pt-200 pb-115 p-relative">
                             <div className="tp-hero-glob-img">
@@ -264,6 +224,9 @@ const SearchBox = () => {
                                     </div>
                                     <div className="col-xl-5 col-lg-5">
                                         <div className="tp-hero-4-img-wrapper p-relative">
+                                            <div className="tp-hero-glob-img">
+                                                <img src={hero43} alt="" />
+                                            </div>
                                             <div className="tp-hero-4-main-img text-center z-index-3">
                                                 <img src={hero41} alt="" />
                                             </div>
@@ -350,10 +313,10 @@ const SearchBox = () => {
                                     <div className="container-fluid g-0">
                                         <div className="row g-0 justify-content-center">
                                             <div className="col-xl-7">
-                                                <div className="tp-payment-method__title-box text-center mb-20" style={{color:'white'}}>
-                                                    <h3 className="tp-section-title-lg pb-10" style={{color:'white'}}>All major <br/>
+                                                <div className="tp-payment-method__title-box text-center mb-20" style={{ color: 'white' }}>
+                                                    <h3 className="tp-section-title-lg pb-10" style={{ color: 'white' }}>All major <br />
                                                         payment methods</h3>
-                                                    <p style={{color:'white'}}>We've got all your payments covered</p>
+                                                    <p style={{ color: 'white' }}>We've got all your payments covered</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -362,71 +325,71 @@ const SearchBox = () => {
                                                 <div className="tp-payment-method__wrapper text-center p-relative">
                                                     <div className="tp-payment-method__main-circle p-relative z-index">
                                                         <div className="tp-payment-method__main-img z-index-3">
-                                                            <img src={paylogomain} alt=""/>
+                                                            <img src={paylogomain} alt="" />
                                                         </div>
                                                         <div className="tp-payment-method__line-1">
                                                             <div className="tp-payment-method__circle circle-1"></div>
-                                                            <span><img src={paylogo1} alt=""/></span>
+                                                            <span><img src={paylogo1} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-2 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-2"></div>
-                                                            <span><img src={paylogo2} alt=""/></span>
+                                                            <span><img src={paylogo2} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-3">
                                                             <div className="tp-payment-method__circle circle-3"></div>
-                                                            <span><img src={paylogo3} alt=""/></span>
+                                                            <span><img src={paylogo3} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-4 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-4"></div>
-                                                            <span><img src={paylogo4} alt=""/></span>
+                                                            <span><img src={paylogo4} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-5">
                                                             <div className="tp-payment-method__circle circle-5"></div>
-                                                            <span><img src={paylogo5} alt=""/></span>
+                                                            <span><img src={paylogo5} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-6 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-6"></div>
-                                                            <span><img src={paylogo6} alt=""/></span>
+                                                            <span><img src={paylogo6} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-7">
                                                             <div className="tp-payment-method__circle circle-7"></div>
-                                                            <span><img src={paylogo7} alt=""/></span>
+                                                            <span><img src={paylogo7} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-8 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-8"></div>
-                                                            <span><img src={paylogo16} alt=""/></span>
+                                                            <span><img src={paylogo16} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-9">
                                                             <div className="tp-payment-method__circle circle-9"></div>
-                                                            <span><img src={paylogo15} alt=""/></span>
+                                                            <span><img src={paylogo15} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-10 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-10"></div>
-                                                            <span><img src={paylogo14} alt=""/></span>
+                                                            <span><img src={paylogo14} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-11">
                                                             <div className="tp-payment-method__circle circle-11"></div>
-                                                            <span><img src={paylogo13} alt=""/></span>
+                                                            <span><img src={paylogo13} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-12 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-12"></div>
-                                                            <span><img src={paylogo12} alt=""/></span>
+                                                            <span><img src={paylogo12} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-13">
                                                             <div className="tp-payment-method__circle circle-13"></div>
-                                                            <span><img src={paylogo11} alt=""/></span>
+                                                            <span><img src={paylogo11} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-14 d-none d-lg-block">
                                                             <div className="tp-payment-method__circle circle-14"></div>
-                                                            <span><img src={paylogo10} alt=""/></span>
+                                                            <span><img src={paylogo10} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-15">
                                                             <div className="tp-payment-method__circle circle-15"></div>
-                                                            <span><img src={paylogo9} alt=""/></span>
+                                                            <span><img src={paylogo9} alt="" /></span>
                                                         </div>
                                                         <div className="tp-payment-method__line-16">
                                                             <div className="tp-payment-method__circle circle-16"></div>
-                                                            <span><img src={paylogo8} alt=""/></span>
+                                                            <span><img src={paylogo8} alt="" /></span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -480,7 +443,7 @@ const SearchBox = () => {
 
                         <div className="tp-service-area blue-bg p-relative pt-115 pb-105">
                             <div className="tp-service-shape-right z-index">
-                                <img src="../assets/img/service/service-shape-right.png" alt="" />
+                                <img src={serviceshaperight} alt="" />
                             </div>
                             <div className="container">
                                 <div className="row align-items-end mb-60">
