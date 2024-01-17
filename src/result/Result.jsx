@@ -15,15 +15,15 @@ function WikiComponent(props) {
   const slicedExtract = props?.extract?.slice(0,200);
   console.log(props);
   return (
-    <div className="wiki_container" style={{width:'23rem',padding:'15px',height:'500px'}}>
-      <img className="wiki_image_content" src={props.image} alt={props.title} />{' '}
+    <div className="wiki_container" style={{width:'23rem',height:'500px'}}>
+      <img className="wiki_image_content" src={props.image} alt={props.title} style={{width:'100%'}}/>{' '}
       <div
         className="wiki_heading"
-        style={{ textAlign: 'left', marginBottom: '15px', marginLeft: '10px' }}
+        style={{ textAlign: 'left', marginBottom: '10px', marginLeft: '10px',padding:'0 8px' }}
       >
         <div
           className="main_heading"
-          style={{ marginTop: '20px', marginBottom: '10px' }}
+          style={{ marginTop: '20px', marginBottom: '8px',padding:'0 8px' }}
         >
           <h2 style={{ fontSize: '40px' }}>
             <span>{props.title}</span>
@@ -31,14 +31,14 @@ function WikiComponent(props) {
         </div>
         <div
           className="sun_heading"
-          style={{ fontSize: '20px', color: 'chocolate' }}
+          style={{ fontSize: '20px', color: 'chocolate',padding:'0 8px' }}
         >
           <span>{props.description}</span>
         </div>
       </div>
       <div
         className="wiki_details"
-        style={{ textAlign: 'left', marginLeft: '10px' }}
+        style={{ textAlign: 'left',padding:'0 8px' }}
       >
         <span style={{lineHeight:'23px'}}>
           {slicedExtract}{' '}

@@ -18988,13 +18988,9 @@ z {
     text-align: center;
     margin-left: 200px;
     color: black;
-    /* height: 480px;
-    width: 490px; */
     background-color: #fff;
-    box-shadow: 1px 1px 5px #888888;
+    border: 1px solid rgba(0, 0, 0, 0.20);
     border-radius: 10px;
-    /* border: 0 solid lightgray;
-    box-shadow: 1px 1px 3px #888888; */
 }
 
 .wiki_social {
