@@ -55,9 +55,9 @@ function WikiComponent(props) {
 function ResultComponent(props) {
   return (
     <li className="b_algo">
-      <div className="b_title">
+      <div className="b_title" style={{lineHeight:'0'}}>
         <h2>
-          <a href={props.link} h="ID=SERP,5292.1">
+          <a style={{color:'#174AE4',opacity:'0.8',fontWeight:'normal',fontSize:'24px'}} href={props.link} h="ID=SERP,5292.1">
             {props.title} {props.index < 10 ? <MdVerified/>:''}
           </a>
         </h2>
@@ -117,11 +117,8 @@ function ResultComponent(props) {
             </span>
           </div>
           <p className="b_lineclamp2 b_algoSlug">
-            <span className="algoSlug_icon" data-priority={2}>
-              Web
-            </span>
             <span className="news_dt">
-              <strong>{props.snippet}</strong>
+              {props.snippet}
             </span>
           </p>
           <div className="b_factrow b_twofr">
@@ -178,10 +175,10 @@ export default function Result() {
           <main aria-label="Search Results">
             {
               wiki.extract?.length? (<div className="aiResult example" style={{height:'40px'}}>
-              <h1 style={{fontWeight:'700',color:'black',fontSize:'35px'}}>
+              <h1 style={{fontWeight:'700',color:'black',fontSize:'20px'}}>
                 {wiki.title}
               </h1>
-              <p style={{color:'black',marginTop:'10px',fontSize:'18px'}}>
+              <p style={{color:'black',marginTop:'10px',fontSize:'15px'}}>
                 {wiki.extract}
               </p>
             </div>):''
