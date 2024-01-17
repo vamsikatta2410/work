@@ -239,21 +239,15 @@ const Business = () => {
                                        </div>
                                     </div>
                                     <div className="col-12">
-                                       <div className="postbox__select mb-30">
-                                          <select>
-                                             <option>Your Inquiry about</option>
-                                             <option>01 Year</option>
-                                             <option>02 Year</option>
-                                             <option>03 Year</option>
-                                             <option>04 Year</option>
-                                             <option>05 Year</option>
-                                          </select>
+                                    <div className="postbox__comment-input mb-35">
+                                          <input type="text" className="inputText" required/>
+                                          <span className="floating-label">Website URL</span>
                                        </div>
                                     </div>
                                     <div className="col-xxl-12">
                                        <div className="postbox__comment-input mb-30">
                                           <textarea className="textareaText" required></textarea>
-                                          <span className="floating-label-2">Message...</span>
+                                          <span className="floating-label-2">How can we help you ?</span>
                                        </div>
                                     </div>
                                     <div className="col-xxl-12">
