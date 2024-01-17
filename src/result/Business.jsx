@@ -38,6 +38,9 @@ import contactbanner from '../assets/img/contact/contact-banner.jpg'
 import footerinner1 from '../assets/img/footer/footer-inner-1.png'
 import footerinner2 from '../assets/img/footer/footer-inner-2.png'
 
+// importing cta 
+import ctabg from '../assets/img/cta/cta-bg.jpg'
+
 const Business = () => {
   return (
     <body>
@@ -130,7 +133,7 @@ const Business = () => {
                </div>
             </div>
             
-            <div className="contact-info-area pb-90">
+            {/* <div className="contact-info-area pb-90">
                <div className="container">
                   <div className="row">
                      <div className="col-xl-4 col-lg-4 mb-30">
@@ -174,7 +177,7 @@ const Business = () => {
                      </div>
                   </div>
                </div>
-            </div>
+            </div> */}
 
             <div className="contact-form-area pb-120">
                <div className="container">
@@ -267,7 +270,7 @@ const Business = () => {
                </div>
             </div>
 
-            <div className="contact-inner-area pb-130">
+            {/* <div className="contact-inner-area pb-130">
                <div className="container">
                   <div className="row">
                      <div className="col-xl-12">
@@ -312,14 +315,14 @@ const Business = () => {
                      </div>
                   </div>
                </div> 
-            </div>
+            </div> */}
             
             <div className="tp-cta-area p-relative">
                <div className="tp-cta-grey-bg grey-bg-2"></div>
                <div className="container">
                   <div className="row">
                      <div className="col-12">
-                        <div className="tp-cta-bg" data-background="assets/img/cta/cta-bg.jpg">
+                        <div className="tp-cta-bg" style={{ backgroundImage: `url(${ctabg})` }}>
                            <div className="tp-cta-content tp-inner-font text-center">
                               <h3 className="tp-section-title text-white">Try our service now!</h3>
                               <p>Eyerything you need to accept cord payments and grow your business <br/>
