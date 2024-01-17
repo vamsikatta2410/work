@@ -219,14 +219,7 @@ const Search2 = () => {
                                     <nav id="mobile-menu">
                                         <ul>
                                             <li>
-                                                <a href="index.html">Home</a>
-                                                <ul className="submenu">
-                                                    <li><a href="index.html">Data analytics</a></li>
-                                                    <li><a href="index-2.html">Payment Gateway</a></li>
-                                                    <li><a href="index-3.html">CRM Software</a></li>
-                                                    <li><a href="index-4.html">Security Software</a></li>
-                                                    <li><a href="index-5.html">Saas</a></li>
-                                                </ul>
+                                                <a href="/home">Home</a>
                                             </li>
                                             <li>
                                                 <a href="#">Pages</a>
