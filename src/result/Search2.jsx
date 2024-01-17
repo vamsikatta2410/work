@@ -189,57 +189,8 @@ const Search2 = () => {
                 <i className="far fa-angle-double-up"></i>
             </button>
 
-            <div className="search__popup">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xxl-12">
-                            <div className="search__wrapper">
-                                <div className="search__top d-flex justify-content-between align-items-center">
-                                    <div className="search__logo">
-                                        <a href="home-main.html">
-                                            <img src={mainLogo} alt="" />
-                                        </a>
-                                    </div>
-                                    <div className="search__close">
-                                        <button type="button" className="search__close-btn search-close-btn">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M17 1L1 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                                <path d="M1 1L17 17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                                <div className="search__form">
-                                    <form onSubmit={handleSearch} method='post'>
-                                        <div className="search__input">
-                                            <input className="search-input-field" type="text" name='search' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder="Type here to search..." />
-                                            <span className="search-focus-border"></span>
-                                            <button type="submit">
-                                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M9.55 18.1C14.272 18.1 18.1 14.272 18.1 9.55C18.1 4.82797 14.272 1 9.55 1C4.82797 1 1 4.82797 1 9.55C1 14.272 4.82797 18.1 9.55 18.1Z"
-                                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                        stroke-linejoin="round" />
-                                                    <path d="M19.0002 19.0002L17.2002 17.2002" stroke="currentColor" stroke-width="1.5"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+        
             <header className="header-bottom__transparent z-index-6 tp-header-height">
-
-
                 <div className="header-top__area header-top__space z-index-3 d-none d-md-block tp-header-top-animation">
                     <div className="container">
                         <div className="row align-items-start">
@@ -318,14 +269,7 @@ const Search2 = () => {
                                 <div className="header-bottom__right d-flex align-items-center justify-content-end">
                                     <div className="header-bottom__action">
                                         <a className="d-none d-md-inline-block search-open-btn" href="javascript:void(0)">
-                                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
-                                                xmlns="http://www.w3.org/2000/svg">
-                                                <path
-                                                    d="M8.6 16.2C12.7974 16.2 16.2 12.7974 16.2 8.6C16.2 4.40264 12.7974 1 8.6 1C4.40264 1 1 4.40264 1 8.6C1 12.7974 4.40264 16.2 8.6 16.2Z"
-                                                    stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M16.9999 17L15.3999 15.4" stroke="#292D32" stroke-width="1.5"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
+                                           
                                         </a>
                                         <a className="d-none d-lg-inline-block last-child" href="/login">
                                             <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
