@@ -58,7 +58,7 @@ function ResultComponent(props) {
       <div className="b_title" style={{lineHeight:'0'}}>
         <h2>
           <a style={{color:'#174AE4',opacity:'0.8',fontWeight:'normal',fontSize:'24px'}} href={props.link} h="ID=SERP,5292.1">
-            {props.title} {props.index < 10 ? <MdVerified/>:''}
+            {props.title} {props.index < 10 ? <MdVerified style={{fontSize:'20px'}}/>:''}
           </a>
         </h2>
         <div className="b_suffix b_secondaryText nowrap scs_exp siz23 b_floatrt">
@@ -117,7 +117,7 @@ function ResultComponent(props) {
             </span>
           </div>
           <p className="b_lineclamp2 b_algoSlug">
-            <span className="news_dt">
+            <span className="news_dt" style={{fontSize:'15px'}}>
               {props.snippet}
             </span>
           </p>
