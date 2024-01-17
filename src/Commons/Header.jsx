@@ -6,6 +6,7 @@ import Avatar from 'react-avatar'
 import { FaMedal } from 'react-icons/fa'
 import {ImImages,ImNewspaper} from 'react-icons/im'
 import {BiSolidVideos} from 'react-icons/bi'
+import {MdOutlineSettings} from 'react-icons/md'
 
 const Header = ({ page }) => {
   const { name } = useParams()
@@ -214,17 +215,22 @@ const Header = ({ page }) => {
 
               <li class="nav-item">
                 <a class="nav-link  " href={`../images/${name}`}>
-                  <ImImages style={{color:'#174AE4',opacity:'0.7'}}/> Images
+                  <ImImages style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Images
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  " href={`../videos/${name}`}>
-                  <BiSolidVideos style={{color:'#174AE4',opacity:'0.7'}}/> Videos
+                  <BiSolidVideos style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Videos
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  " href={`../news/${name}`}>
-                  <ImNewspaper style={{color:'#174AE4',opacity:'0.7'}}/> News
+                  <ImNewspaper style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> News
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link  " >
+                  <MdOutlineSettings style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Settings
                 </a>
               </li>
             </ul>
