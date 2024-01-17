@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { Link, useParams, useNavigate } from 'react-router-dom'
 
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css'
+
 import './Search.css'
 
 import './../assets/css/bootstrap.min.css'
@@ -19,6 +22,14 @@ import './../assets/css/style.css'
 import './../New Home/Style.css'
 
 import manarrow from '../assets/man_arrow.png'
+import bubbles from '../assets/about_s6_bubbles.png'
+import img16 from '../assets/16.png'
+import img15 from '../assets/15.png'
+import img14 from '../assets/14.png'
+import img17 from '../assets/17.png'
+import img18 from '../assets/18.png'
+import img19 from '../assets/19.png'
+import img20 from '../assets/20.png'
 
 // import hero images 
 import heroshape1 from '../assets/img/hero/hero-shape-1.png'
@@ -104,6 +115,46 @@ import aboutbgshape from '../assets/img/about/about-bg-shape.png'
 import mainLogo from '../assets/google.png'
 
 const Search2 = () => {
+
+    const responsive = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 5,
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 5,
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 5,
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 3,
+        },
+    }
+
+    const responsive1 = {
+        superLargeDesktop: {
+            // the naming can be any, depends on you.
+            breakpoint: { max: 4000, min: 3000 },
+            items: 1,
+        },
+        desktop: {
+            breakpoint: { max: 3000, min: 1024 },
+            items: 1,
+        },
+        tablet: {
+            breakpoint: { max: 1024, min: 464 },
+            items: 1,
+        },
+        mobile: {
+            breakpoint: { max: 464, min: 0 },
+            items: 1,
+        },
+    }
 
     const [searchQuery, setSearchQuery] = useState('')
     const navigate = useNavigate()
@@ -415,7 +466,7 @@ const Search2 = () => {
                             </div>
                         </div>
 
-                        <div className="tp-payment-method__area tp-payment-method__space" style={{ paddingBottom: '0' }}>
+                        <div className="tp-payment-method__area tp-payment-method__space" style={{ paddingBottom: '100px' }}>
                             <div className="container-fluid g-0">
                                 <div className="row g-0 justify-content-center">
                                     <div className="col-xl-7">
@@ -504,91 +555,13 @@ const Search2 = () => {
                             </div>
                         </div>
 
-                        <div className="tp-feature__area tp-feature__pt-pb pt-165 p-relative" style={{paddingBottom:'80px'}}>
-                            <div className="tp-feature__bottom-shape">
-                                <img src={featurebgshape1} alt="" />
-                            </div>
-                            <div className="container">
-                                <div className="row justify-content-center">
-                                    <div className="col-xl-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".2s">
-                                        <div className="tp-feature__section-box text-center mb-55 tp-title-anim">
-                                            <h2 className="tp-section-title">Our Exciting Features</h2>
-                                            <p>More than 15,000 companies trust and choose Itech</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s"
-                                        data-wow-delay=".4s">
-                                        <div id="divtest" className="tp-feature__item">
-                                            <div className="tp-feature__icon">
-                                                <img src={featureicon1} alt="" />
-                                            </div>
-                                            <h3 className="tp-feature__title-sm">A Unified View of The Customer</h3>
-                                            <div className="tp-feature__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s"
-                                        data-wow-delay=".6s">
-                                        <div className="tp-feature__item">
-                                            <div className="tp-feature__icon">
-                                                <img src={featureicon2} alt="" />
-                                            </div>
-                                            <h3 className="tp-feature__title-sm">Industry Leading Procedures</h3>
-                                            <div className="tp-feature__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 mb-30 wow tpfadeUp" data-wow-duration=".9s"
-                                        data-wow-delay=".8s">
-                                        <div className="tp-feature__item">
-                                            <div className="tp-feature__icon">
-                                                <img src={featureicon3} alt="" />
-                                            </div>
-                                            <h3 className="tp-feature__title-sm">Collaboration Across <br /> All Areas</h3>
-                                            <div className="tp-feature__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="tp-about__area tp-about__pt-pb pt-100 pb-160">
+                        <div className="tp-about__area tp-about__pt-pb pb-160" style={{ paddingTop: '100px' }}>
                             <div className="container">
                                 <div className="row align-items-center">
                                     <div className="col-xl-6 col-lg-6 wow tpfadeLeft" data-wow-duration=".9s" data-wow-delay=".2s">
                                         <div className="tp-about__img-wrapper text-center text-lg-end p-relative">
                                             <div className="tp-about__bg-shape">
-                                                <img src={aboutbgshape} alt="" />
+                                                <img src={bubbles} alt="" />
                                             </div>
                                             <div className="tp-about__main-img z-index">
                                                 <img src={manarrow} alt="" />
@@ -598,17 +571,15 @@ const Search2 = () => {
                                     <div className="col-xl-6 col-lg-6 wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".6s">
                                         <div className="tp-about__right">
                                             <div className="tp-about__section-box">
-                                                <h4 className="tp-section-subtitle">Why Choose Bsearch ? </h4>
-                                                <h3 className="tp-section-title mb-15">We Offer Real Time Data Solutions
-                                                </h3>
-                                                <p>Excepteur sint occaecat cupidatat officia non proident <br />
-                                                    sunt in culpa qui deserunt.!</p>
+                                                <h4 className="tp-section-title" style={{ marginBottom: '20px' }}>Why <span style={{ backgroundColor: 'blue', padding: '5px', color: 'white', borderRadius: '10px' }}>Bsearch</span>?
+                                                </h4>
+                                                <p>We are passionate about our work. Our designers stay ahead of the curve to provide engaging and user-friendly website designs to make your business stand out</p>
                                             </div>
                                             <div className="tp-about__list">
                                                 <ul>
-                                                    <li><i className="fal fa-check"></i>Various analysis options.</li>
-                                                    <li><i className="fal fa-check"></i>Page Load (time, size, number of requests).</li>
-                                                    <li><i className="fal fa-check"></i>Big data analysis.</li>
+                                                    <li><i className="fal fa-check"></i>Affordable Price.</li>
+                                                    <li><i className="fal fa-check"></i>Top-Notch Experts Consulting.</li>
+                                                    <li><i className="fal fa-check"></i>Dedicated Support 24/7.</li>
                                                 </ul>
                                             </div>
                                             <div className="tp-about__btn">
@@ -629,147 +600,162 @@ const Search2 = () => {
                                 <div className="row justify-content-center">
                                     <div className="col-lg-8">
                                         <div className="tp-service__section-box mb-50 text-center tp-title-anim">
-                                            <h2 className="tp-section-title">Explore Our Data Services</h2>
+                                            <h2 className="tp-section-title">Discover our top services</h2>
                                             <p>More than 15,000 companies trust and choose Itech</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="row">
-                                    <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".4s">
-                                        <div className="tp-service__item mb-30">
-                                            <div className="tp-service__icon">
-                                                <img src={service1} alt="" />
-                                            </div>
-                                            <div className="tp-service__content">
-                                                <h3 className="tp-service__title-sm tp-orange-color"><a href="service-details.html">AI Data
-                                                    Analysis</a></h3>
-                                                <p>Lorem Ipsum is simply dummy text <br />
-                                                    of the printing</p>
-                                            </div>
-                                            <div className="tp-service__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
+    
+                                <div className="content" style={{marginBottom:'80px'}}>
+                                    <div className="services-slider position-relative style-6">
+                                        <div className="swiper-container">
+                                            <Carousel
+                                                responsive={responsive}
+                                                showDots={false}
+                                                autoPlay={true}
+                                                autoPlaySpeed={2000}
+                                                infinite={true}
+                                                arrows={false}
+                                            >
+                                                {/* <div className="swiper-wrapper"> */}
+
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img16} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>Content Strategy</h5>
+                                                            <div className="text">
+                                                                You can provide the answers that your potential
+                                                                customers are trying to find, so you can become the
+                                                                industry.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img15} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>Google/FB Ads</h5>
+                                                            <div className="text">
+                                                                Get more website traffic, more customers &amp; more
+                                                                online visibility with powerful SEO services.
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img14} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>Email Marketing</h5>
+                                                            <div className="text">
+                                                                Your website has to impress your visitors within
+                                                                just a few seconds
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img17} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>Social Media</h5>
+                                                            <div className="text">
+                                                                Get more website traffic, more customers for your
+                                                                social chanel
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img18} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>Website Design and Development</h5>
+                                                            <div className="text">
+                                                                Your website has to impress your visitors within
+                                                                just a few seconds. If it runs slow, if it feels
+                                                                outdated
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img19} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>TVC/ Viral Clip</h5>
+                                                            <div className="text">
+                                                                Optimized your website on google result with PPC
+                                                                Marketing
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div className="swiper-slide">
+                                                    <a
+                                                        href="page-services-5.html"
+                                                        className="service-card style-6"
+                                                    >
+                                                        <div className="icon">
+                                                            <img src={img20} alt="" />
+                                                        </div>
+                                                        <div className="info">
+                                                            <h5>PPC Ads</h5>
+                                                            <div className="text">
+                                                                Optimized your website on google result with PPC
+                                                                Marketing
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+
+                                                {/* </div> */}
+                                            </Carousel>
                                         </div>
                                     </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".6s">
-                                        <div className="tp-service__item mb-30">
-                                            <div className="tp-service__icon">
-                                                <img src={service2} alt="" />
-                                            </div>
-                                            <div className="tp-service__content">
-                                                <h3 className="tp-service__title-sm tp-theme-color"><a href="service-details.html">Machine
-                                                    Learning</a></h3>
-                                                <p>Lorem Ipsum is simply dummy text <br />
-                                                    of the printing</p>
-                                            </div>
-                                            <div className="tp-service__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".7s">
-                                        <div className="tp-service__item mb-30">
-                                            <div className="tp-service__icon">
-                                                <img src={service3} alt="" />
-                                            </div>
-                                            <div className="tp-service__content">
-                                                <h3 className="tp-service__title-sm tp-purple-color"><a href="service-details.html">Data
-                                                    Visualization</a></h3>
-                                                <p>Lorem Ipsum is simply dummy text <br />
-                                                    of the printing</p>
-                                            </div>
-                                            <div className="tp-service__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".8s">
-                                        <div className="tp-service__item mb-30">
-                                            <div className="tp-service__icon">
-                                                <img src={service4} alt="" />
-                                            </div>
-                                            <div className="tp-service__content">
-                                                <h3 className="tp-service__title-sm tp-green-color"><a href="service-details.html">Business
-                                                    Intelligence</a></h3>
-                                                <p>Lorem Ipsum is simply dummy text <br />
-                                                    of the printing</p>
-                                            </div>
-                                            <div className="tp-service__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".9s">
-                                        <div className="tp-service__item mb-30">
-                                            <div className="tp-service__icon">
-                                                <img src={service5} alt="" />
-                                            </div>
-                                            <div className="tp-service__content">
-                                                <h3 className="tp-service__title-sm tp-yellow-color"><a href="service-details.html">Artificial
-                                                    Intelligence</a></h3>
-                                                <p>Lorem Ipsum is simply dummy text <br />
-                                                    of the printing</p>
-                                            </div>
-                                            <div className="tp-service__link">
-                                                <a href="service-details.html">
-                                                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
-                                                        xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M1.00098 7H13.001" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                        <path d="M7.00098 1L13.001 7L7.00098 13" stroke="currentColor" stroke-width="1.5"
-                                                            stroke-linecap="round" stroke-linejoin="round" />
-                                                    </svg>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="col-xl-4 col-lg-4 col-md-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay="1s">
-                                        <div className="tp-service__dashboard" data-background="assets/img/service/sv-bg.jpg">
-                                            <div className="tp-service__top-content">
-                                                <h3 className="tp-service__title-white">Data Analysis <br /> Tools & Methods</h3>
-                                                <p>Lorem Ipsum is simply dummy text <br /> of the printing</p>
-                                                <a className="tp-btn-orange tp-btn-hover alt-color-white" href="project-details.html">
-                                                    <span>Work with Us</span>
-                                                    <b></b>
-                                                </a>
-                                            </div>
-                                            <div className="tp-service__dashdboard-sm-img">
-                                                <img className="wow tpfadeRight" data-wow-duration=".9s" data-wow-delay=".7s"
-                                                    src={servicedashboard} alt="" />
-                                            </div>
-                                        </div>
+                                    <div className="text-center">
+                                        <a
+                                            href="page-services-5.html"
+                                            className="btn rounded-pill butn-blue6 hover-blue2 sm-butn fw-bold me-3"
+                                        >
+                                            <span>
+                                                See All Our Services
+                                                <i className="bi bi-arrow-right ms-1" />
+                                            </span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
