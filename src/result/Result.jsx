@@ -9,6 +9,8 @@ import RelatedSearch from './RelatedSearch'
 import Pagination from './Pagination'
 import NoDataFound from './NoDataFound'
 
+import {MdVerified} from 'react-icons/md'
+
 function WikiComponent(props) {
   const slicedExtract = props?.extract?.slice(0,200);
   console.log(props);
@@ -56,7 +58,7 @@ function ResultComponent(props) {
       <div className="b_title">
         <h2>
           <a href={props.link} h="ID=SERP,5292.1">
-            {props.title}
+            {props.title} {props.index < 10 ? <MdVerified/>:''}
           </a>
         </h2>
         <div className="b_suffix b_secondaryText nowrap scs_exp siz23 b_floatrt">
@@ -193,12 +195,13 @@ export default function Result() {
             >
               <ol id="b_results" className>
                 {
-                  Totalresults? Totalresults?.map((results) => (
+                  Totalresults? Totalresults?.map((results,index) => (
                     <ResultComponent
                       title={results.title}
                       link={results.link}
                       displayLink={results.displayLink}
                       snippet={results.snippet}
+                      index = {index}
                     />
                   )):<NoDataFound/>
                 }
