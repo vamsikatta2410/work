@@ -1,5 +1,5 @@
 import React from 'react'
-import {FaTwitter,FaFacebookF,FaInstagram} from 'react-icons/fa'
+import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa'
 
 const Footer = () => {
     return (
@@ -52,6 +52,9 @@ const Footer = () => {
                         <div className="items">
                             <div className="title">Services</div>
                             <ul>
+                                <li>
+                                    <a href="/business">Business</a>
+                                </li>
                                 <li>
                                     <a href="#">SEO Analysis</a>
                                 </li>

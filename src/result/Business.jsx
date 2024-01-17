@@ -40,6 +40,7 @@ import footerinner2 from '../assets/img/footer/footer-inner-2.png'
 
 // importing cta 
 import ctabg from '../assets/img/cta/cta-bg.jpg'
+import Footer from './Footer'
 
 const Business = () => {
     return (
@@ -435,7 +436,7 @@ const Business = () => {
 
                     </main>
 
-                    <footer>
+                    {/* <footer>
                         <div className="tp-footer__pl-pr grey-bg-2 pt-105">
                             <div className="tp-footer__area p-relative tp-footer__tp-border-bottom">
                                 <div className="tp-footer__shape-1 d-none d-xxl-block">
@@ -565,7 +566,8 @@ const Business = () => {
                                 </div>
                             </div>
                         </div>
-                    </footer>
+                    </footer> */}
+                    <Footer/>
 
                 </div>
             </div>
