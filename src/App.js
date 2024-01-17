@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import ComingSoon from './ComingSoon/ComingSoon'
 import NewHomePage from './result/NewHomePage'
 import Login from './result/Login';
+import Business from './result/Business';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/images/:name" element={<Images />} />
           <Route path="/ComingSoon/" element={<ComingSoon />} />
           <Route path='/login' element={<Login/>}/>
+          <Route path='/business' element={<Business/>}/>
         </Routes>
       </Router>
     </>
