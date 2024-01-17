@@ -4,10 +4,13 @@ import mainLogo from '../BingVideo/google.png'
 import './Style.css'
 import Avatar from 'react-avatar'
 import { FaMedal } from 'react-icons/fa'
+import {ImImages,ImNewspaper} from 'react-icons/im'
+import {BiSolidVideos} from 'react-icons/bi'
+
 const Header = ({ page }) => {
-  const [searchQuery, setSearchQuery] = useState('')
-  const navigate = useNavigate()
   const { name } = useParams()
+  const [searchQuery, setSearchQuery] = useState(name)
+  const navigate = useNavigate()
 
   const handleSearch = (e) => {
     navigate(`/${page}/${searchQuery}`)
@@ -211,17 +214,17 @@ const Header = ({ page }) => {
 
               <li class="nav-item">
                 <a class="nav-link  " href={`../images/${name}`}>
-                  Images
+                  <ImImages style={{color:'#174AE4',opacity:'0.7'}}/> Images
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  " href={`../videos/${name}`}>
-                  Videos
+                  <BiSolidVideos style={{color:'#174AE4',opacity:'0.7'}}/> Videos
                 </a>
               </li>
               <li class="nav-item">
                 <a class="nav-link  " href={`../news/${name}`}>
-                  News
+                  <ImNewspaper style={{color:'#174AE4',opacity:'0.7'}}/> News
                 </a>
               </li>
             </ul>
