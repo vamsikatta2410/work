@@ -532,7 +532,8 @@ const Search2 = () => {
                             </div>
                         </div>
 
-                        <div className="tp-service__area p-relative fix">
+                        {/* Top services carousel  */}
+                        {/* <div className="tp-service__area p-relative fix">
                             <div className="tp-service__grey-shape grey-bg"></div>
                             <div className="container">
                                 <div className="row justify-content-center">
@@ -555,7 +556,6 @@ const Search2 = () => {
                                                 infinite={true}
                                                 arrows={false}
                                             >
-                                                {/* <div className="swiper-wrapper"> */}
 
                                                 <div className="swiper-slide">
                                                     <a
@@ -679,8 +679,6 @@ const Search2 = () => {
                                                         </div>
                                                     </a>
                                                 </div>
-
-                                                {/* </div> */}
                                             </Carousel>
                                         </div>
                                     </div>
@@ -697,7 +695,7 @@ const Search2 = () => {
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
 
 
                         {/* <div className="tp-rank__area pb-200">

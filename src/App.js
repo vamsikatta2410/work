@@ -16,8 +16,8 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/" element={<NewHome />} />
-          <Route path="/home" element={<NewHomePage />} />
+          <Route path="/home" element={<NewHome />} />
+          <Route path="/" element={<NewHomePage />} />
           <Route path="/result/:name" element={<Result />} />
           <Route path="/news/:name" element={<News />} />
           <Route path="/videos/:name" element={<Videos />} />
