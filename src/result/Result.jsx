@@ -15,30 +15,30 @@ function WikiComponent(props) {
   const slicedExtract = props?.extract?.slice(0,200);
   console.log(props);
   return (
-    <div className="wiki_container" style={{width:'23rem',height:'500px'}}>
-      <img className="wiki_image_content" src={props.image} alt={props.title} style={{width:'100%'}}/>{' '}
+    <div className="wiki_container" style={{width:'23rem',height:'450px'}}>
+      <img className="wiki_image_content" src={props.image} alt={props.title} style={{width:'100%',height:'45%',borderTopLeftRadius:'10px',borderTopRightRadius:'10px'}}/>{' '}
       <div
         className="wiki_heading"
-        style={{ textAlign: 'left', marginBottom: '10px', marginLeft: '10px',padding:'0 8px' }}
+        style={{ textAlign: 'left', marginBottom: '10px',marginLeft:'8px'}}
       >
         <div
           className="main_heading"
           style={{ marginTop: '20px', marginBottom: '8px',padding:'0 8px' }}
         >
-          <h2 style={{ fontSize: '40px' }}>
+          <h2 style={{ fontSize: '28px'}}>
             <span>{props.title}</span>
           </h2>
         </div>
         <div
           className="sun_heading"
-          style={{ fontSize: '20px', color: 'chocolate',padding:'0 8px' }}
+          style={{ fontSize: '18px', color: 'chocolate',padding:'0 8px' }}
         >
-          <span>{props.description}</span>
+          <span style={{color:'#888888',fontFamily:'DDG_ProximaNova'}}>{props.description}</span>
         </div>
       </div>
       <div
         className="wiki_details"
-        style={{ textAlign: 'left',padding:'0 8px' }}
+        style={{ textAlign: 'left',padding:'0 8px',marginLeft:'8px' }}
       >
         <span style={{lineHeight:'23px'}}>
           {slicedExtract}{' '}
