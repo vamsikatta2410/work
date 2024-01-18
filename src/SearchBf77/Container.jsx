@@ -61,11 +61,10 @@ function Container() {
             data-iid="images.5996"
             data-layout="row"
           >
-            {imgData.map((val) => {
+            {imgData?.map((val,index) => {
               return (
                 <ImageCard
-                  // key={val.id}
-                  // id={val.id}
+                  key = {index}
                   imgurl={val.image.thumbnailLink}
                   info={val.snippet}
                   setCurrentSelectedCard={setCurrentSelectedCard}
