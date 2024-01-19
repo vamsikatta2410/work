@@ -201,7 +201,7 @@ const Search2 = () => {
                             <path d="M13 15C13 12.291 10.3108 10.1 7 10.1C3.68917 10.1 1 12.291 1 15" stroke="currentColor"
                                 strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
-                        <span style={{ marginLeft: '8px',fontSize:'17px' }}>Log In</span>
+                        <span style={{ marginLeft: '8px',fontSize:'19px' }}>Log In</span>
                     </a>
                 </div>
             </header>

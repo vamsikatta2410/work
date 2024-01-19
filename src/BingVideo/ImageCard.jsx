@@ -2,7 +2,7 @@ import React from 'react'
 
 function ImageCard(props) {
 
-  const maxLength = 70;
+  const maxLength = 60;
   const croppedName = props.info.length > maxLength ? props.info.slice(0, maxLength) + '...' : props.info;
 
   return (
