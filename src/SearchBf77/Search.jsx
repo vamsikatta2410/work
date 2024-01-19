@@ -1160,20 +1160,6 @@ function Search(page) {
                             </div>
                         </div>
                     </div>
-                    <a
-                        id="imgcrtor"
-                        title="Image Creator"
-                        href="create4d3a.html?form=IRPGEN"
-                        h="ID=images,6231.1"
-                    >
-                        <img
-                            className="imgclg rms_img"
-                            width={20}
-                            height={20}
-                            src="https://www.bing.com/rp/gNfjWh66umAXY1CGIvRYzJ-0zek.svg"
-                        />
-                        <span className="imgcrtor_t">Image Creator</span>
-                    </a>
 
                     <div style={{ display: "flex", margin: "0px -20px 20px 0p" }}>
                         <Container />
