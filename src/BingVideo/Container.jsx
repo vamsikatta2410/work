@@ -15,6 +15,7 @@ function Container() {
       {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8');
         console.log(response);
+        setimgData(data.items);
       }
       catch(error)
       {

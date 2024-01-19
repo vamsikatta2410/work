@@ -1,6 +1,10 @@
 import React from 'react'
 
 function ImageCard(props) {
+
+  const maxLength = 70;
+  const croppedName = props.info.length > maxLength ? props.info.slice(0, maxLength) + '...' : props.info;
+
   return (
     <>
       <div
@@ -71,7 +75,7 @@ function ImageCard(props) {
                       fontWeight: '600',
                     }}
                   >
-                    {props.info}
+                    {croppedName}
                   </a>
                 </li>
               </ul>
@@ -84,16 +88,7 @@ function ImageCard(props) {
                 className="b_dataList"
                 style={{ display: 'flex', lineHeight: '1.6', fontSize: '10px' }}
               >
-                <li style={{ marginLeft: '5px' }}>
-                  {/* {props.info} */}
-                  7.5k views
-                </li>
-                <li style={{ marginLeft: '5px' }}>
-                  {/* {props.info} */}1 day ago
-                </li>
               </ul>
-              {/* </div> */}
-              {/* <div className="infpd hoff">  */}
               <div
                 className="mc_vtvc_meta_row"
                 style={{
@@ -105,9 +100,6 @@ function ImageCard(props) {
                   whiteSpace: 'nowrap',
                 }}
               >
-                <span>YouTube</span>
-                <span>{' >'}</span>
-
                 <span
                   className="mc_vtvc_meta_row_channel"
                   style={{ margin: '10px' }}
