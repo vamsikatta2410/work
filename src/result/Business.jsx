@@ -74,7 +74,7 @@ const Business = () => {
                                     <nav id="mobile-menu">
                                         <ul>
                                             <li>
-                                                <a href="/home" style={{color:'#fff'}}>Home</a>
+                                                <a href="/" style={{color:'#fff'}}>Home</a>
                                             </li>
                                             <li>
                                                 <a href="#" style={{color:'#fff'}}>Pages</a>
@@ -426,7 +426,7 @@ const Business = () => {
                                                 <h3 className="tp-section-title text-white">Try our service now!</h3>
                                                 <p>Eyerything you need to accept cord payments and grow your business <br />
                                                     anywhere on the planet.</p>
-                                                <a className="tp-btn-inner white-bg text-black" href="/home">Get Started Now</a>
+                                                <a className="tp-btn-inner white-bg text-black" href="/">Get Started Now</a>
                                             </div>
                                         </div>
                                     </div>
