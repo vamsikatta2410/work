@@ -15,7 +15,6 @@ function Container() {
       {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8');
         console.log(response);
-        setimgData(data.items);
       }
       catch(error)
       {
@@ -78,13 +77,14 @@ function Container() {
             data-iid="images.5996"
             data-layout="row"
           >
-            {imgData?.map((val) => {
+            {imgData?.map((val,index) => {
               return (
                 <ImageCard
                   channelTitle={val.channelTitle}
                   link={val.id.videoId}
                   imgurl={val.snippet.thumbnails.high.url}
                   info={val.snippet.title}
+                  key = {index}
                 />
               );
             })}
