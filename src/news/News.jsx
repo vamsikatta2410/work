@@ -6,17 +6,15 @@ import Header from '../Commons/Header'
 
 function NewsComponent(props) {
   return (
-    <div className="news-card">
+    <div className="news-card m-3">
       <div className="news-details">
-        <div className="news-heading">
+        <div className="news-heading" style={{color:'#174AE4',opacity:'0.7',marginTop:'10px'}}>
           <a href={props.link}>{props.title}.</a>
         </div>
         <div className="news-mini-details">
           <span>
             <strong>{props.author}</strong>
           </span>
-          <span>|</span>
-          <span>time</span>
         </div>
         <div className="news-snippet">
           <span>{props.snippet}</span>
@@ -44,7 +42,7 @@ export default function Result() {
     <>
       <div className="news_result">
         <Header />
-        <div className="news-container">
+        <div className="news-container" style={{overflowY:'auto',height:'100%', width:'60%'}}>
           {News.map((news) => (
             <NewsComponent
               title={news.title}
