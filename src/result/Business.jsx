@@ -76,7 +76,7 @@ const Business = () => {
                                             <li>
                                                 <a href="/" style={{color:'#fff'}}>Home</a>
                                             </li>
-                                            <li>
+                                            {/*<li>
                                                 <a href="#" style={{color:'#fff'}}>Pages</a>
                                                 <ul className="submenu">
                                                     <li><a href="about.html">About</a></li>
@@ -92,8 +92,8 @@ const Business = () => {
                                                     <li><a href="sign-in.html">Signin</a></li>
                                                     <li><a href="404.html">404</a></li>
                                                 </ul>
-                                            </li>
-                                            <li>
+    </li>*/}
+                                            {/*<li>
                                                 <a href="blog-details.html" style={{color:'#fff'}}>Blog</a>
                                                 <ul className="submenu">
                                                     <li><a href="blog.html">Blog</a></li>
@@ -101,14 +101,14 @@ const Business = () => {
                                                     <li><a href="blog-details.html">Blog Details</a></li>
                                                     <li><a href="blog-details-2.html">Blog Details 02</a></li>
                                                 </ul>
-                                            </li>
-                                            <li>
+    </li>*/}
+                                            {/*<li>
                                                 <a href="project-details.html" style={{color:'#fff'}}>Projects</a>
                                                 <ul className="submenu">
                                                     <li><a href="project.html">Project</a></li>
                                                     <li><a href="project-details.html">Project Details</a></li>
                                                 </ul>
-                                            </li>
+    </li>*/}
                                         </ul>
                                     </nav>
                                 </div>
@@ -133,7 +133,7 @@ const Business = () => {
                                             <span style={{color:'#fff'}}>Log In</span>
                                         </a>
                                     </div>
-                                    <div className="header-bottom__btn d-flex align-items-center">
+                                    {/*<div className="header-bottom__btn d-flex align-items-center">
                                         <a className="tp-btn-white tp-btn-hover alt-color-black d-none d-md-inline-block"
                                             href="service-details.html">
                                             <span className="white-text">Get Started</span>
@@ -141,7 +141,7 @@ const Business = () => {
                                         </a>
                                         <a className="header-bottom__bar d-lg-none tp-menu-bar" href="javascript:void(0)"><i
                                             className="fal fa-bars"></i></a>
-                                    </div>
+</div> */}
                                 </div>
                             </div>
                         </div>
