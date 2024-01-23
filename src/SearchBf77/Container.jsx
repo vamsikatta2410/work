@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from "react";
+import React, { useState, useEffect } from "react";
 // import ImageData from "./ImageData";
 import ImageCard from "./ImageCard";
 import SideImage from "./SideImage";
@@ -9,6 +9,7 @@ function Container() {
   const [currentSelectedCard, setCurrentSelectedCard] = useState();
   const [isImageOpen, setIsImageOpen] = useState(false)
   const [imgData, setimgData] = useState([]);
+  const [imgData2, setimgData2] = useState([]);
 
   useEffect(() => {
     const fetchImages = async () => {
@@ -16,6 +17,19 @@ function Container() {
         const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0&searchType=image`);
         const data = await response.json();
         setimgData(data.items);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+    fetchImages();
+  }, []);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=11&searchType=image`);
+        const data = await response.json();
+        setimgData2(data.items);
       } catch (error) {
         console.error(error);
       }
@@ -61,10 +75,22 @@ function Container() {
             data-iid="images.5996"
             data-layout="row"
           >
-            {imgData?.map((val,index) => {
+            {imgData?.map((val, index) => {
               return (
                 <ImageCard
-                  key = {index}
+                  key={index}
+                  imgurl={val.image.thumbnailLink}
+                  info={val.snippet}
+                  setCurrentSelectedCard={setCurrentSelectedCard}
+                  setIsImageOpen={setIsImageOpen}
+                />
+              );
+            })}
+
+            {imgData2?.map((val, index) => {
+              return (
+                <ImageCard
+                  key={index}
                   imgurl={val.image.thumbnailLink}
                   info={val.snippet}
                   setCurrentSelectedCard={setCurrentSelectedCard}
