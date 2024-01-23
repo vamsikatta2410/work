@@ -12667,8 +12667,8 @@
         _border: 0;
         position: relative;
         display: inline-block;
-        *zoom: 1;
-        *display: inline
+        zoom: 1;
+        display: inline
     }
 
     .vtv2:hover {
@@ -15621,13 +15621,13 @@
     .btm_sml .expansionDefaultText,
     .btm_sml .expansionCustomizedText {
         display: inline-block;
-        *display: inline;
+        display: inline;
         zoom: 1
     }
 
     .expandChevronContainer {
         display: inline-block;
-        *display: inline
+        display: inline
     }
 
     .expandChevronContainer.hasExpandText {
@@ -15638,7 +15638,7 @@
     .btm_sml .expandChevronContainer>* {
         margin-left: 8px;
         display: inline-block;
-        *display: inline
+        display: inline
     }
 
     .btm_sml .sw_plus,
@@ -15663,7 +15663,7 @@
     .inline {
         display: inline-block;
         margin-left: 4px;
-        *display: inline;
+        display: inline;
         zoom: 1
     }
 
@@ -15874,7 +15874,7 @@
         text-align: left;
         padding: 0 0 0 19px;
         display: inline-block;
-        *display: inline;
+        display: inline;
         zoom: 1
     }
 
