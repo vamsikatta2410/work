@@ -49,7 +49,7 @@ const Header = ({ page }) => {
             />
           </div>
         </form>
-        <div
+        {/* <div
           id="id_h"
           role="complementary"
           aria-label="Account Rewards and Preferences"
@@ -70,7 +70,7 @@ const Header = ({ page }) => {
             aria-modal="true"
             role="menu"
           />
-        </div>
+        </div> */}
         <span id="langChange" className="b_hide langLabel">
           <a
             id="langChangeAnchor"

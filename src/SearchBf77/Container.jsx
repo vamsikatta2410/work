@@ -10,13 +10,24 @@ function Container() {
   const [isImageOpen, setIsImageOpen] = useState(false)
   const [imgData, setimgData] = useState([]);
   const [imgData2, setimgData2] = useState([]);
+  const [startIndex,setstartIndex] = useState(10);
 
   useEffect(() => {
     const fetchImages = async () => {
-      try {
-        const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=0&searchType=image`);
-        const data = await response.json();
-        setimgData(data.items);
+      try 
+      {
+        for(let i = 0 ; i <= Math.min(startIndex,70) ; i+=10)
+        {
+          let response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=${i}&searchType=image`);
+          let data = await response.json();
+
+          const dataItems = data?.items ? data.items : [];
+          
+          setimgData(prevData => [...prevData, ...dataItems]);
+          setstartIndex(data.queries.nextPage[0].startIndex);
+
+          console.log(data);
+        }
       } catch (error) {
         console.error(error);
       }
@@ -24,18 +35,18 @@ function Container() {
     fetchImages();
   }, []);
 
-  useEffect(() => {
-    const fetchImages = async () => {
-      try {
-        const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=11&searchType=image`);
-        const data = await response.json();
-        setimgData2(data.items);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchImages();
-  }, []);
+  // useEffect(() => {
+  //   const fetchImages = async () => {
+  //     try {
+  //       const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=AIzaSyAPe5RBxcHm1VyIEUVu1dRQO5M4W4EnYrI&cx=6563eb05187c74b28&q=${name}&start=11&searchType=image`);
+  //       const data = await response.json();
+  //       setimgData2(data.items);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   };
+  //   fetchImages();
+  // }, []);
 
   return (
     <>
