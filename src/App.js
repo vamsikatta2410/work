@@ -9,6 +9,7 @@ import ComingSoon from './ComingSoon/ComingSoon'
 import NewHomePage from './result/NewHomePage'
 import Login from './result/Login';
 import Business from './result/Business';
+import Page from './result/Page';
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
           <Route path="/ComingSoon/" element={<ComingSoon />} />
           <Route path='/login' element={<Login/>}/>
           <Route path='/business' element={<Business/>}/>
+          <Route path='/temp' element={<Page/>}/>
+
         </Routes>
       </Router>
     </>
