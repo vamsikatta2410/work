@@ -11,7 +11,7 @@
 
     .news-card {
         display: flex;
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .news-details {
@@ -31,12 +31,12 @@
     }
 
     .news-snippet {
-        margin-top: 0.5rem;
+        margin-top: 0.1rem;
     }
 
     img {
-        height: 8rem;
-        width: 14rem;
+        height: 7rem;
+        width: 11rem;
         border-radius: 0.5rem;
     }
 

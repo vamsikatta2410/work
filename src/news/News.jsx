@@ -6,7 +6,7 @@ import Header from '../Commons/Header'
 
 function NewsComponent(props) {
   return (
-    <div className="news-card m-3" style={{width:'60%'}}>
+    <div className="news-card" style={{width:'60%'}}>
       <div className="news-details" style={{width:'65%',marginRight:'28px'}}>
         <div className="news-heading" style={{color:'#174AE4',opacity:'0.7',marginTop:'10px'}}>
           <a href={props.link}>{props.title}.</a>
