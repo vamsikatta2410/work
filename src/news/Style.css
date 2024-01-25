@@ -19,11 +19,15 @@
     }
 
     .news-heading {
-        font-size: large;
+        font-size: 18px;
+    }
+
+    .news-heading a:hover{
+        text-decoration: underline !important;
     }
 
     .news-mini-details {
-        margin-top: 0.5rem;
+        margin-top: 0.1rem;
     }
 
     .news-snippet {

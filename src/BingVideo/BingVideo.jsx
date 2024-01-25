@@ -9,13 +9,26 @@ import ImageCard from './ImageCard.jsx'
 function BingVideo() {
   const { name } = useParams();
   const [imgData, setimgData] = useState([]);
+  const [token,setToken] = useState('');
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8`);
         const data = await response.json();
+        const dataItems = data?.items? data.items:[];
         setimgData(data.items);
+        setToken(data.nextPageToken);
+
+        for(let i = 0 ; i < 3 ; i++)
+        {
+           const response2 = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=200&q=${name}&key=AIzaSyBgp3Q7UJ7630cKu0yjXi8c_Dp7mKwAUC8&pageToken=${token}`);
+           const data2 = await response2.json();
+
+           const data2Items = data2?.items? data2.items : [];
+           setimgData(prevData => [...prevData, ...data2Items]);
+           setToken(data2.nextPageToken);
+        }
       } catch (error) {
         console.error(error);
       }
