@@ -9,7 +9,7 @@ function ImageCard(props) {
     <>
       <div
         className="iuscp isv"
-        style={{ height: 290, width: 295, borderRadius: '20px' }}
+        style={{ height: 270, width: 250}}
         data-hovstyle=""
         data-evt={1}
       >
@@ -21,7 +21,7 @@ function ImageCard(props) {
             href={`https://www.youtube.com/watch?v=${props.link}`}
             h="ID=images,5228.1"
           >
-            <div className="img_cont hoff" style={{ borderRadius: '20px' }}>
+            <div className="img_cont hoff">
               <img
                 className="mimg"
                 style={{ backgroundColor: '#6b302b', color: '#6b302b' }}
@@ -71,7 +71,7 @@ function ImageCard(props) {
                     h="ID=images,5228.3"
                     style={{
                       lineHeight: '1.1',
-                      fontSize: '14px',
+                      fontSize: '13px',
                       fontWeight: '600',
                     }}
                   >

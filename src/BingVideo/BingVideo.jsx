@@ -55,13 +55,13 @@ function BingVideo() {
           data-clientwidth={0}
           data-disablerefreshoniframe={1}
           data-reloadableiniframe=""
-          style={{ display: "inline-flex", marginLeft:"40px" }}
+          style={{ display: "inline-flex", marginLeft:"60px" }}
         >
           <div
             id="mmComponent_images_2"
             className="dgControl dtl hover"
             style={{
-              gridTemplateColumns:"repeat(4, minmax(350px, 1fr))",
+              gridTemplateColumns:"repeat(5, minmax(270px, 1fr))",
               display: "grid",
               gap: "1.8 rem",
 
