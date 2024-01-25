@@ -61,6 +61,8 @@ function ImageCard(props) {
             href={`https://www.youtube.com/watch?v=${props.link}`}
             h="ID=images,5228.2"
           />
+
+          
           <div className="infnmpt">
             <div className="infpd hoff">
               <ul className="b_dataList">
@@ -72,10 +74,11 @@ function ImageCard(props) {
                     style={{
                       lineHeight: '1.1',
                       fontSize: '14px',
-                      fontWeight: '600',
+                      fontWeight: '500',
                     }}
+                    className='video-img'
                   >
-                    {croppedName}
+                    <p>{croppedName}</p>
                   </a>
                 </li>
               </ul>

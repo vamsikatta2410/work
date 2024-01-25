@@ -1899,6 +1899,10 @@ body .b_scopebar {
    width: calc(100% - 20px)
 }
 
+.video-img p:hover{
+   text-decoration: underline !important;
+}
+
 .subhead {
    font-size: 15px;
    margin: 0 0 17px 160px;

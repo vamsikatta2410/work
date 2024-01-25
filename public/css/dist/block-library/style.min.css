@@ -4110,7 +4110,7 @@ ul.wp-block-rss.is-grid li {
     font-size: unset !important;
     margin-right: 0;
     padding: 1ch 2ch;
-    text-decoration: none !important
+    text-decoration: none 
 }
 
 .wp-block-table {
