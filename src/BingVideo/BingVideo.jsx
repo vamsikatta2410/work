@@ -74,16 +74,18 @@ function BingVideo() {
             data-iid="images.5996"
             data-layout="row"
           >
-            {imgData?.map((val) => {
-              return (
-                <ImageCard
-                  channelTitle={val.channelTitle}
-                  link={val.id.videoId}
-                  imgurl={val.snippet.thumbnails.high.url}
-                  info={val.snippet.title}
-                />
-              );
-            })}
+            {
+              imgData?.length > 0 ? imgData?.map((val) => {
+                return (
+                  <ImageCard
+                    channelTitle={val.channelTitle}
+                    link={val.id.videoId}
+                    imgurl={val.snippet.thumbnails.high.url}
+                    info={val.snippet.title}
+                  />
+                );
+              }) : null
+            }
           </div>
           
         </div>
