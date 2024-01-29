@@ -1,4 +1,5 @@
 import React from 'react'
+import { FaYoutube } from 'react-icons/fa'
 
 function ImageCard(props) {
 
@@ -9,7 +10,7 @@ function ImageCard(props) {
     <>
       <div
         className="iuscp isv"
-        style={{ height: 270, width: 250}}
+        style={{ height: 270, width: 250 }}
         data-hovstyle=""
         data-evt={1}
       >
@@ -82,7 +83,7 @@ function ImageCard(props) {
             </div>
             <div
               className="infpd hoff"
-              style={{ lineHeight: '2', marginBottom: '10px' }}
+              style={{ lineHeight: '2', marginBottom: '17px' }}
             >
               <ul
                 className="b_dataList"
@@ -101,10 +102,8 @@ function ImageCard(props) {
                 }}
               >
                 <span
-                  className="mc_vtvc_meta_row_channel"
-                  style={{ margin: '10px' }}
                 >
-                  {props.channelTitle}
+                  <FaYoutube style={{ color: 'red' }} /> Youtube
                 </span>
               </div>
             </div>
