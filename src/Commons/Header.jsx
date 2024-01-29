@@ -160,9 +160,9 @@ const Header = ({ page }) => {
             </a>
           </div>
         </span>
-        <nav class="navbar navbar-expand-lg navbar-light b_scopebar ">
+        <nav className="navbar navbar-expand-lg navbar-light b_scopebar ">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarSupportedContent"
@@ -170,13 +170,13 @@ const Header = ({ page }) => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href={`../result/${name}`}>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav mr-auto">
+              <li className="nav-item active">
+                <a className="nav-link" href={`../result/${name}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={15}
@@ -190,11 +190,11 @@ const Header = ({ page }) => {
                       d="M5.5 0a5.5 5.5 0 0 1 4.383 8.823l4.147 4.147a.75.75 0 0 1-.976 1.133l-.084-.073-4.147-4.147A5.5 5.5 0 1 1 5.5 0Zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
                     />
                   </svg>
-                  All <span class="sr-only">(current)</span>
+                  All <span className="sr-only">(current)</span>
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href={'../ComingSoon/'}>
+              <li className="nav-item">
+                <a className="nav-link" href={'../ComingSoon/'}>
                   <svg
                     width={16}
                     height={16}
@@ -213,23 +213,23 @@ const Header = ({ page }) => {
                 </a>
               </li>
 
-              <li class="nav-item">
-                <a class="nav-link  " href={`../images/${name}`}>
+              <li className="nav-item">
+                <a className="nav-link  " href={`../images/${name}`}>
                   <ImImages style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Images
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link  " href={`../videos/${name}`}>
+              <li className="nav-item">
+                <a className="nav-link  " href={`../videos/${name}`}>
                   <BiSolidVideos style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Videos
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link  " href={`../news/${name}`}>
+              <li className="nav-item">
+                <a className="nav-link  " href={`../news/${name}`}>
                   <ImNewspaper style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> News
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link  " >
+              <li className="nav-item">
+                <a className="nav-link  " >
                   <MdOutlineSettings style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Settings
                 </a>
               </li>

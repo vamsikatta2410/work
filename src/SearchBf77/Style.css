@@ -11412,11 +11412,11 @@ label,
 }
 
 #b_results>.b_ans {
-   padding: 12px 20px 0
+   padding: 0;
 }
 
 #b_results>.b_algo {
-   padding: 12px 20px 0
+   padding: 0;
 }
 
 #b_results>li .b_fullb {

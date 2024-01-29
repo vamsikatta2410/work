@@ -56,58 +56,20 @@ function ResultComponent(props) {
   return (
     <li className="b_algo">
       <div className="b_title" style={{lineHeight:'0'}}>
-        <h2>
-          <a style={{color:'#174AE4',opacity:'0.8',fontWeight:'normal',fontSize:'24px'}} href={props.link} h="ID=SERP,5292.1">
+        <h2 style={{marginBottom : '0'}}>
+          <a style={{color:'#174AE4',opacity:'0.8',fontWeight:'normal',fontSize:'18px'}} href={props.link} h="ID=SERP,5292.1">
             {props.title} {props.index < 10 ? <MdVerified style={{fontSize:'20px'}}/>:''}
           </a>
         </h2>
-        <div className="b_suffix b_secondaryText nowrap scs_exp siz23 b_floatrt">
-          <a
-            className="scs_icn b_hide sc_al"
-            tabIndex={-1}
-            aria-label="Additional Results"
-            href="javascript:void(0)"
-            h="ID=SERP,7080.1"
-          >
-            <span
-              className="scs_cls b_hide"
-              tabIndex={0}
-              title="Close"
-              aria-label="Show less"
-              role="button"
-              aria-expanded="true"
-            />
-            <span
-              className="scs_arw"
-              tabIndex={0}
-              title="Explore this page"
-              aria-label="Show more"
-              role="button"
-              aria-expanded="false"
-            />
-          </a>
-          <div
-            data-priority={2}
-            data-sc-metadata='{"entity":"Narendra Modi","scenarios":"2,6,13,14","url":"https://www.britannica.com/biography/Narendra-Modi","agi5qv":"agi5qv4218937785913006128"}'
-            data-sc-iid="SERP.7081"
-            className="scs_c b_hide cnt_vis_hid scs_load"
-          />
-        </div>
       </div>
       <div className="b_imgcap_altitle b_imgcap_alattr">
         <div className="b_imagePair square_mp reverse">
-          <div className="inner">
-            <div>
-              {/* <img data-priority={2} height={80} width={80} className="b_circleImage b_ci_image_overlay rms_img" fdopt="False" data-overlaylink="/" aria-hidden="true" title="Explore this image" id="emb1B0392D545" src={props.image} /> */}
-              <div id="greyBackgroundModal" onclick="return false" />
-            </div>
-          </div>
           <div
             className="b_attribution"
             u="3|5094|4802937594642996|jXaG3jOqUP-IH6J3UdURN5ccWGAXP6ee"
             tabIndex={0}
           >
-            <cite>{props.displayLink}</cite>
+            <cite style={{fontSize:'14px'}}>{props.displayLink}</cite>
             <span className="c_tlbxTrg">
               <span
                 className="c_tlbxH"
@@ -117,16 +79,12 @@ function ResultComponent(props) {
             </span>
           </div>
           <p className="b_lineclamp2 b_algoSlug">
-            <span className="news_dt" style={{fontSize:'15px'}}>
+            <span className="news_dt" style={{fontSize:'14px',fontFamily: 'Raleway, sans-serif',color:'black'}} >
               {props.snippet}
             </span>
           </p>
-          <div className="b_factrow b_twofr">
-            {}
-          </div>
         </div>
       </div>
-      <div className="b_caption b_rich b_stsp1" />
     </li>
   )
 }
