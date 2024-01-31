@@ -1,6 +1,34 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
+import {useNavigate} from 'react-router-dom'
+import logo from '../assets/google.png'
 
 const Search3 = () => {
+
+    const [searchQuery, setSearchQuery] = useState('')
+    const navigate = useNavigate()
+
+    const handleSearch = (e) => {
+        e.preventDefault()
+        navigate(`/result/${searchQuery}`)
+    }
+
+    const handleSubmit = (e) => {
+        const scriptURL = ''
+        const form = document.forms['formName']
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then((response) =>
+                    alert('Thank you! your form is submitted successfully.')
+                )
+                .then(() => {
+                    window.location.reload()
+                })
+                .catch((error) => console.error('Error!', error.message))
+        })
+    }
+
   return (
             <div>
               <div className="layout-width layout-wide">
@@ -12,10 +40,6 @@ const Search3 = () => {
                         <div className="elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-1f1eb2a" data-id="1f1eb2a" data-element_type="column">
                           <div className="elementor-widget-wrap elementor-element-populated">
                             <div className="elementor-element elementor-element-5c51450 elementor-widget elementor-widget-wdes-logo" data-id="5c51450" data-element_type="widget" data-widget_type="wdes-logo.default">
-                              <div className="elementor-widget-container">
-                                <div className="wdes-logo wdes-logo-type-image wdes-logo-display-inline"><a href="https://phox.whmcsdes.com/demos/classy-pro" className="wdes-logo_link"><img className="wdes-logo_img elementor-animation-none" src="wp-content/uploads/sites/21/2023/04/phox-logo.png" width={200} height={200} alt="Phox - Classy Pro" srcSet="https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/phox-logo.png 1x,https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/phox-logo.png 2x" /></a>
-                                </div>
-                              </div>
                             </div>
                           </div>
                         </div>
@@ -102,12 +126,7 @@ const Search3 = () => {
                                     <div className="elementor-widget-container">
                                       <section className="widget-content wdes-widget-section-header">
                                         <div className="wdes-widget-inner wdes-text-align-center ">
-                                          <h1 className="wdes-section-header-primary">World-class hosting
-                                          </h1>
-                                          <h2 className="wdes-section-header-secondary"><span className="wdes-head-before">to empower you.</span>
-                                          </h2>
-                                          <div className="wdes-section-header-description">Find the right
-                                            plan and register a domain now!</div>
+                                          <img src={logo} style={{width:'80%'}}/>
                                         </div>
                                       </section>
                                     </div>
@@ -116,60 +135,15 @@ const Search3 = () => {
                                     <div className="elementor-widget-container">
                                       <div className="domain-element-wdes">
                                         <div id="wdes-domain-search">
-                                          <form id="wdes-domain-form" className="domain-search-area-main" method="post" action="https://preview.whmcsdes.com/domainchecker.php" data-setting="{&quot;spinnerIcon&quot;:&quot;fas fa-circle-notch&quot;,&quot;suggestionsSpinnerIcon&quot;:&quot;fas fa-circle-notch&quot;,&quot;whois_button&quot;:&quot;&quot;,&quot;transfer_button&quot;:&quot;&quot;,&quot;nameProperty&quot;:&quot;domain&quot;}">
+                                            
+                                          <form onSubmit={handleSearch} method='post' className="domain-search-area-main">
                                             <div className="domain-form-wrapper">
                                               <div className="wdes-domain-input-wrapper">
                                                 <div className="domain-input-search-label"><i className="fas fa-search" /></div> <input type="hidden" name="token" defaultValue="0811bf819565bf8142cc613d099e85a27ec1204c" />
-                                                <input id="wdes-domain" className="sea-dom" type="search" name="domain" placeholder="example.com" />
+                                                <input id="wdes-domain" className="sea-dom" name='search' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder='Search anything ...'/>
                                                 <input type="hidden" id="wdes_lup" name="wdes_lup" defaultValue="lup-1" />
                                               </div>
                                               <input id="wdes-search" className="reg-dom" type="submit" defaultValue="Search Domain" />
-                                            </div>
-                                            <div id="dc-error-message-invalid" className="d-none">
-                                              <i className="fas fa-exclamation-circle" />
-                                              <p className="text-h-warning">Invalid domain name</p>
-                                            </div>
-                                            <div id="dc-error-message-unsupported" className="d-none">
-                                              <i className="fas fa-exclamation-circle" />
-                                              <p className="text-h-warning">We are not support this
-                                                extension</p>
-                                            </div>
-                                            <div className="extensions-block">
-                                              <a href="#" className="block elementor-repeater-item-0bc92a9 inline">
-                                                <span className="domain-ext-name">.com</span>
-                                                <div className="price-extention-domain-wdes">
-                                                  <span className="dollar-sign-wdes ">$</span>
-                                                  <span className="direct-price-extention-domain-wdes ">5</span>
-                                                </div>
-                                              </a>
-                                              <a href="#" className="block elementor-repeater-item-d7a8718 inline">
-                                                <span className="domain-ext-name">.net</span>
-                                                <div className="price-extention-domain-wdes">
-                                                  <span className="dollar-sign-wdes ">$</span>
-                                                  <span className="direct-price-extention-domain-wdes ">5</span>
-                                                </div>
-                                              </a>
-                                              <a href="#" className="block elementor-repeater-item-e6253a1 inline">
-                                                <span className="domain-ext-name">.org</span>
-                                                <div className="price-extention-domain-wdes">
-                                                  <span className="dollar-sign-wdes ">$</span>
-                                                  <span className="direct-price-extention-domain-wdes ">5</span>
-                                                </div>
-                                              </a>
-                                              <a href="#" className="block elementor-repeater-item-e210587 inline">
-                                                <span className="domain-ext-name">.me</span>
-                                                <div className="price-extention-domain-wdes">
-                                                  <span className="dollar-sign-wdes ">$</span>
-                                                  <span className="direct-price-extention-domain-wdes ">5</span>
-                                                </div>
-                                              </a>
-                                              <a href="#" className="block elementor-repeater-item-ed412fd inline">
-                                                <span className="domain-ext-name">.info</span>
-                                                <div className="price-extention-domain-wdes">
-                                                  <span className="dollar-sign-wdes ">$</span>
-                                                  <span className="direct-price-extention-domain-wdes ">5</span>
-                                                </div>
-                                              </a>
                                             </div>
                                             <div id="preloader-resource" data-priority-tlds="[{&quot;tld&quot;:&quot;domain-com&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-net&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-org&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-me&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-info&quot;,&quot;price&quot;:&quot;$5&quot;}]" data-priority-local-tlds="[]" />
                                             {/* Result section*/}
