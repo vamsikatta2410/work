@@ -10,6 +10,7 @@ import NewHomePage from './result/NewHomePage'
 import Login from './result/Login';
 import Business from './result/Business';
 import Page from './result/Page';
+import Signup from './result/Signup';
 
 
 function App() {
@@ -27,7 +28,7 @@ function App() {
           <Route path='/login' element={<Login/>}/>
           <Route path='/business' element={<Business/>}/>
           <Route path='/temp' element={<Page/>}/>
-
+          <Route path='/signup' element={<Signup/>}/>
         </Routes>
       </Router>
     </>
