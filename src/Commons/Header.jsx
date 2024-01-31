@@ -4,9 +4,9 @@ import mainLogo from '../BingVideo/google.png'
 import './Style.css'
 import Avatar from 'react-avatar'
 import { FaMedal } from 'react-icons/fa'
-import {ImImages,ImNewspaper} from 'react-icons/im'
-import {BiSolidVideos} from 'react-icons/bi'
-import {MdOutlineSettings} from 'react-icons/md'
+import { ImImages, ImNewspaper } from 'react-icons/im'
+import { BiSolidVideos } from 'react-icons/bi'
+import { MdOutlineSettings, MdSettings } from 'react-icons/md'
 
 const Header = ({ page }) => {
   const { name } = useParams()
@@ -18,7 +18,7 @@ const Header = ({ page }) => {
   }
   return (
     <>
-      <header id="b_header" className="m-3">
+      <header id="b_header" className="m-3" style={{ backgroundColor: 'white' }}>
         <form onSubmit={handleSearch} id="sb_form" className="hassbi">
           <a className="b_logoArea" target href="/" h="ID=SERP,5050.1">
             <img src={mainLogo} alt="" />
@@ -160,23 +160,13 @@ const Header = ({ page }) => {
             </a>
           </div>
         </span>
-        <nav className="navbar navbar-expand-lg navbar-light b_scopebar ">
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav mr-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href={`../result/${name}`}>
+        {/*<nav class="navbar  navbar-expand-md navbar-light b_scopebar ">
+
+          <div class="navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href={`../result/${name}`}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width={15}
@@ -190,11 +180,11 @@ const Header = ({ page }) => {
                       d="M5.5 0a5.5 5.5 0 0 1 4.383 8.823l4.147 4.147a.75.75 0 0 1-.976 1.133l-.084-.073-4.147-4.147A5.5 5.5 0 1 1 5.5 0Zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
                     />
                   </svg>
-                  All <span className="sr-only">(current)</span>
+                  All <span class="sr-only">(current)</span>
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href={'../ComingSoon/'}>
+              <li class="nav-item active">
+                <a class="nav-link" href={'../ComingSoon/'}>
                   <svg
                     width={16}
                     height={16}
@@ -209,33 +199,82 @@ const Header = ({ page }) => {
                       fill="#174AE4"
                     />
                   </svg>
-                  Chat
+                  Chat 
                 </a>
               </li>
 
-              <li className="nav-item">
-                <a className="nav-link  " href={`../images/${name}`}>
+              <li class="nav-item-active">
+                <a class="nav-link  " href={`../images/${name}`}>
                   <ImImages style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Images
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link  " href={`../videos/${name}`}>
+              <li class="nav-item-active">
+                <a class="nav-link  " href={`../videos/${name}`}>
                   <BiSolidVideos style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Videos
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link  " href={`../news/${name}`}>
+              <li className="nav-item-active">
+                <a class="nav-link  " href={`../news/${name}`}>
                   <ImNewspaper style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> News
                 </a>
               </li>
-              <li className="nav-item">
-                <a className="nav-link  " >
+              <li class="nav-item-active">
+                <a class="nav-link  " >
                   <MdOutlineSettings style={{color:'#174AE4',opacity:'0.7',marginRight:'2px'}}/> Settings
                 </a>
               </li>
             </ul>
           </div>
-        </nav>
+      </nav>*/}
+        <div style={{ marginLeft: '9.5rem' }}>
+          <ul className='d-flex flex-row justify-content-start m-3'>
+            <li><a class="nav-link" href={`../result/${name}`}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={15}
+                height={15}
+                fill="none"
+                style={{ marginRight: '5px' }}
+              >
+                <path
+                  fill="#174AE4"
+                  className="cdxscopei"
+                  d="M5.5 0a5.5 5.5 0 0 1 4.383 8.823l4.147 4.147a.75.75 0 0 1-.976 1.133l-.084-.073-4.147-4.147A5.5 5.5 0 1 1 5.5 0Zm0 1.5a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"
+                />
+              </svg>
+              All
+            </a></li>
+            <li style={{marginLeft:'1rem'}}><a class="nav-link" href={'../ComingSoon/'}>
+              <svg
+                width={16}
+                height={16}
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                style={{ marginRight: '5px' }}
+              >
+                <path
+                  d="M8 0C12.4183 0 16 3.58172 16 8C16 12.4183 12.4183 16 8 16C6.72679 16 5.49591 15.7018 4.38669 15.1393L4.266 15.075L0.621091 15.9851C0.311269 16.0625 0.0262241 15.8369 0.00130987 15.5438L0.00114131 15.4624L0.0149329 15.3787L0.925 11.735L0.86169 11.6153C0.406602 10.7186 0.124331 9.74223 0.0327466 8.72826L0.00737596 8.34634L0 8C0 3.58172 3.58172 0 8 0ZM8 1C4.13401 1 1 4.13401 1 8C1 9.21704 1.31054 10.3878 1.89352 11.4249C1.94046 11.5084 1.9621 11.603 1.95692 11.6973L1.94274 11.7912L1.187 14.812L4.21104 14.0583C4.27294 14.0429 4.33662 14.0396 4.39873 14.0479L4.4903 14.0691L4.57701 14.1075C5.61362 14.6898 6.7837 15 8 15C11.866 15 15 11.866 15 8C15 4.13401 11.866 1 8 1ZM8.5 9C8.77614 9 9 9.22386 9 9.5C9 9.74546 8.82312 9.94961 8.58988 9.99194L8.5 10H5.5C5.22386 10 5 9.77614 5 9.5C5 9.25454 5.17688 9.05039 5.41012 9.00806L5.5 9H8.5ZM10.5 6C10.7761 6 11 6.22386 11 6.5C11 6.74546 10.8231 6.94961 10.5899 6.99194L10.5 7H5.5C5.22386 7 5 6.77614 5 6.5C5 6.25454 5.17688 6.05039 5.41012 6.00806L5.5 6H10.5Z"
+                  className="cdxscopei"
+                  fill="#174AE4"
+                />
+              </svg>
+              Chat
+            </a></li>
+            <li style={{marginLeft:'1rem'}}><a class="nav-link  " href={`../images/${name}`}>
+              <ImImages style={{ color: '#174AE4', opacity: '0.7'}} /> Images
+            </a></li>
+            <li style={{marginLeft:'1rem'}}><a class="nav-link  " href={`../videos/${name}`}>
+              <BiSolidVideos style={{ color: '#174AE4', opacity: '0.7'}} /> Videos
+            </a></li>
+            <li style={{marginLeft:'1rem'}}><a class="nav-link  " href={`../news/${name}`}>
+              <ImNewspaper style={{ color: '#174AE4', opacity: '0.7' }} /> News
+            </a></li>
+            <li style={{marginLeft:'1rem'}}><a class="nav-link  " href={``}>
+              <MdSettings style={{ color: '#174AE4', opacity: '0.7'}} /> Settings
+            </a></li>
+          </ul>
+        </div>
       </header>
     </>
   )

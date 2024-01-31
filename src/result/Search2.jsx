@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 import { Link, useParams, useNavigate } from 'react-router-dom'
+import {TbGridDots} from 'react-icons/tb'
 
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css'
@@ -203,6 +204,7 @@ const Search2 = () => {
                                     strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                             <span style={{ marginLeft: '8px', fontSize: '19px' }}>Log In</span>
+                            <span><TbGridDots style={{marginLeft:'30px',fontSize:'25px'}}/></span>
                         </div>
                     </a>
                 </div>

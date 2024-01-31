@@ -304,19 +304,19 @@ input[type=color] {
 }
 
 *::-moz-selection {
-  background: var(--tp-theme-1);
+  background: white;
   color: var(--tp-common-white);
   text-shadow: none;
 }
 
 ::-moz-selection {
-  background: var(--tp-theme-1);
+  background: white;
   color: var(--tp-common-white);
   text-shadow: none;
 }
 
 ::selection {
-  background: var(--tp-theme-1);
+  background: white;
   color: var(--tp-common-white);
   text-shadow: none;
 }
