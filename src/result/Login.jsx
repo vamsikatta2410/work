@@ -20,8 +20,43 @@ import loginBg from '../assets/img/login/login-bg-shape.png'
 import { Link } from 'react-router-dom'
 
 const Login = () => {
+
+   const handleSubmit = async (e) => {
+      e.preventDefault();
+    
+      const formData = {
+        name: e.target.elements.name.value,
+        email: e.target.elements.email.value,
+        password: e.target.elements.password.value,
+        remember: e.target.elements.remember.checked,
+      };
+
+      console.log(formData);
+    
+      try {
+        const response = await fetch('http://localhost:3001/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+    
+        if (response.ok) {
+          alert('Registration successful');
+        } else {
+          alert('Registration failed');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('An error occurred while submitting the form');
+      }
+    };
+    
+    
+
    return (
-      <body>
+      <>
 
          <button className="scroll-top scroll-to-target" data-target="html">
             <i className="far fa-angle-double-up"></i>
@@ -112,23 +147,23 @@ const Login = () => {
                            </div>
                            <div className="signin-banner-from-box">
                               <h5 className="signin-banner-from-subtitle">Or Sign In with email</h5>
-                              <form action="#">
+                              <form onSubmit={handleSubmit}>
                                  <div className="row">
                                     <div className="col-12">
                                        <div className="postbox__comment-input mb-30">
-                                          <input type="text" className="inputText" required />
+                                          <input type="text" className="inputText" name='name' required />
                                           <span className="floating-label">Full Name</span>
                                        </div>
                                     </div>
                                     <div className="col-12">
                                        <div className="postbox__comment-input mb-30">
-                                          <input type="text" className="inputText" required />
+                                          <input type="text" className="inputText" name='email' required />
                                           <span className="floating-label">Your Email</span>
                                        </div>
                                     </div>
                                     <div className="col-12">
                                        <div className="postbox__comment-input mb-30">
-                                          <input id="myInput" className="inputText password" type="password" required />
+                                          <input id="myInput" className="inputText password" name='password' type="password" required />
                                           <span className="floating-label">Password</span>
                                           <span id="click" className="eye-btn">
                                              <span className="eye-on">
@@ -154,13 +189,12 @@ const Login = () => {
                                        </div>
                                     </div>
                                  </div>
-                              </form>
-                              <div className="signin-banner-form-remember">
+                                 <div className="signin-banner-form-remember">
                                  <div className="row">
                                     <div className="col-6">
                                        <div className="postbox__comment-agree">
                                           <div className="form-check">
-                                             <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                             <input className="form-check-input" name='remember' type="checkbox" value="" id="flexCheckDefault" />
                                              <label className="form-check-label" for="flexCheckDefault">
                                                 Remember me
                                              </label>
@@ -177,6 +211,8 @@ const Login = () => {
                               <div className="signin-banner-from-btn mb-20">
                                  <button className="signin-btn ">Register</button>
                               </div>
+                              </form>
+                              
                            </div>
                         </div>
                      </div>
@@ -185,7 +221,7 @@ const Login = () => {
             </div>
          </div>
 
-      </body>
+      </>
    )
 }
 
