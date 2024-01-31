@@ -47,9 +47,9 @@ const RelatedSearch = ({ title, name }) => {
             {error && <div>Error: {error.message}</div>} */}
       <li className="b_ans" h="SERP,6820.1">
         <div className="b_rs" id="brsv3">
-          <h2 className>
-            Related searches for <strong>{title}</strong>
-          </h2>
+          <p style={{fontSize : '18px',marginTop:'20px',color:'black'}}>
+            Related searches for <strong style={{fontWeight:'bold'}}>{title}</strong>
+          </p>
           <ul className="b_vList b_divsec">
             {
               relatedData.map((item, index) => {
@@ -79,7 +79,7 @@ const RelatedSearch = ({ title, name }) => {
                           />
                         </svg>
                       </div>
-                      <div className="b_suggestionText">
+                      <div className="b_suggestionText" style={{fontSize:'15px'}}>
                         {name} <strong>{item.subtitle}</strong>
                       </div>
                     </a>
