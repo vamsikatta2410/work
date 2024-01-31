@@ -82,7 +82,7 @@ const Login = () => {
                   <div className="row align-items-center">
                      <div className="col-6">
                         <div className="header-signin-logo">
-                           <Link to='/home'><img src={mainLogo} alt="" style={{ height: '130px', width: '300px' }} /></Link>
+                           <Link to='/'><img src={mainLogo} alt="" style={{ height: '130px', width: '300px' }} /></Link>
                         </div>
                      </div>
                      <div className="col-6">

@@ -43,6 +43,40 @@ import ctabg from '../assets/img/cta/cta-bg.jpg'
 import Footer from './Footer'
 
 const Business = () => {
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+    
+      const formData = {
+        name: e.target.elements.name.value,
+        email: e.target.elements.email.value,
+        phone: e.target.elements.phone.value,
+        weburl: e.target.elements.weburl.value,
+        help : e.target.elements.help.value
+      };
+
+      console.log(formData);
+    
+      try {
+        const response = await fetch('http://localhost:3001/business', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(formData),
+        });
+    
+        if (response.ok) {
+          alert('Submission successful');
+        } else {
+          alert('Submission failed');
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('An error occurred while submitting the form');
+      }
+    };
+
     return (
         <body>
 
@@ -76,39 +110,7 @@ const Business = () => {
                                             <li>
                                                 <a href="/" style={{color:'#fff'}}>Home</a>
                                             </li>
-                                            {/*<li>
-                                                <a href="#" style={{color:'#fff'}}>Pages</a>
-                                                <ul className="submenu">
-                                                    <li><a href="about.html">About</a></li>
-                                                    <li><a href="service.html">Service</a></li>
-                                                    <li><a href="service-details.html">Service Details</a></li>
-                                                    <li><a href="team.html">Team</a></li>
-                                                    <li><a href="team-details.html">Team Details</a></li>
-                                                    <li><a href="career.html">Career</a></li>
-                                                    <li><a href="career-details.html">Career Details</a></li>
-                                                    <li><a href="integrations.html">Integrations</a></li>
-                                                    <li><a href="price.html">Price</a></li>
-                                                    <li><a href="register.html">Register</a></li>
-                                                    <li><a href="sign-in.html">Signin</a></li>
-                                                    <li><a href="404.html">404</a></li>
-                                                </ul>
-    </li>*/}
-                                            {/*<li>
-                                                <a href="blog-details.html" style={{color:'#fff'}}>Blog</a>
-                                                <ul className="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog-list.html">Blog List</a></li>
-                                                    <li><a href="blog-details.html">Blog Details</a></li>
-                                                    <li><a href="blog-details-2.html">Blog Details 02</a></li>
-                                                </ul>
-    </li>*/}
-                                            {/*<li>
-                                                <a href="project-details.html" style={{color:'#fff'}}>Projects</a>
-                                                <ul className="submenu">
-                                                    <li><a href="project.html">Project</a></li>
-                                                    <li><a href="project-details.html">Project Details</a></li>
-                                                </ul>
-    </li>*/}
+                                            {}{}{}
                                         </ul>
                                     </nav>
                                 </div>
@@ -133,15 +135,7 @@ const Business = () => {
                                             <span style={{color:'#fff'}}>Log In</span>
                                         </a>
                                     </div>
-                                    {/*<div className="header-bottom__btn d-flex align-items-center">
-                                        <a className="tp-btn-white tp-btn-hover alt-color-black d-none d-md-inline-block"
-                                            href="service-details.html">
-                                            <span className="white-text">Get Started</span>
-                                            <b></b>
-                                        </a>
-                                        <a className="header-bottom__bar d-lg-none tp-menu-bar" href="javascript:void(0)"><i
-                                            className="fal fa-bars"></i></a>
-</div> */}
+                                    {}
                                 </div>
                             </div>
                         </div>
@@ -293,15 +287,7 @@ const Business = () => {
                                                 <h5 className="inner-section-subtitle">CONTACT US</h5>
                                                 <h4 className="tp-section-title pb-10">We'd love to <br /> hear From
                                                     <span>
-                                                        {/* <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                    <rect width="44" height="44" fill="url(#pattern0)"/>
-                                    <defs>
-                                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                                    <use xlink:href="#image0_2106_35" transform="translate(-0.425532 -0.170213) scale(0.0212766)"/>
-                                    </pattern>
-                                    <image id="image0_2106_35" width="83" height="66" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFMAAABCCAYAAAArOOo+AAADcklEQVR4nO2bP0wTURzHP5RqQhyMtyJNTCcTnKCLnVhs4sRmHRk10U0WFhcXiQskuDPhxirRQZMagn8WB1gatTqQiMV/qRBM6nB99oDe9Y7+3mvf8T5j03u/yyfv97vvK8dQs9ls4hAh0+8bSBNOpiBOpiBOpiBOpiBOpiBOpiBOpiCnWma1AmvzUK/JrJeVWcYeqhWovoKnDw9/fu1e72ufCplhAhUXLsrUSa3MbgKD5IsyNVMlM4nAIF5Opr71Mk8qUFEoy92LlTJ7FRgkf7X3NRRDtvyeKSkwyKOvcmsN9M6UEuiNQf3z8c8lWxwGUKbkDvTGoHAzfC3JFocBkamjhfNFKC/Ag4no70jSN5m6ZiBAadY/0SxNR39PKhIpjMrUKRD8ti4v+jtubd6vF4b0vAQDMnULVOSLcHu1XbNbPel5CZqiUb0Gb57oF6hQba1qR81JhWQkUmjZmY+nO0cRaYJtrVi52/06HS0OmmTeWm239+sVHRUOt7Wi25z8f62GFgcDJ6B6TV5ssK0V1Ur3p7di7q38kxwMHyd7FduprdW6ceakQse8BBg6OPjbzGaH9aweQVKxndpasTQdr73Bn5flxfj3mYTMyxfv9KzcBS/nH/XKi37blRfCHwyl2XCRceekQte8BBg+N3Lp/tRUgTNn+3eyHDkPo1dg/LovdHTc/2zvB8wsh0uuVmDlTrJaM8u9328Y2efPNtjc/MDE5GV9VRLg5dq7Nop6Lf4DR6ErEiky29vfWF9/r7eKBuLkyaPobHFo/d18a+sjjcae3kqCJJ2TCulfiY6SAah92rZGZpxzdxg6smWQDMDOznd2d3/qrSRE0jmp0D0voSXzT2OP/f0D/dUEKM2e7Drd8xJaMqvVL/z+1dBfTYDJGye7rls6kMC6F7e8XPKWNdHiYKFMSP6SlYkWB0tlerlkMUd3JFJYKROglGB36o5ECmtl5ovxdpypeQkWywQoxHiym5qXYLnMWDvTQCRSWC3Ty0WHeJMtDpbLhOgQb7LFIQUyo0K8qUiksF4mhId4U5FIkQqZnUK86XkJKZEJx0O86XkJKZJ5NMSbjESK1MiEdojvR4tDymTmi61Xr/skcyBew5bCy8Fcf96pAFK2M/uNkymINf9UZQNuZwriZAriZAriZAriZAriZAriZAriZAryD4xxER8vOFEDAAAAAElFTkSuQmCC"/>
-                                    </defs>
-                                 </svg> */}
+                                                        {}
                                                     </span>
                                                     you.</h4>
                                                 <p>While we're good with smoke signals,
@@ -323,41 +309,42 @@ const Business = () => {
                                     <div className="col-xl-7 col-lg-6">
                                         <div className="contact-form-right-warp">
                                             <div className="postbox__comment-form">
-                                                <form action="#" className="box">
+
+                                                <form onSubmit={handleSubmit}>
                                                     <div className="row gx-20">
                                                         <div className="col-12">
                                                             <div className="postbox__comment-input mb-30">
-                                                                <input type="text" className="inputText" required />
+                                                                <input type="text" className="inputText" name='name' required />
                                                                 <span className="floating-label">Full  Name</span>
                                                             </div>
                                                         </div>
                                                         <div className="col-12">
                                                             <div className="postbox__comment-input mb-30">
-                                                                <input type="text" className="inputText" required />
+                                                                <input type="text" className="inputText" name='email' required />
                                                                 <span className="floating-label">Your Email</span>
                                                             </div>
                                                         </div>
                                                         <div className="col-12">
                                                             <div className="postbox__comment-input mb-35">
-                                                                <input type="text" className="inputText" required />
+                                                                <input type="text" className="inputText" name='phone' required />
                                                                 <span className="floating-label">Phone Number</span>
                                                             </div>
                                                         </div>
                                                         <div className="col-12">
                                                             <div className="postbox__comment-input mb-35">
-                                                                <input type="text" className="inputText" required />
+                                                                <input type="text" className="inputText" name='weburl' required />
                                                                 <span className="floating-label">Website URL</span>
                                                             </div>
                                                         </div>
                                                         <div className="col-xxl-12">
                                                             <div className="postbox__comment-input mb-30">
-                                                                <textarea className="textareaText" required></textarea>
+                                                                <textarea className="textareaText" name='help' required></textarea>
                                                                 <span className="floating-label-2">How can we help you ?</span>
                                                             </div>
                                                         </div>
                                                         <div className="col-xxl-12">
                                                             <div className="postbox__btn-box">
-                                                                <button className="submit-btn w-100">Send your Request</button>
+                                                                <button className="submit-btn w-100" type='submit'>Send your Request</button>
                                                             </div>
                                                         </div>
                                                     </div>
