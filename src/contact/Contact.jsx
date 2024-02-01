@@ -3,6 +3,7 @@ import './post-473.css'
 import { useNavigate } from 'react-router-dom'
 import logo from '../assets/google.png'
 import Map from './Map'
+import {FaMoneyBillWave,FaUserEdit} from 'react-icons/fa'
 
 const Contact = () => {
 
@@ -212,8 +213,8 @@ const Contact = () => {
                                                         <div className="elementor-widget-container">
                                                             <div className="elementor-icon-box-wrapper">
                                                                 <div className="elementor-icon-box-icon">
-                                                                    <span className="elementor-icon elementor-animation-">
-                                                                        <i aria-hidden="true" className="fas fa-money-bill-wave" /> </span>
+                                                                    <span className="elementor-icon elementor-animation-" style={{backgroundColor:'#596FB7'}}>
+                                                                        <FaMoneyBillWave/></span>
                                                                 </div>
                                                                 <div className="elementor-icon-box-content">
                                                                     <h3 className="elementor-icon-box-title">
@@ -262,8 +263,8 @@ const Contact = () => {
                                                         <div className="elementor-widget-container">
                                                             <div className="elementor-icon-box-wrapper">
                                                                 <div className="elementor-icon-box-icon">
-                                                                    <span className="elementor-icon elementor-animation-">
-                                                                        <i aria-hidden="true" className="fas fa-user-edit" />
+                                                                    <span className="elementor-icon elementor-animation-" style={{backgroundColor:'#1F2544'}}>
+                                                                        <FaUserEdit/>
                                                                     </span>
                                                                 </div>
                                                                 <div className="elementor-icon-box-content">
