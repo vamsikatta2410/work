@@ -99,9 +99,9 @@ const Search3 = () => {
                             <div className="elementor-element elementor-element-75d4936 elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="75d4936" data-element_type="widget" data-widget_type="button.default">
                               <div className="elementor-widget-container">
                                 <div className="elementor-button-wrapper">
-                                  <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                  <a className="elementor-button elementor-button-link elementor-size-sm" href="/login">
                                     <span className="elementor-button-content-wrapper">
-                                      <span className="elementor-button-text">Client area</span>
+                                      <span className="elementor-button-text">Login</span>
                                     </span>
                                   </a>
                                 </div>
@@ -152,7 +152,7 @@ const Search3 = () => {
                                                 <input id="wdes-domain" className="sea-dom" name='search' value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} placeholder='Search anything ...'/>
                                                 <input type="hidden" id="wdes_lup" name="wdes_lup" defaultValue="lup-1" />
                                               </div>
-                                              <input id="wdes-search" className="reg-dom" type="submit" defaultValue="Search Domain" />
+                                              <button id="wdes-search" className="reg-dom" type="submit">Search</button>
                                             </div>
                                             <div id="preloader-resource" data-priority-tlds="[{&quot;tld&quot;:&quot;domain-com&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-net&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-org&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-me&quot;,&quot;price&quot;:&quot;$5&quot;},{&quot;tld&quot;:&quot;domain-info&quot;,&quot;price&quot;:&quot;$5&quot;}]" data-priority-local-tlds="[]" />
                                             {/* Result section*/}

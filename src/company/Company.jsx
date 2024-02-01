@@ -69,9 +69,9 @@ const Company = () => {
                                         <div className="elementor-element elementor-element-75d4936 elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="75d4936" data-element_type="widget" data-widget_type="button.default">
                                             <div className="elementor-widget-container">
                                                 <div className="elementor-button-wrapper">
-                                                    <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                                    <a className="elementor-button elementor-button-link elementor-size-sm" href="/login">
                                                         <span className="elementor-button-content-wrapper">
-                                                            <span className="elementor-button-text">Client area</span>
+                                                            <span className="elementor-button-text">Login</span>
                                                         </span>
                                                     </a>
                                                 </div>
