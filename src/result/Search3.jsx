@@ -1,6 +1,10 @@
 import React,{useState,useEffect} from 'react'
 import {useNavigate} from 'react-router-dom'
 import logo from '../assets/google.png'
+import globe from '../assets/globe.png'
+import cloudhosting from '../assets/cloud-hosting.png'
+import vpshosting from '../assets/vps-hosting.png'
+import wphosting from '../assets/wp-hosting.png'
 
 const Search3 = () => {
 
@@ -205,16 +209,16 @@ const Search3 = () => {
                             <div className="elementor-widget-container">
                               <div className="wdes-tabs ">
                                 <ul className="nav nav-tabs wdes-general-tabs-position-top wdes-align-tabs-center" id="featuresTab" role="tablist">
-                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src="wp-content/uploads/sites/21/2023/04/globe.png" alt="Shared Hosting" />
+                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}}><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting" />
                                       <div className="wdes-tabs-control-text">Shared Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src="wp-content/uploads/sites/21/2023/04/cloud-hosting.png" alt="Cloud Hosting" />
+                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab"  style={{backgroundColor:'blue',padding:'30px 40px'}}><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
                                       <div className="wdes-tabs-control-text">Cloud Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src="wp-content/uploads/sites/21/2023/04/vps-hosting.png" alt="VPS Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}}><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
                                       <div className="wdes-tabs-control-text">VPS Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src="wp-content/uploads/sites/21/2023/04/wp-hosting.png" alt="Wordpress Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}}><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
                                       <div className="wdes-tabs-control-text">WordPress Hosting</div>
                                     </a></li>
                                 </ul>
@@ -507,289 +511,7 @@ const Search3 = () => {
                       </div>
                     </div>
                   </section>
-                  <section className="elementor-section elementor-top-section elementor-element elementor-element-da19da7 elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="da19da7" data-element_type="section">
-                    <div className="elementor-container elementor-column-gap-default">
-                      <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1eb0605 elementor-hidden-mobile elementor-hidden-tablet" data-id="1eb0605" data-element_type="column">
-                        <div className="elementor-widget-wrap elementor-element-populated">
-                          <div className="elementor-element elementor-element-376ba7e elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="376ba7e" data-element_type="widget" data-widget_type="image.default">
-                            <div className="elementor-widget-container">
-                              <img loading="lazy" decoding="async" width={266} height={613} src="wp-content/uploads/sites/21/2023/04/sec-left-path.png" className="attachment-full size-full wp-image-558" alt="" srcSet="https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/sec-left-path.png 266w, https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/sec-left-path-130x300.png 130w" sizes="(max-width: 266px) 100vw, 266px" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-508388f" data-id="508388f" data-element_type="column">
-                        <div className="elementor-widget-wrap elementor-element-populated">
-                          <section className="elementor-section elementor-inner-section elementor-element elementor-element-2e5db49 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2e5db49" data-element_type="section">
-                            <div className="elementor-container elementor-column-gap-default">
-                              <div className="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-ffb6070" data-id="ffb6070" data-element_type="column">
-                                <div className="elementor-widget-wrap elementor-element-populated">
-                                  <div className="elementor-element elementor-element-ecf3a93 elementor-widget elementor-widget-wdes-section-header-widget" data-id="ecf3a93" data-element_type="widget" data-widget_type="wdes-section-header-widget.default">
-                                    <div className="elementor-widget-container">
-                                      <section className="widget-content wdes-widget-section-header">
-                                        <div className="wdes-widget-inner wdes-text-align-center ">
-                                          <h1 className="wdes-section-header-primary">Hosting Plans</h1>
-                                        </div>
-                                      </section>
-                                    </div>
-                                  </div>
-                                  <div className="elementor-element elementor-element-1a41510 elementor-widget elementor-widget-wdes-section-header-widget" data-id="1a41510" data-element_type="widget" data-widget_type="wdes-section-header-widget.default">
-                                    <div className="elementor-widget-container">
-                                      <section className="widget-content wdes-widget-section-header">
-                                        <div className="wdes-widget-inner wdes-text-align-center ">
-                                          <h1 className="wdes-section-header-primary">Get started with
-                                            hosting</h1>
-                                        </div>
-                                      </section>
-                                    </div>
-                                  </div>
-                                  <section className="elementor-section elementor-inner-section elementor-element elementor-element-9e781c8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="9e781c8" data-element_type="section">
-                                    <div className="elementor-container elementor-column-gap-default">
-                                      <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-1fb1111" data-id="1fb1111" data-element_type="column">
-                                        <div className="elementor-widget-wrap elementor-element-populated">
-                                          <div className="elementor-element elementor-element-9467e9d elementor-widget elementor-widget-wdes_price_table" data-id="9467e9d" data-element_type="widget" data-widget_type="wdes_price_table.default">
-                                            <div className="elementor-widget-container">
-                                              <div className="wdes-pricing-table">
-                                                <div className="wdes-pricing-table-heading">
-                                                  <h2 className="wdes-pricing-table-title">Start
-                                                  </h2>
-                                                </div>
-                                                <div className="wdes-pricing-table-price">
-                                                  <span className="wdes-pricing-table-price-perfix">$</span>
-                                                  <span className="wdes-pricing-table-price-num">9.79</span>
-                                                  <span className="wdes-pricing-table-price-suffix">/mo</span>
-                                                </div>
-                                                <div className="wdes-pricing-table-features">
-                                                  <div className="wdes-pricing-table-features-wrap">
-                                                    <div className="wdes-pricing-feature pricing-feature-5308b69">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">1
-                                                          Website</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-0fb1a88">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">10GB
-                                                          Web Space</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-421f9a6">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">10,000
-                                                          Visits Monthly</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-aa7ff5c">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Unmetered
-                                                          Traffic</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-d6959a7">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          SSL</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-6984be2">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Daily
-                                                          Backup</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-097cf36">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          CDN</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-7e7f4a3">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          Email</span>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div className="wdes-pricing-feature-footer">
-                                                  <a className="pricing-table-button button-full-size" href="#">Select Plan</a>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-39f4af6" data-id="39f4af6" data-element_type="column">
-                                        <div className="elementor-widget-wrap elementor-element-populated">
-                                          <div className="elementor-element elementor-element-79f4fe2 elementor-widget elementor-widget-wdes_price_table" data-id="79f4fe2" data-element_type="widget" data-widget_type="wdes_price_table.default">
-                                            <div className="elementor-widget-container">
-                                              <div className="wdes-pricing-table">
-                                                <div className="wdes-pricing-table-heading">
-                                                  <h2 className="wdes-pricing-table-title">Power
-                                                  </h2>
-                                                </div>
-                                                <div className="wdes-pricing-table-price">
-                                                  <span className="wdes-pricing-table-price-perfix">$</span>
-                                                  <span className="wdes-pricing-table-price-num">27.99</span>
-                                                  <span className="wdes-pricing-table-price-suffix">/mo</span>
-                                                </div>
-                                                <div className="wdes-pricing-table-features">
-                                                  <div className="wdes-pricing-table-features-wrap">
-                                                    <div className="wdes-pricing-feature pricing-feature-5308b69">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">1
-                                                          Website</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-0fb1a88">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">10GB
-                                                          Web Space</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-421f9a6">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">10,000
-                                                          Visits Monthly</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-aa7ff5c">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Unmetered
-                                                          Traffic</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-d6959a7">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          SSL</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-6984be2">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Daily
-                                                          Backup</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-097cf36">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          CDN</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-7e7f4a3">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          Email</span>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div className="wdes-pricing-feature-footer">
-                                                  <a className="pricing-table-button button-full-size" href="#">Select Plan</a>
-                                                </div>
-                                                <div className="wdes-pricing-table-strip-default">
-                                                  <div className="wdes-pricing-table-strip-default-inner">
-                                                    Most popular</div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div className="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-56ef68c" data-id="56ef68c" data-element_type="column">
-                                        <div className="elementor-widget-wrap elementor-element-populated">
-                                          <div className="elementor-element elementor-element-a6a68ff elementor-widget elementor-widget-wdes_price_table" data-id="a6a68ff" data-element_type="widget" data-widget_type="wdes_price_table.default">
-                                            <div className="elementor-widget-container">
-                                              <div className="wdes-pricing-table">
-                                                <div className="wdes-pricing-table-heading">
-                                                  <h2 className="wdes-pricing-table-title">Mega
-                                                  </h2>
-                                                </div>
-                                                <div className="wdes-pricing-table-price">
-                                                  <span className="wdes-pricing-table-price-perfix">$</span>
-                                                  <span className="wdes-pricing-table-price-num">45.99</span>
-                                                  <span className="wdes-pricing-table-price-suffix">/mo</span>
-                                                </div>
-                                                <div className="wdes-pricing-table-features">
-                                                  <div className="wdes-pricing-table-features-wrap">
-                                                    <div className="wdes-pricing-feature pricing-feature-5308b69">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">1
-                                                          Website</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-0fb1a88">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">10GB
-                                                          Web Space</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-421f9a6">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">10,000
-                                                          Visits Monthly</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-aa7ff5c">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Unmetered
-                                                          Traffic</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-d6959a7">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          SSL</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-6984be2">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Daily
-                                                          Backup</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-097cf36">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          CDN</span>
-                                                      </div>
-                                                    </div>
-                                                    <div className="wdes-pricing-feature pricing-feature-7e7f4a3">
-                                                      <div className="wdes-pricing-feature-inner">
-                                                        <i className="feature-icon fas fa-check" /><span className="wdes-pricing-table-features-text">Free
-                                                          Email</span>
-                                                      </div>
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                                <div className="wdes-pricing-feature-footer">
-                                                  <a className="pricing-table-button button-full-size" href="#">Select Plan</a>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </section>
-                                </div>
-                              </div>
-                            </div>
-                          </section>
-                        </div>
-                      </div>
-                      <div className="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-cc53a79 elementor-hidden-mobile elementor-hidden-tablet" data-id="cc53a79" data-element_type="column">
-                        <div className="elementor-widget-wrap elementor-element-populated">
-                          <div className="elementor-element elementor-element-1a7af53 elementor-widget__width-auto elementor-widget elementor-widget-image" data-id="1a7af53" data-element_type="widget" data-widget_type="image.default">
-                            <div className="elementor-widget-container">
-                              <img loading="lazy" decoding="async" width={349} height={582} src="wp-content/uploads/sites/21/2023/04/sec-right-path.png" className="attachment-full size-full wp-image-559" alt="" srcSet="https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/sec-right-path.png 349w, https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/sec-right-path-180x300.png 180w" sizes="(max-width: 349px) 100vw, 349px" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </section>
+                  
                   <section className="elementor-section elementor-top-section elementor-element elementor-element-ed598fd elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="ed598fd" data-element_type="section">
                     <div className="elementor-container elementor-column-gap-default">
                       <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c9891e8" data-id="c9891e8" data-element_type="column">
@@ -811,8 +533,8 @@ const Search3 = () => {
                                     <div className="wdes-testimonials-item-inner">
                                       <div className="wdes-testimonials-content">
                                         <p className="wdes-testimonials-comment"> <span>Phox host is the
-                                            best hosting I’ve ever dealt with. They are truly
-                                            amazing! My advice for you, don’t think just select a
+                                            best hosting I've ever dealt with. They are truly
+                                            amazing! My advice for you, don't think just select a
                                             plan!
                                           </span></p>
                                         <div className="wdes-testimonials-name"><span>Cheryl Doyle</span>
@@ -826,8 +548,8 @@ const Search3 = () => {
                                     <div className="wdes-testimonials-item-inner">
                                       <div className="wdes-testimonials-content">
                                         <p className="wdes-testimonials-comment"> <span>Phox host is the
-                                            best hosting I’ve ever dealt with. They are truly
-                                            amazing! My advice for you, don’t think just select a
+                                            best hosting I've ever dealt with. They are truly
+                                            amazing! My advice for you, don't think just select a
                                             plan!
                                           </span></p>
                                         <div className="wdes-testimonials-name"><span>Cheryl Doyle</span>
@@ -841,8 +563,8 @@ const Search3 = () => {
                                     <div className="wdes-testimonials-item-inner">
                                       <div className="wdes-testimonials-content">
                                         <p className="wdes-testimonials-comment"> <span>Phox host is the
-                                            best hosting I’ve ever dealt with. They are truly
-                                            amazing! My advice for you, don’t think just select a
+                                            best hosting I've ever dealt with. They are truly
+                                            amazing! My advice for you, don't think just select a
                                             plan!
                                           </span></p>
                                         <div className="wdes-testimonials-name"><span>Cheryl Doyle</span>
@@ -856,8 +578,8 @@ const Search3 = () => {
                                     <div className="wdes-testimonials-item-inner">
                                       <div className="wdes-testimonials-content">
                                         <p className="wdes-testimonials-comment"> <span>Phox host is the
-                                            best hosting I’ve ever dealt with. They are truly
-                                            amazing! My advice for you, don’t think just select a
+                                            best hosting I've ever dealt with. They are truly
+                                            amazing! My advice for you, don't think just select a
                                             plan!
                                           </span></p>
                                         <div className="wdes-testimonials-name"><span>Cheryl Doyle</span>
@@ -871,8 +593,8 @@ const Search3 = () => {
                                     <div className="wdes-testimonials-item-inner">
                                       <div className="wdes-testimonials-content">
                                         <p className="wdes-testimonials-comment"> <span>Phox host is the
-                                            best hosting I’ve ever dealt with. They are truly
-                                            amazing! My advice for you, don’t think just select a
+                                            best hosting I've ever dealt with. They are truly
+                                            amazing! My advice for you, don't think just select a
                                             plan!
                                           </span></p>
                                         <div className="wdes-testimonials-name"><span>Cheryl Doyle</span>
