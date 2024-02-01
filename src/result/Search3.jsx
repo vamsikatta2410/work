@@ -5,6 +5,10 @@ import globe from '../assets/globe.png'
 import cloudhosting from '../assets/cloud-hosting.png'
 import vpshosting from '../assets/vps-hosting.png'
 import wphosting from '../assets/wp-hosting.png'
+import './post-359.css'
+import './post-11.css'
+import './elementor-widgets.css'
+import './post-3.css'
 
 const Search3 = () => {
 
@@ -80,7 +84,7 @@ const Search3 = () => {
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-438 wdes-nav-item">
                                         <a href="domain/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Domain</span></a></div>
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-469 wdes-nav-item">
-                                        <a href="company/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
+                                        <a href="/company" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-498 wdes-nav-item">
                                         <a href="blog/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-485 wdes-nav-item">
@@ -209,16 +213,16 @@ const Search3 = () => {
                             <div className="elementor-widget-container">
                               <div className="wdes-tabs ">
                                 <ul className="nav nav-tabs wdes-general-tabs-position-top wdes-align-tabs-center" id="featuresTab" role="tablist">
-                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}}><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting" />
+                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting" />
                                       <div className="wdes-tabs-control-text">Shared Hosting</div>
                                     </a></li>
-                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab"  style={{backgroundColor:'blue',padding:'30px 40px'}}><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
+                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
                                       <div className="wdes-tabs-control-text">Cloud Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}}><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
                                       <div className="wdes-tabs-control-text">VPS Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}}><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
                                       <div className="wdes-tabs-control-text">WordPress Hosting</div>
                                     </a></li>
                                 </ul>
@@ -1052,7 +1056,7 @@ const Search3 = () => {
                         <div className="elementor-widget-wrap elementor-element-populated">
                           <div className="elementor-element elementor-element-d404407 elementor-widget__width-auto elementor-widget-mobile__width-inherit elementor-widget elementor-widget-wdes-logo" data-id="d404407" data-element_type="widget" data-widget_type="wdes-logo.default">
                             <div className="elementor-widget-container">
-                              <div className="wdes-logo wdes-logo-type-image wdes-logo-display-inline"><a href="https://phox.whmcsdes.com/demos/classy-pro" className="wdes-logo_link"><img className="wdes-logo_img elementor-animation-none" src="wp-content/uploads/sites/21/2023/04/phox-logo.png" width={200} height={200} alt="Phox - Classy Pro" srcSet="https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/phox-logo.png 1x,https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/phox-logo.png 2x" /></a>
+                              <div className="wdes-logo wdes-logo-type-image wdes-logo-display-inline"><a href="/" className="wdes-logo_link"><img className="wdes-logo_img elementor-animation-none" src={logo} width={200} height={200} alt="Phox - Classy Pro" srcSet={logo} /></a>
                               </div>
                             </div>
                           </div>
@@ -1060,8 +1064,7 @@ const Search3 = () => {
                             <div className="elementor-widget-container">
                               <section className="widget-content wdes-widget-section-header">
                                 <div className="wdes-widget-inner  ">
-                                  <h1 className="wdes-section-header-primary">© 2016-2023 Phox inc. all rights
-                                    reserved.</h1>
+                                  <h1 className="wdes-section-header-primary">© Bharat Tech .</h1>
                                 </div>
                               </section>
                             </div>

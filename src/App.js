@@ -11,6 +11,7 @@ import Login from './result/Login';
 import Business from './result/Business';
 import Page from './result/Page';
 import Signup from './result/Signup';
+import Company from './company/Company';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path='/business' element={<Business/>}/>
           <Route path='/temp' element={<Page/>}/>
           <Route path='/signup' element={<Signup/>}/>
+          <Route path='/company' element={<Company/>}/>
         </Routes>
       </Router>
     </>
