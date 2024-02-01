@@ -53,13 +53,13 @@ const Company = () => {
                                                                 </div>
                                                             </div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-438 wdes-nav-item">
-                                                                <a href="../domain/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Domain</span></a></div>
+                                                                <a href="/" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Domain</span></a></div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-464 current_page_item wdes-nav-item-469 wdes-nav-item">
-                                                                <a href="index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
+                                                                <a href="/company" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-498 wdes-nav-item">
-                                                                <a href="../blog/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
+                                                                <a href="/blog" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-485 wdes-nav-item">
-                                                                <a href="../contact-us/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Contact</span></a></div>
+                                                                <a href="/contact" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Contact</span></a></div>
                                                             <div className="wdes-nav-mobile-close-btn wdes-blocks-icon"><i className="fa-solid fas fa-times" aria-hidden="true" /></div>
                                                         </div>
                                                     </div>

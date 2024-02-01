@@ -1,5 +1,6 @@
 import React from 'react'
 import './post-473.css'
+import logo from '../assets/google.png'
 
 const Contact = () => {
     return (
@@ -14,7 +15,7 @@ const Contact = () => {
                                     <div className="elementor-widget-wrap elementor-element-populated">
                                         <div className="elementor-element elementor-element-5c51450 elementor-widget elementor-widget-wdes-logo" data-id="5c51450" data-element_type="widget" data-widget_type="wdes-logo.default">
                                             <div className="elementor-widget-container">
-                                                <div className="wdes-logo wdes-logo-type-image wdes-logo-display-inline"><a href="https://phox.whmcsdes.com/demos/classy-pro" className="wdes-logo_link"><img className="wdes-logo_img elementor-animation-none" src="../wp-content/uploads/sites/21/2023/04/phox-logo.png" width={200} height={200} alt="Phox - Classy Pro" srcSet="https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/phox-logo.png 1x,https://phox.whmcsdes.com/demos/classy-pro/wp-content/uploads/sites/21/2023/04/phox-logo.png 2x" /></a>
+                                                <div className="wdes-logo wdes-logo-type-image wdes-logo-display-inline"><a href="/" className="wdes-logo_link"><img className="wdes-logo_img elementor-animation-none" src={logo} width={200} height={200} alt="Phox - Classy Pro" srcSet={logo} /></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -51,13 +52,13 @@ const Contact = () => {
                                                                 </div>
                                                             </div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-438 wdes-nav-item">
-                                                                <a href="../domain/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Domain</span></a></div>
+                                                                <a href="/" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Domain</span></a></div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-469 wdes-nav-item">
-                                                                <a href="../company/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
+                                                                <a href="/company" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-498 wdes-nav-item">
-                                                                <a href="../blog/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
+                                                                <a href="/blog" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
                                                             <div className="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-473 current_page_item wdes-nav-item-485 wdes-nav-item">
-                                                                <a href="index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Contact</span></a></div>
+                                                                <a href="/contact" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Contact</span></a></div>
                                                             <div className="wdes-nav-mobile-close-btn wdes-blocks-icon"><i className="fa-solid fas fa-times" aria-hidden="true" /></div>
                                                         </div>
                                                     </div>
