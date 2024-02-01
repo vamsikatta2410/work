@@ -12,6 +12,8 @@ import Business from './result/Business';
 import Page from './result/Page';
 import Signup from './result/Signup';
 import Company from './company/Company';
+import Blog from './blog/Blog';
+import Contact from './contact/Contact';
 
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
           <Route path='/temp' element={<Page/>}/>
           <Route path='/signup' element={<Signup/>}/>
           <Route path='/company' element={<Company/>}/>
+          <Route path='/blog' element={<Blog/>}/>
+          <Route path='/contact' element={<Contact/>}/>
         </Routes>
       </Router>
     </>

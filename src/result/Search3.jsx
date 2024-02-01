@@ -9,6 +9,7 @@ import './post-359.css'
 import './post-11.css'
 import './elementor-widgets.css'
 import './post-3.css'
+import './swiper.min.css'
 
 const Search3 = () => {
 
@@ -86,7 +87,7 @@ const Search3 = () => {
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-469 wdes-nav-item">
                                         <a href="/company" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Company</span></a></div>
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-498 wdes-nav-item">
-                                        <a href="blog/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
+                                        <a href="/blog" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Blog</span></a></div>
                                       <div className="menu-item menu-item-type-post_type menu-item-object-page wdes-nav-item-485 wdes-nav-item">
                                         <a href="contact-us/index.html" className="menu-item-link menu-item-link-depth-0 menu-item-link-top"><span className="wdes-nav-link-text">Contact</span></a></div>
                                       <div className="wdes-nav-mobile-close-btn wdes-blocks-icon"><i className="fa-solid fas fa-times" aria-hidden="true" /></div>
@@ -213,16 +214,16 @@ const Search3 = () => {
                             <div className="elementor-widget-container">
                               <div className="wdes-tabs ">
                                 <ul className="nav nav-tabs wdes-general-tabs-position-top wdes-align-tabs-center" id="featuresTab" role="tablist">
-                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting" />
+                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting"/>
                                       <div className="wdes-tabs-control-text">Shared Hosting</div>
                                     </a></li>
-                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
+                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
                                       <div className="wdes-tabs-control-text">Cloud Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
                                       <div className="wdes-tabs-control-text">VPS Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab"><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
                                       <div className="wdes-tabs-control-text">WordPress Hosting</div>
                                     </a></li>
                                 </ul>
