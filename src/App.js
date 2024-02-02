@@ -11,9 +11,11 @@ import Login from './result/Login';
 import Business from './result/Business';
 import Page from './result/Page';
 import Signup from './result/Signup';
-import Company from './company/Company';
+import Company from './company/Company'
 import Blog from './blog/Blog';
 import Contact from './contact/Contact';
+import Login2 from './login/Login2';
+
 
 
 function App() {
@@ -35,6 +37,7 @@ function App() {
           <Route path='/company' element={<Company/>}/>
           <Route path='/blog' element={<Blog/>}/>
           <Route path='/contact' element={<Contact/>}/>
+          <Route path='login2' element={<Login2/>}/>
         </Routes>
       </Router>
     </>
