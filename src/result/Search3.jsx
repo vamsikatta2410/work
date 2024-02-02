@@ -214,16 +214,16 @@ const Search3 = () => {
                             <div className="elementor-widget-container">
                               <div className="wdes-tabs ">
                                 <ul className="nav nav-tabs wdes-general-tabs-position-top wdes-align-tabs-center" id="featuresTab" role="tablist">
-                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting"/>
+                                  <li className="nav-item "><a className="nav-link active wdes-tabs-control-image-left" href="#wdes-b6c4ede" aria-controls="wdes-b6c4ede" role="tab" data-toggle="tab" style={{backgroundColor:'#7868E5'}} ><img decoding="async" className="wdes-tabs-control-image" src={globe} alt="Shared Hosting"/>
                                       <div className="wdes-tabs-control-text">Shared Hosting</div>
                                     </a></li>
-                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
+                                  <li className="nav-item"><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-59539d1" aria-controls="wdes-59539d1" role="tab" data-toggle="tab" style={{backgroundColor:'#7868E5'}} ><img decoding="async" className="wdes-tabs-control-image" src={cloudhosting} alt="Cloud Hosting" />
                                       <div className="wdes-tabs-control-text">Cloud Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-b698c15" aria-controls="wdes-b698c15" role="tab" data-toggle="tab" style={{backgroundColor:'#7868E5'}} ><img decoding="async" className="wdes-tabs-control-image" src={vpshosting} alt="VPS Hosting" />
                                       <div className="wdes-tabs-control-text">VPS Hosting</div>
                                     </a></li>
-                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab" style={{backgroundColor:'blue'}} ><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
+                                  <li className="nav-item "><a className="nav-link  wdes-tabs-control-image-left" href="#wdes-9d2d9ae" aria-controls="wdes-9d2d9ae" role="tab" data-toggle="tab" style={{backgroundColor:'#7868E5'}} ><img decoding="async" className="wdes-tabs-control-image" src={wphosting} alt="Wordpress Hosting" />
                                       <div className="wdes-tabs-control-text">WordPress Hosting</div>
                                     </a></li>
                                 </ul>
@@ -262,7 +262,7 @@ const Search3 = () => {
                                                   <div className="elementor-element elementor-element-b05383f elementor-widget elementor-widget-button" data-id="b05383f" data-element_type="widget" data-widget_type="button.default">
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-button-wrapper">
-                                                        <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                                        <a className="elementor-button elementor-button-link elementor-size-sm" style={{backgroundColor:'#B49BFC'}} href="#">
                                                           <span className="elementor-button-content-wrapper">
                                                             <span className="elementor-button-text">Get
                                                               Started</span>
@@ -318,7 +318,7 @@ const Search3 = () => {
                                                   <div className="elementor-element elementor-element-dd80964 elementor-widget elementor-widget-button" data-id="dd80964" data-element_type="widget" data-widget_type="button.default">
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-button-wrapper">
-                                                        <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                                        <a className="elementor-button elementor-button-link elementor-size-sm" style={{backgroundColor:'#B49BFC'}} href="#">
                                                           <span className="elementor-button-content-wrapper">
                                                             <span className="elementor-button-text">Get
                                                               Started</span>
@@ -374,7 +374,7 @@ const Search3 = () => {
                                                   <div className="elementor-element elementor-element-3c06718 elementor-widget elementor-widget-button" data-id="3c06718" data-element_type="widget" data-widget_type="button.default">
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-button-wrapper">
-                                                        <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                                        <a className="elementor-button elementor-button-link elementor-size-sm" style={{backgroundColor:'#B49BFC'}} href="#">
                                                           <span className="elementor-button-content-wrapper">
                                                             <span className="elementor-button-text">Get
                                                               Started</span>
@@ -430,7 +430,7 @@ const Search3 = () => {
                                                   <div className="elementor-element elementor-element-f3f00dd elementor-widget elementor-widget-button" data-id="f3f00dd" data-element_type="widget" data-widget_type="button.default">
                                                     <div className="elementor-widget-container">
                                                       <div className="elementor-button-wrapper">
-                                                        <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                                        <a className="elementor-button elementor-button-link elementor-size-sm" style={{backgroundColor:'#B49BFC'}} href="#">
                                                           <span className="elementor-button-content-wrapper">
                                                             <span className="elementor-button-text">Get
                                                               Started</span>
@@ -467,7 +467,7 @@ const Search3 = () => {
                   <section className="elementor-section elementor-top-section elementor-element elementor-element-c0e45d3 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c0e45d3" data-element_type="section">
                     <div className="elementor-container elementor-column-gap-default">
                       <div className="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-cf5bae9" data-id="cf5bae9" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                        <div className="elementor-widget-wrap elementor-element-populated">
+                        <div className="elementor-widget-wrap elementor-element-populated" style={{backgroundColor:'#312D5E'}}>
                           <section className="elementor-section elementor-inner-section elementor-element elementor-element-5ac1fcb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5ac1fcb" data-element_type="section">
                             <div className="elementor-container elementor-column-gap-default">
                               <div className="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-bf54326" data-id="bf54326" data-element_type="column">
@@ -500,7 +500,7 @@ const Search3 = () => {
                                   <div className="elementor-element elementor-element-dc4db15 elementor-widget elementor-widget-button" data-id="dc4db15" data-element_type="widget" data-widget_type="button.default">
                                     <div className="elementor-widget-container">
                                       <div className="elementor-button-wrapper">
-                                        <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                        <a className="elementor-button elementor-button-link elementor-size-sm" style={{backgroundColor:'#B49BFC'}} href="#">
                                           <span className="elementor-button-content-wrapper">
                                             <span className="elementor-button-text">Get Started</span>
                                           </span>
@@ -788,7 +788,7 @@ const Search3 = () => {
                           <div className="elementor-element elementor-element-6fbbd82 elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="6fbbd82" data-element_type="widget" data-widget_type="button.default">
                             <div className="elementor-widget-container">
                               <div className="elementor-button-wrapper">
-                                <a className="elementor-button elementor-button-link elementor-size-sm" href="#">
+                                <a className="elementor-button elementor-button-link elementor-size-sm"  style={{backgroundColor:'#B49BFC'}} href="#">
                                   <span className="elementor-button-content-wrapper">
                                     <span className="elementor-button-text">Get Started</span>
                                   </span>
